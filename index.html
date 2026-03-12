@@ -1,0 +1,3367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of Migrant Workers - Philippines</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#0038a8',
+                            600: '#002d8c',
+                            700: '#001f66',
+                            800: '#001440',
+                            900: '#000a1a',
+                        },
+                        crimson: {
+                            50: '#fef2f2',
+                            100: '#fee2e2',
+                            200: '#fecaca',
+                            300: '#fca5a5',
+                            400: '#f87171',
+                            500: '#ce1126',
+                            600: '#b91c1c',
+                            700: '#9c1313',
+                            800: '#800d0d',
+                            900: '#640808',
+                        },
+                        gold: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            200: '#fde68a',
+                            300: '#fcd34d',
+                            400: '#fbbf24',
+                            500: '#fcd116',
+                            600: '#d4a017',
+                            700: '#b8860b',
+                            800: '#9a7209',
+                            900: '#7c5c07',
+                        },
+                        navy: {
+                            50: '#f0f4f8',
+                            100: '#d9e2ec',
+                            200: '#bcccdc',
+                            300: '#9fb3c8',
+                            400: '#829ab1',
+                            500: '#1a365d',
+                            600: '#153e75',
+                            700: '#0d3b66',
+                            800: '#0a2647',
+                            900: '#061a2e',
+                        }
+                    },
+                    fontFamily: {
+                        'display': ['Cinzel', 'serif'],
+                        'body': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --bg: #fafbfc;
+            --fg: #0f172a;
+            --muted: #64748b;
+            --accent: #0038a8;
+            --accent-crimson: #ce1126;
+            --accent-gold: #fcd116;
+            --card: #ffffff;
+            --border: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--fg);
+            overflow-x: hidden;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #0038a8, #ce1126);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(180deg, #002d8c, #b91c1c);
+        }
+
+        /* Animations */
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-15px) rotate(1deg);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -1000px 0;
+            }
+
+            100% {
+                background-position: 1000px 0;
+            }
+        }
+
+        @keyframes pulse-glow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(252, 209, 22, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 0 40px rgba(252, 209, 22, 0.6);
+            }
+        }
+
+        @keyframes gradient-shift {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes rotateIn {
+            from {
+                opacity: 0;
+                transform: rotate(-180deg) scale(0);
+            }
+
+            to {
+                opacity: 1;
+                transform: rotate(0deg) scale(1);
+            }
+        }
+
+        @keyframes borderGlow {
+
+            0%,
+            100% {
+                border-color: rgba(252, 209, 22, 0.3);
+            }
+
+            50% {
+                border-color: rgba(252, 209, 22, 0.8);
+            }
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .animate-shimmer {
+            animation: shimmer 3s infinite linear;
+        }
+
+        .animate-pulse-glow {
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+
+        .animate-gradient {
+            animation: gradient-shift 8s ease infinite;
+            background-size: 200% 200%;
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .animate-scaleIn {
+            animation: scaleIn 0.6s ease-out forwards;
+        }
+
+        .animate-slideInLeft {
+            animation: slideInLeft 0.8s ease-out forwards;
+        }
+
+        .animate-slideInRight {
+            animation: slideInRight 0.8s ease-out forwards;
+        }
+
+        .animate-rotateIn {
+            animation: rotateIn 0.8s ease-out forwards;
+        }
+
+        .animate-borderGlow {
+            animation: borderGlow 3s ease-in-out infinite;
+        }
+
+        /* Logo Styling */
+        .logo-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            height: 56px;
+            width: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 8px rgba(0, 56, 168, 0.2));
+            transition: all 0.4s ease;
+        }
+
+        .logo-img:hover {
+            transform: scale(1.02);
+            filter: drop-shadow(0 4px 16px rgba(252, 209, 22, 0.4));
+        }
+
+        /* Gradient Text */
+        .gradient-text {
+            background: linear-gradient(135deg, #0038a8 0%, #fcd116 50%, #ce1126 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gradient-text-gold {
+            background: linear-gradient(135deg, #fcd116 0%, #fff7cc 50%, #d4a017 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Premium Button */
+        .btn-premium {
+            position: relative;
+            background: linear-gradient(135deg, #0038a8 0%, #002d8c 100%);
+            color: white;
+            padding: 14px 36px;
+            border-radius: 12px;
+            font-weight: 600;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 4px 15px rgba(0, 56, 168, 0.3);
+        }
+
+        .btn-premium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(252, 209, 22, 0.4), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .btn-premium:hover::before {
+            left: 100%;
+        }
+
+        .btn-premium:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0, 56, 168, 0.4);
+        }
+
+        .btn-premium::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 12px;
+            padding: 2px;
+            background: linear-gradient(135deg, #fcd116, transparent, #ce1126);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .btn-premium:hover::after {
+            opacity: 1;
+        }
+
+        /* Premium Card */
+        .premium-card {
+            background: white;
+            border-radius: 24px;
+            padding: 32px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .premium-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0038a8, #fcd116, #ce1126);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease;
+        }
+
+        .premium-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .premium-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 56, 168, 0.15);
+        }
+
+        /* Section Title */
+        .section-title {
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        /* Hero Background */
+        .hero-bg {
+            background:
+                radial-gradient(ellipse at 30% 70%, rgba(0, 56, 168, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 30%, rgba(206, 17, 38, 0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(252, 209, 22, 0.05) 0%, transparent 60%),
+                linear-gradient(180deg, #ffffff 0%, #f8fafc 50%, #eff6ff 100%);
+        }
+
+        /* Decorative Elements */
+        .deco-line {
+            height: 4px;
+            background: linear-gradient(90deg, #0038a8, #fcd116, #ce1126);
+            border-radius: 2px;
+        }
+
+        .deco-circle {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        /* Counter */
+        .counter {
+            font-family: 'Cinzel', serif;
+            font-weight: 800;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            background: linear-gradient(135deg, #0038a8 0%, #fcd116 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Navigation */
+        .nav-link {
+            position: relative;
+            color: #0f172a;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #0038a8, #fcd116);
+            transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .nav-link:hover {
+            color: #0038a8;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* =========================
+   Hero Animations
+========================= */
+
+        .animate-fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeUp 1s ease forwards;
+        }
+
+        @keyframes fadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .animate-slow-float {
+            animation: float 12s ease-in-out infinite;
+        }
+
+        .animate-slow-float2 {
+            animation: float 15s ease-in-out infinite reverse;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0)
+            }
+
+            50% {
+                transform: translateY(-20px)
+            }
+
+            100% {
+                transform: translateY(0)
+            }
+        }
+
+        /* Service Card */
+        .service-card {
+            background: white;
+            border-radius: 24px;
+            padding: 32px;
+            transition: all 0.5s ease;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, #0038a8, #fcd116, #ce1126);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(0, 56, 168, 0.15);
+        }
+
+        /* FAQ Accordion */
+        .faq-item {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 8px 30px rgba(0, 56, 168, 0.1);
+            border-color: rgba(0, 56, 168, 0.1);
+        }
+
+        .faq-question {
+            padding: 24px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #0f172a;
+            transition: color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            color: #0038a8;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+
+        .faq-answer.active {
+            max-height: 500px;
+            padding: 0 24px 24px;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-icon.active {
+            transform: rotate(180deg);
+        }
+
+        /* Job Card */
+        .job-card {
+            background: white;
+            border-radius: 20px;
+            padding: 24px;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .job-card:hover {
+            border-color: #0038a8;
+            box-shadow: 0 15px 40px rgba(0, 56, 168, 0.12);
+            transform: translateY(-5px);
+        }
+
+        /* Badge */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 6px 14px;
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .badge-blue {
+            background: rgba(0, 56, 168, 0.1);
+            color: #0038a8;
+        }
+
+        .badge-green {
+            background: rgba(16, 185, 129, 0.1);
+            color: #059669;
+        }
+
+        .badge-gold {
+            background: rgba(252, 209, 22, 0.2);
+            color: #b8860b;
+        }
+
+        /* Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Input Styles */
+        .input-field {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .input-field:focus {
+            outline: none;
+            border-color: #0038a8;
+            box-shadow: 0 0 0 4px rgba(0, 56, 168, 0.1);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            max-width: 400px;
+            height: 100vh;
+            background: white;
+            z-index: 1000;
+            transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: -10px 0 50px rgba(0, 0, 0, 0.1);
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Tabs */
+        .tab-btn {
+            padding: 12px 24px;
+            border-radius: 100px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            color: #64748b;
+            border: 2px solid transparent;
+        }
+
+        .tab-btn.active {
+            background: linear-gradient(135deg, #0038a8 0%, #002d8c 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 56, 168, 0.3);
+        }
+
+        .tab-btn:not(.active):hover {
+            background: rgba(0, 56, 168, 0.1);
+            color: #0038a8;
+            border-color: rgba(0, 56, 168, 0.2);
+        }
+
+        /* Testimonial */
+        .testimonial-card {
+            background: white;
+            border-radius: 24px;
+            padding: 40px;
+            position: relative;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            transition: all 0.4s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0, 56, 168, 0.1);
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 120px;
+            font-family: 'Cinzel', serif;
+            color: rgba(0, 56, 168, 0.06);
+            line-height: 1;
+        }
+
+        /* Agency Card */
+        .agency-card {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            border-left: 4px solid transparent;
+        }
+
+        .agency-card:hover {
+            border-left-color: #0038a8;
+            box-shadow: 0 15px 40px rgba(0, 56, 168, 0.1);
+            transform: translateX(5px);
+        }
+
+        .agency-card.valid {
+            border-left-color: #10b981;
+        }
+
+        /* News Card */
+        .news-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .news-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(0, 56, 168, 0.15);
+        }
+
+        .news-card img {
+            transition: transform 0.6s ease;
+        }
+
+        .news-card:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Focus Visible */
+        *:focus-visible {
+            outline: 2px solid #0038a8;
+            outline-offset: 4px;
+        }
+
+        /* Stat Card */
+        .stat-card {
+            text-align: center;
+            padding: 40px 30px;
+            background: white;
+            border-radius: 24px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #0038a8, #fcd116, #ce1126, transparent);
+        }
+
+        /* Loading Spinner */
+        .loading-spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(255, 255, 255, 0.1);
+            border-top-color: #fcd116;
+            border-right-color: #0038a8;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Floating decoration */
+        .float-decoration {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.5;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+    <!-- Preloader -->
+    <div id="preloader"
+        class="fixed inset-0 z-[200] flex items-center justify-center bg-gradient-to-br from-primary-900 via-primary-800 to-navy-900">
+        <div class="text-center transition-all duration-500" id="preloader-content">
+            <div class="loading-spinner mx-auto mb-8"></div>
+
+            <div class="flex items-center justify-center gap-3 mb-4">
+                <img src="https://z-cdn-media.chatglm.cn/files/1c58a356-6f8d-4a3c-b8d5-ec3c707c699d.png?auth_key=1873251906-07b2e7f6ed17478fb0a8fed6d6c1b95b-0-9a4902917ccf2e535c7bc9997225fdca"
+                    alt="DMW Logo" class="h-16 w-auto opacity-95">
+            </div>
+
+            <p class="text-white/80 text-lg font-medium tracking-wide">
+                Loading Official Portal...
+            </p>
+        </div>
+    </div>
+
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="p-6 h-full flex flex-col">
+            <div class="flex justify-between items-center mb-10">
+                <img src="https://z-cdn-media.chatglm.cn/files/1c58a356-6f8d-4a3c-b8d5-ec3c707c699d.png?auth_key=1873251906-07b2e7f6ed17478fb0a8fed6d6c1b95b-0-9a4902917ccf2e535c7bc9997225fdca"
+                    alt="DMW Logo" class="h-14 w-auto">
+                <button id="closeMenuBtn" class="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                    aria-label="Close menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <nav class="flex-1">
+                <ul class="space-y-2">
+                    <li><a href="#home"
+                            class="block py-3 px-4 text-lg font-medium hover:bg-primary-50 hover:text-primary-500 rounded-lg transition-colors">Home</a>
+                    </li>
+                    <li><a href="#services"
+                            class="block py-3 px-4 text-lg font-medium hover:bg-primary-50 hover:text-primary-500 rounded-lg transition-colors">Services</a>
+                    </li>
+                    <li><a href="#jobs"
+                            class="block py-3 px-4 text-lg font-medium hover:bg-primary-50 hover:text-primary-500 rounded-lg transition-colors">Job
+                            Orders</a></li>
+                    <li><a href="#agencies"
+                            class="block py-3 px-4 text-lg font-medium hover:bg-primary-50 hover:text-primary-500 rounded-lg transition-colors">Agencies</a>
+                    </li>
+                    <li><a href="#faq"
+                            class="block py-3 px-4 text-lg font-medium hover:bg-primary-50 hover:text-primary-500 rounded-lg transition-colors">FAQ</a>
+                    </li>
+                    <li><a href="#news"
+                            class="block py-3 px-4 text-lg font-medium hover:bg-primary-50 hover:text-primary-500 rounded-lg transition-colors">News</a>
+                    </li>
+                    <li><a href="#contact"
+                            class="block py-3 px-4 text-lg font-medium hover:bg-primary-50 hover:text-primary-500 rounded-lg transition-colors">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="pt-6 border-t border-gray-100">
+                <a href="#" class="btn-premium block text-center w-full">Request Assistance</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+        <div class="absolute inset-0 bg-white/90 backdrop-blur-xl border-b border-gray-100/50 opacity-0 transition-opacity duration-300"
+            id="headerBg"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="flex items-center justify-between h-20 gap-6">
+                <!-- Logo -->
+                <a href="#home" class="flex items-center gap-4 min-w-0 flex-shrink-0">
+                    <div class="logo-container">
+                        <img src="https://z-cdn-media.chatglm.cn/files/1c58a356-6f8d-4a3c-b8d5-ec3c707c699d.png?auth_key=1873251906-07b2e7f6ed17478fb0a8fed6d6c1b95b-0-9a4902917ccf2e535c7bc9997225fdca"
+                            alt="DMW Official Logo" class="logo-img">
+                    </div>
+                    <div class="hidden md:block leading-tight border-l-2 border-gold-400 pl-4">
+                        <h1 class="font-display font-bold text-lg text-primary-700 tracking-wide">
+                            DMW | MWO
+                        </h1>
+                        <p class="text-xs text-gray-500 leading-snug">
+                            Department of Migrant Workers<br>
+                            Migrant Workers Office
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center gap-8 whitespace-nowrap flex-1 justify-center">
+                    <a href="#home" class="nav-link font-medium">Home</a>
+                    <a href="#services" class="nav-link font-medium">Services</a>
+                    <a href="#jobs" class="nav-link font-medium">Job Orders</a>
+                    <a href="#agencies" class="nav-link font-medium">Agencies</a>
+                    <a href="#faq" class="nav-link font-medium">FAQ</a>
+                    <a href="#news" class="nav-link font-medium">News</a>
+                </nav>
+
+                <!-- Right Buttons -->
+                <div class="hidden lg:flex items-center gap-4 flex-shrink-0">
+
+                    <!-- Contact Button -->
+                    <a href="#contact"
+                        class="px-6 py-3 rounded-xl border-2 border-[#0038A8] text-[#0038A8] font-semibold hover:bg-[#0038A8] hover:text-white transition-all whitespace-nowrap">
+                        Contact Us
+                    </a>
+
+                    <!-- Request Assistance Button -->
+                    <a href="https://sys.yaramay.online/complaints"
+                        class="px-6 py-3 rounded-xl bg-[#0038A8] text-white font-semibold shadow-md hover:bg-[#002b80] hover:shadow-lg transition-all whitespace-nowrap inline-flex items-center gap-2 text-sm">
+
+                        <span>Request Assistance</span>
+
+                    </a>
+
+                </div>
+            </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home"
+        class="relative min-h-screen flex items-center overflow-hidden pt-20 bg-gradient-to-b from-slate-50 via-white to-slate-100">
+
+        <!-- Soft Animated Background -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div
+                class="absolute w-[600px] h-[600px] bg-blue-200/20 blur-3xl rounded-full -top-40 -left-40 animate-slow-float">
+            </div>
+            <div
+                class="absolute w-[500px] h-[500px] bg-yellow-200/20 blur-3xl rounded-full bottom-0 -right-40 animate-slow-float2">
+            </div>
+        </div>
+
+        <!-- subtle grid -->
+        <div class="absolute inset-0 opacity-[0.03]"
+            style="background-image: linear-gradient(to right,#0f172a 1px,transparent 1px),linear-gradient(to bottom,#0f172a 1px,transparent 1px); background-size:50px 50px;">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+
+                <!-- LEFT SIDE -->
+                <div class="text-center lg:text-left max-w-2xl">
+
+                    <!-- Badge -->
+                    <div
+                        class="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-white shadow-sm border border-blue-100 mb-8 animate-fade-up">
+                        <img src="https://cdn-icons-png.flaticon.com/128/14009/14009758.png" alt="Philippine Flag"
+                            class="h-4 w-auto">
+                        <span class="text-sm font-semibold text-blue-700 tracking-wide">
+                            Republic of the Philippines
+                        </span>
+                    </div>
+
+                    <!-- Heading -->
+                    <h1
+                        class="font-display text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-[#0F172A] mb-8 animate-fade-up">
+
+                        Empowering
+
+                        <span class="block text-[#0038A8]">
+
+                            Migrant Workers
+
+                        </span>
+
+                        <span class="text-[#CE1126]">
+
+                            Worldwide
+
+                        </span>
+
+                    </h1>
+
+                    <!-- Description -->
+                    <p
+                        class="text-lg lg:text-xl text-slate-600 leading-relaxed mb-10 max-w-xl mx-auto lg:mx-0 animate-fade-up">
+                        The Department of Migrant Workers provides trusted guidance,
+                        verified opportunities, and responsive public service to
+                        protect and promote the welfare of Filipino workers abroad.
+                    </p>
+
+                    <!-- Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12 animate-fade-up">
+
+                        <a href="#services"
+                            class="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+                            Explore Services
+                        </a>
+
+                        <a href="#jobs"
+                            class="px-8 py-4 rounded-xl border-2 border-blue-600 text-blue-600 font-semibold hover:bg-blue-50 transition-all duration-300">
+                            Find Jobs
+                        </a>
+
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-4 max-w-xl mx-auto lg:mx-0 animate-fade-up">
+
+                        <!-- OFWs -->
+                        <div
+                            class="bg-white rounded-2xl p-5 shadow-sm border-t-4 border-[#0038A8] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 text-center">
+                            <p class="counter text-3xl lg:text-4xl font-bold text-[#0038A8]" data-target="10">0</p>
+                            <p class="text-sm text-slate-500 mt-1">Million OFWs</p>
+                        </div>
+
+                        <!-- Countries -->
+                        <div
+                            class="bg-white rounded-2xl p-5 shadow-sm border-t-4 border-[#FCD116] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 text-center">
+                            <p class="counter text-3xl lg:text-4xl font-bold text-[#0F172A]" data-target="190">0</p>
+                            <p class="text-sm text-slate-500 mt-1">Countries</p>
+                        </div>
+
+                        <!-- Agencies -->
+                        <div
+                            class="bg-white rounded-2xl p-5 shadow-sm border-t-4 border-[#CE1126] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 text-center">
+                            <p class="counter text-3xl lg:text-4xl font-bold text-[#CE1126]" data-target="2500">0</p>
+                            <p class="text-sm text-slate-500 mt-1">Agencies</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT SIDE IMAGE -->
+                <div class="relative animate-fade-up">
+
+                    <div
+                        class="relative rounded-3xl overflow-hidden shadow-2xl border border-[#0038A8]/10 bg-white/70 backdrop-blur">
+
+                        <img src="images/3.jpg" alt="Hero Image" class="w-full h-[520px] object-cover">
+
+                        <!-- overlay -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#0038A8]/40 to-transparent"></div>
+
+                    </div>
+
+                    <!-- floating card -->
+                    <div
+                        class="absolute -left-6 top-10 bg-white rounded-2xl shadow-xl border-l-4 border-[#0038A8] p-4 animate-float">
+
+                        <div class="flex items-center gap-3">
+
+                            <!-- Icon -->
+                            <img src="https://cdn-icons-gif.flaticon.com/16664/16664303.gif"
+                                class="w-8 h-8 object-contain" alt="Verified Agencies">
+
+                            <!-- Text -->
+                            <div>
+                                <p class="text-sm font-semibold text-[#0F172A]">
+                                    Verified Agencies
+                                </p>
+
+                                <p class="text-xs text-[#0038A8] font-medium">
+                                    2,500+ Trusted Listings
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- floating card -->
+                    <div
+                        class="absolute -right-6 bottom-10 bg-white rounded-2xl shadow-xl border-l-4 border-[#FCD116] p-4 animate-float delay-200">
+
+                        <div class="flex items-center gap-3">
+
+                            <!-- Icon -->
+                            <img src="https://cdn-icons-gif.flaticon.com/16104/16104275.gif"
+                                class="w-8 h-8 object-contain" alt="Job Opportunities">
+
+                            <!-- Text -->
+                            <div>
+                                <p class="text-sm font-semibold text-[#0F172A]">
+                                    Job Opportunities
+                                </p>
+
+                                <p class="text-xs text-[#CE1126] font-medium">
+                                    50,000+ Active Openings
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- Stats Section -->
+    <section class="py-24 bg-gradient-to-b from-white to-slate-50 relative overflow-hidden">
+
+        <!-- subtle grid background -->
+        <div class="absolute inset-0 opacity-[0.03]"
+            style="background-image: linear-gradient(to right,#0f172a 1px,transparent 1px),linear-gradient(to bottom,#0f172a 1px,transparent 1px); background-size:50px 50px;">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 lg:px-8 relative">
+
+            <!-- Title -->
+            <div class="text-center mb-16">
+
+                <h2 class="font-display text-4xl lg:text-5xl font-bold text-[#0F172A] mb-4">
+
+                    Global Impact of
+
+                    <span
+                        class="bg-gradient-to-r from-[#0038A8] via-[#FCD116] to-[#CE1126] bg-clip-text text-transparent">
+
+                        Filipino Workers
+
+                    </span>
+
+                </h2>
+
+                <p class="text-slate-600 max-w-2xl mx-auto text-lg">
+
+                    Empowering Filipino talent across the world through trusted recruitment
+                    and international deployment.
+
+                </p>
+
+            </div>
+
+
+            <!-- Horizontal Stats -->
+            <div class="flex gap-8 overflow-x-auto pb-6 scroll-smooth snap-x">
+
+                <!-- Card -->
+                <div
+                    class="snap-center min-w-[260px] stat-card group bg-white rounded-3xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
+
+                    <!-- gradient glow -->
+                    <div class="absolute -top-10 -right-10 w-28 h-28 bg-primary-200 blur-3xl opacity-40"></div>
+
+                    <div
+                        class="w-20 h-20 rounded-3xl bg-white flex items-center justify-center mx-auto mb-6 ring-8 ring-[#0038A8]/10 shadow-lg">
+
+                        <img src="https://cdn-icons-gif.flaticon.com/15332/15332375.gif"
+                            class="w-12 h-12 object-contain transition-transform duration-700 group-hover:scale-110"
+                            alt="OFW Workers">
+
+                    </div>
+
+                    <p class="counter text-4xl lg:text-5xl font-bold bg-gradient-to-r from-slate-700 to-amber-500 bg-clip-text text-transparent"
+                        data-target="2.5">
+                        0
+                    </p>
+
+                    <p class="mt-3 text-slate-600 font-medium">
+                        Million OFWs Deployed
+                    </p>
+
+                </div>
+
+
+                <!-- Card -->
+                <div
+                    class="snap-center min-w-[260px] stat-card group bg-white rounded-3xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
+
+                    <div class="absolute -top-10 -right-10 w-28 h-28 bg-emerald-200 blur-3xl opacity-40"></div>
+
+                    <!-- Icon -->
+                    <div
+                        class="w-20 h-20 rounded-3xl bg-white flex items-center justify-center mx-auto mb-6 ring-8 ring-emerald-50 shadow-lg">
+                        <img src="https://cdn-icons-gif.flaticon.com/17904/17904197.gif"
+                            class="w-12 h-12 object-contain transition-transform duration-700 group-hover:scale-110"
+                            alt="Licensed Agencies">
+                    </div>
+
+                    <!-- Counter -->
+                    <p class="counter text-4xl lg:text-5xl font-bold bg-gradient-to-r from-slate-700 to-emerald-500 bg-clip-text text-transparent"
+                        data-target="3500">
+                        0
+                    </p>
+
+                    <!-- Label -->
+                    <p class="mt-3 text-slate-600 font-medium">
+                        Licensed Agencies
+                    </p>
+
+                </div>
+
+
+                <!-- Card -->
+                <div
+                    class="snap-center min-w-[260px] stat-card group bg-white rounded-3xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
+
+                    <div class="absolute -top-10 -right-10 w-28 h-28 bg-amber-200 blur-3xl opacity-40"></div>
+
+                    <!-- Icon -->
+                    <div
+                        class="w-20 h-20 rounded-3xl bg-white flex items-center justify-center mx-auto mb-6 ring-8 ring-amber-50 shadow-lg">
+                        <img src="https://cdn-icons-gif.flaticon.com/17997/17997864.gif"
+                            class="w-12 h-12 object-contain transition-transform duration-700 group-hover:scale-110"
+                            alt="Countries Served">
+                    </div>
+
+                    <!-- Counter -->
+                    <p class="counter text-4xl lg:text-5xl font-bold bg-gradient-to-r from-slate-700 to-amber-500 bg-clip-text text-transparent"
+                        data-target="190">
+                        0
+                    </p>
+
+                    <!-- Label -->
+                    <p class="mt-3 text-slate-600 font-medium">
+                        Countries Served
+                    </p>
+
+                </div>
+
+
+                <!-- Card -->
+                <div
+                    class="snap-center min-w-[260px] stat-card group bg-white rounded-3xl p-8 text-center shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 relative overflow-hidden">
+
+                    <div class="absolute -top-10 -right-10 w-28 h-28 bg-rose-200 blur-3xl opacity-40"></div>
+
+                    <!-- Icon -->
+                    <div
+                        class="w-20 h-20 rounded-3xl bg-white flex items-center justify-center mx-auto mb-6 ring-8 ring-rose-50 shadow-lg">
+                        <img src="https://cdn-icons-gif.flaticon.com/18818/18818463.gif"
+                            class="w-12 h-12 object-contain transition-transform duration-700 group-hover:scale-110"
+                            alt="Remittances">
+                    </div>
+
+                    <!-- Counter -->
+                    <p class="counter text-4xl lg:text-5xl font-bold bg-gradient-to-r from-slate-700 to-rose-500 bg-clip-text text-transparent"
+                        data-target="33">
+                        0
+                    </p>
+
+                    <!-- Label -->
+                    <p class="mt-3 text-slate-600 font-medium">
+                        Billion USD Remittances
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- Services Section -->
+    <section id="services"
+        class="relative overflow-hidden py-24 lg:py-32 bg-gradient-to-b from-[#F8FAFC] via-white to-[#F1F5F9]">
+
+        <!-- soft top-right glow -->
+        <div
+            class="absolute top-0 right-0 w-[38rem] h-[38rem] bg-[#0038A8]/[0.06] rounded-full blur-3xl -translate-y-1/3 translate-x-1/3 pointer-events-none">
+        </div>
+
+        <!-- soft bottom-left glow -->
+        <div
+            class="absolute bottom-0 left-0 w-[34rem] h-[34rem] bg-[#FCD116]/[0.08] rounded-full blur-3xl translate-y-1/3 -translate-x-1/3 pointer-events-none">
+        </div>
+
+        <!-- subtle red accent -->
+        <div
+            class="absolute top-1/2 left-1/2 w-[26rem] h-[26rem] bg-[#CE1126]/[0.04] rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+        </div>
+
+        <div class="container mx-auto px-4 lg:px-8 relative z-10">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+
+                <!-- Badge -->
+                <span
+                    class="inline-block px-4 py-1.5 rounded-full text-sm font-semibold bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
+                    Online Services
+                </span>
+
+                <!-- Title -->
+                <h2 class="font-display text-4xl lg:text-5xl font-bold text-[#0F172A] mb-6 reveal">
+                    Comprehensive Services for
+                    <span
+                        class="bg-gradient-to-r from-[#0038A8] via-[#FCD116] to-[#CE1126] bg-clip-text text-transparent">
+                        OFWs
+                    </span>
+                </h2>
+
+                <!-- Description -->
+                <p class="text-[#64748B] text-lg max-w-2xl mx-auto reveal">
+                    Access all government services conveniently online. Register, apply, and manage your records with
+                    ease through our digital platforms.
+                </p>
+
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+                <!-- Service Card 1 -->
+                <div
+                    class="service-card service-card-premium reveal group relative overflow-hidden rounded-3xl bg-white p-8 border border-slate-200 shadow-sm transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-blue-200/40">
+                    <div
+                        class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]">
+                    </div>
+                    <div
+                        class="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-blue-100/40 blur-3xl transition-all duration-700 group-hover:scale-125">
+                    </div>
+                    <div
+                        class="absolute -left-10 -bottom-10 h-24 w-24 rounded-full bg-yellow-100/40 blur-3xl transition-all duration-700 group-hover:scale-125">
+                    </div>
+
+                    <div class="relative z-10">
+                        <div
+                            class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-lg border border-slate-200 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-blue-200/50">
+                            <img src="https://cdn-icons-png.flaticon.com/128/11422/11422047.png" alt="PEOS Online"
+                                class="w-10 h-10 object-contain">
+                        </div>
+
+                        <h3
+                            class="text-xl font-bold text-gray-900 mb-3 transition-colors duration-300 group-hover:text-[#0038A8]">
+                            PEOS Online
+                        </h3>
+
+                        <p
+                            class="text-gray-600 mb-6 leading-relaxed transition-colors duration-300 group-hover:text-gray-700">
+                            Pre-Employment Orientation Seminar for first-time OFWs. Complete your mandatory orientation
+                            online at your convenience.
+                        </p>
+
+                        <a href="#"
+                            class="inline-flex items-center gap-2 text-primary-500 font-semibold transition-all duration-300 group-hover:gap-3 group-hover:text-[#0038A8]">
+                            <span>Start Seminar</span>
+                            <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div
+                    class="service-card service-card-premium reveal group relative overflow-hidden rounded-3xl bg-white p-8 border border-slate-200 shadow-sm transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-emerald-200/40">
+                    <div
+                        class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]">
+                    </div>
+                    <div
+                        class="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-emerald-100/40 blur-3xl transition-all duration-700 group-hover:scale-125">
+                    </div>
+                    <div
+                        class="absolute -left-10 -bottom-10 h-24 w-24 rounded-full bg-blue-100/30 blur-3xl transition-all duration-700 group-hover:scale-125">
+                    </div>
+
+                    <div class="relative z-10">
+                        <div
+                            class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-lg border border-slate-200 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-emerald-200/50">
+                            <img src="https://cdn-icons-png.flaticon.com/128/12153/12153732.png" alt="E-Registration Icon"
+                                class="w-10 h-10 object-contain">
+                        </div>
+
+                        <h3
+                            class="text-xl font-bold text-gray-900 mb-3 transition-colors duration-300 group-hover:text-emerald-600">
+                            E-Registration
+                        </h3>
+
+                        <p
+                            class="text-gray-600 mb-6 leading-relaxed transition-colors duration-300 group-hover:text-gray-700">
+                            Register your profile and create your digital OFW account. Access all
+                            services with a single unified account track your applications.
+                        </p>
+
+                        <a href="#"
+                            class="inline-flex items-center gap-2 text-emerald-600 font-semibold transition-all duration-300 group-hover:gap-3">
+                            <span>Register Now</span>
+                            <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div
+                    class="service-card service-card-premium reveal group relative overflow-hidden rounded-3xl bg-white p-8 border border-slate-200 shadow-sm transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-yellow-200/40">
+                    <div
+                        class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]">
+                    </div>
+                    <div
+                        class="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-yellow-100/40 blur-3xl transition-all duration-700 group-hover:scale-125">
+                    </div>
+                    <div
+                        class="absolute -left-10 -bottom-10 h-24 w-24 rounded-full bg-amber-100/30 blur-3xl transition-all duration-700 group-hover:scale-125">
+                    </div>
+
+                    <div class="relative z-10">
+                        <div
+                            class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-lg border border-slate-200 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-yellow-200/50">
+                            <img src="https://cdn-icons-png.flaticon.com/128/3979/3979423.png" alt="OFW Records Icon"
+                                class="w-10 h-10 object-contain">
+                        </div>
+
+                        <h3
+                            class="text-xl font-bold text-gray-900 mb-3 transition-colors duration-300 group-hover:text-yellow-600">
+                            OFW Records
+                        </h3>
+
+                        <p
+                            class="text-gray-600 mb-6 leading-relaxed transition-colors duration-300 group-hover:text-gray-700">
+                            View and manage your employment history, contracts, and deployment
+                            records in one secure platform.
+                        </p>
+
+                        <a href="#"
+                            class="inline-flex items-center gap-2 text-yellow-600 font-semibold transition-all duration-300 group-hover:gap-3">
+                            <span>View Records</span>
+                            <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div
+                    class="service-card service-card-premium reveal group relative overflow-hidden rounded-3xl bg-white p-8 border border-slate-200 shadow-sm transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-red-200/40">
+                    <div
+                        class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]">
+                    </div>
+                    <div
+                        class="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-red-100/40 blur-3xl transition-all duration-700 group-hover:scale-125">
+                    </div>
+                    <div
+                        class="absolute -left-10 -bottom-10 h-24 w-24 rounded-full bg-rose-100/30 blur-3xl transition-all duration-700 group-hover:scale-125">
+                    </div>
+
+                    <div class="relative z-10">
+                        <div
+                            class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-lg border border-slate-200 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-red-200/50">
+                            <img src="https://cdn-icons-png.flaticon.com/128/7051/7051390.png" alt="Balik-Manggagawa Icon"
+                                class="w-10 h-10 object-contain">
+                        </div>
+
+                        <h3
+                            class="text-xl font-bold text-gray-900 mb-3 transition-colors duration-300 group-hover:text-red-600">
+                            Balik-Manggagawa
+                        </h3>
+
+                        <p
+                            class="text-gray-600 mb-6 leading-relaxed transition-colors duration-300 group-hover:text-gray-700">
+                            Processing services for returning OFWs. Get your OEC and clearances
+                            online without visiting our offices.
+                        </p>
+
+                        <a href="#"
+                            class="inline-flex items-center gap-2 text-crimson-500 font-semibold transition-all duration-300 group-hover:gap-3 group-hover:text-red-600">
+                            <span>Apply Now</span>
+                            <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div
+                    class="service-card service-card-premium reveal group relative overflow-hidden rounded-3xl bg-white p-8 border border-slate-200 shadow-sm transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-purple-200/40">
+                    <div
+                        class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]">
+                    </div>
+                    <div
+                        class="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-purple-100/40 blur-3xl transition-all duration-700 group-hover:scale-125">
+                    </div>
+                    <div
+                        class="absolute -left-10 -bottom-10 h-24 w-24 rounded-full bg-violet-100/30 blur-3xl transition-all duration-700 group-hover:scale-125">
+                    </div>
+
+                    <div class="relative z-10">
+                        <div
+                            class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-lg border border-slate-200 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-purple-200/50">
+                            <img src="https://cdn-icons-png.flaticon.com/128/16445/16445915.png"
+                                alt="Appointment System Icon" class="w-10 h-10 object-contain">
+                        </div>
+
+                        <h3
+                            class="text-xl font-bold text-gray-900 mb-3 transition-colors duration-300 group-hover:text-purple-600">
+                            Appointment System
+                        </h3>
+
+                        <p
+                            class="text-gray-600 mb-6 leading-relaxed transition-colors duration-300 group-hover:text-gray-700">
+                            Schedule your visit to any DMW office. Choose your preferred date and
+                            time for faster service.
+                        </p>
+
+                        <a href="#"
+                            class="inline-flex items-center gap-2 text-purple-600 font-semibold transition-all duration-300 group-hover:gap-3">
+                            <span>Book Appointment</span>
+                            <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div
+                    class="service-card service-card-premium reveal group relative overflow-hidden rounded-3xl bg-white p-8 border border-slate-200 shadow-sm transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-teal-200/40">
+                    <div
+                        class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]">
+                    </div>
+                    <div
+                        class="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-teal-100/40 blur-3xl transition-all duration-700 group-hover:scale-125">
+                    </div>
+                    <div
+                        class="absolute -left-10 -bottom-10 h-24 w-24 rounded-full bg-cyan-100/30 blur-3xl transition-all duration-700 group-hover:scale-125">
+                    </div>
+
+                    <div class="relative z-10">
+                        <div
+                            class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-lg border border-slate-200 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-teal-200/50">
+                            <img src="https://cdn-icons-png.flaticon.com/128/4789/4789117.png" alt="DMW HelpDesk Icon"
+                                class="w-10 h-10 object-contain">
+                        </div>
+
+                        <h3
+                            class="text-xl font-bold text-gray-900 mb-3 transition-colors duration-300 group-hover:text-teal-600">
+                            DMW HelpDesk
+                        </h3>
+
+                        <p
+                            class="text-gray-600 mb-6 leading-relaxed transition-colors duration-300 group-hover:text-gray-700">
+                            24/7 assistance for all your concerns. Get help from our support team
+                            through chat, email, or hotline.
+                        </p>
+
+                        <a href="#"
+                            class="inline-flex items-center gap-2 text-teal-600 font-semibold transition-all duration-300 group-hover:gap-3">
+                            <span>Get Help</span>
+                            <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Orders Section -->
+    <section id="jobs"
+        class="py-24 lg:py-32 bg-gradient-to-b from-blue-50 via-white to-red-50 relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-[0.04]"
+            style="background-image: radial-gradient(#0038a8 1px, transparent 1px); background-size: 28px 28px;">
+        </div>
+
+        <!-- Soft Gradient Blobs -->
+        <div class="absolute top-0 left-0 w-72 h-72 bg-blue-200/30 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 right-0 w-72 h-72 bg-red-200/30 rounded-full blur-3xl"></div>
+
+        <div class="container mx-auto px-4 lg:px-8 relative z-10">
+            <!-- Section Header -->
+            <div
+                class="text-center max-w-3xl mx-auto mb-12 opacity-0 translate-y-8 animate-[fadeUp_1s_ease-out_forwards]">
+                <span
+                    class="inline-flex items-center px-4 py-2 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold shadow-sm mb-3">
+                    Job Opportunities
+                </span>
+
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4 leading-snug">
+                    Approved
+                    <span
+                        class="bg-gradient-to-r from-blue-700 via-red-600 to-yellow-500 bg-clip-text text-transparent">
+                        Job Orders
+                    </span>
+                </h2>
+
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
+                    Explore verified overseas employment opportunities from licensed recruitment agencies.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(32px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+    <!-- Country Filter Tabs -->
+    <!-- Filter Buttons -->
+    <div class="flex flex-wrap justify-center gap-3 mb-12 reveal">
+        <button class="tab-btn active" data-country="all">All Countries</button>
+        <button class="tab-btn" data-country="japan">Japan</button>
+        <button class="tab-btn" data-country="saudi">Saudi Arabia</button>
+        <button class="tab-btn" data-country="uae">UAE</button>
+        <button class="tab-btn" data-country="singapore">Singapore</button>
+        <button class="tab-btn" data-country="qatar">Qatar</button>
+    </div>
+
+    <!-- Jobs Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="jobsGrid">
+        <!-- Job Card 1 -->
+        <div class="job-card reveal group relative bg-white/90 backdrop-blur-sm rounded-2xl border border-blue-100 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out overflow-hidden"
+            data-country="japan">
+            <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]"></div>
+            <div class="p-6">
+                <div class="flex items-start justify-between mb-4">
+                    <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-semibold">Japan</span>
+                    <span class="text-sm text-gray-500">Posted 2 days ago</span>
+                </div>
+
+                <h3
+                    class="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#0038A8] transition-colors duration-300">
+                    Earthwork Construction Worker
+                </h3>
+
+                <!-- Company with Logo -->
+                <div class="flex items-center gap-3 mb-4">
+                    <img src="https://www.tokyu-cnst.co.jp/img/share/logo-tokyu_cnst_en.svg" alt="Tokyu Construction"
+                        class="w-10 h-10 object-contain bg-white p-1 rounded-md shadow-sm border border-gray-100">
+                    <p class="text-gray-600 text-sm font-medium">
+                        TOKYO CONSTRUCTION CO., LTD.
+                    </p>
+                </div>
+
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">Construction</span>
+                    <span class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">Full-time</span>
+                    <span class="px-3 py-1 bg-red-100 rounded-full text-xs text-red-600 animate-pulse">Urgent</span>
+                </div>
+
+                <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                    <div>
+                        <p class="text-sm text-gray-500">Salary</p>
+                        <p class="font-semibold text-[#0038A8]">JPY 180,000 - JPY 350,000</p>
+                    </div>
+
+                    <button
+                        class="px-4 py-2 bg-[#0038A8] text-white rounded-lg text-sm font-medium hover:bg-[#002d85] hover:scale-105 transition-all duration-300 shadow-md">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Job Card 2 -->
+        <div class="job-card reveal group relative bg-white/90 backdrop-blur-sm rounded-2xl border border-yellow-100 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out overflow-hidden"
+            data-country="saudi">
+            <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#FCD116] via-[#CE1126] to-[#0038A8]"></div>
+
+            <div class="p-6">
+                <div class="flex items-start justify-between mb-4">
+                    <span class="px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-semibold">
+                        Saudi Arabia
+                    </span>
+                    <span class="text-sm text-gray-500">Posted 1 day ago</span>
+                </div>
+
+                <h3
+                    class="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#CE1126] transition-colors duration-300">
+                    Registered Nurse
+                </h3>
+
+                <div class="flex items-center gap-3 mb-4">
+                    <img src="https://riyadh-ms.com.sa/wp-content/uploads/2024/04/LOGO-eng.png"
+                        alt="Riyadh Healthcare Services Logo"
+                        class="w-12 h-12 object-contain rounded-lg bg-white p-1 border border-gray-200 shadow-sm">
+                    <p class="text-gray-600 text-sm font-medium">RIYADH HEALTHCARE SERVICES</p>
+                </div>
+
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">Healthcare</span>
+                    <span class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">Full-time</span>
+                </div>
+
+                <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                    <div>
+                        <p class="text-sm text-gray-500">Salary</p>
+                        <p class="font-semibold text-[#0038A8]">SAR 10,000 - SAR 20,000</p>
+                    </div>
+                    <button
+                        class="px-4 py-2 bg-purple-600 text-white rounded-lg text-sm font-medium hover:bg-purple-700 hover:scale-105 transition-all duration-300 shadow-md">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Job Card 3 -->
+        <div class="job-card reveal group relative bg-white/90 backdrop-blur-sm rounded-2xl border border-blue-100 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out overflow-hidden"
+            data-country="uae">
+            <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#FCD116] to-[#CE1126]"></div>
+            <div class="p-6">
+                <div class="flex items-start justify-between mb-4">
+                    <span class="px-3 py-1 rounded-full bg-red-100 text-red-700 text-xs font-semibold">
+                        UAE
+                    </span>
+                    <span class="text-sm text-gray-500">Posted 3 days ago</span>
+                </div>
+
+                <h3
+                    class="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#0038A8] transition-colors duration-300">
+                    Hotel Front Desk Agent
+                </h3>
+
+                <div class="flex items-center gap-3 mb-4">
+                    <img src="https://cdn.prod.website-files.com/677c6c9cc13874f7aa42b6f7/677c6c9cc13874f7aa42b77a_logo-new-black.avif"
+                        alt="Dubai Luxury Hotels Group Logo"
+                        class="w-12 h-12 object-contain rounded-lg bg-white p-1 border border-gray-200 shadow-sm">
+                    <p class="text-gray-600 text-sm font-medium">
+                        DUBAI LUXURY HOTELS GROUP
+                    </p>
+                </div>
+
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">
+                        Hospitality
+                    </span>
+                    <span class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">
+                        Full-time
+                    </span>
+                </div>
+
+                <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                    <div>
+                        <p class="text-sm text-gray-500">Salary</p>
+                        <p class="font-semibold text-[#0038A8]">AED 25,000 - AED 38,000</p>
+                    </div>
+
+                    <button
+                        class="px-4 py-2 bg-[#CE1126] text-white rounded-lg text-sm font-medium hover:bg-red-700 hover:scale-105 transition-all duration-300 shadow-md">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Job Card 4 -->
+        <div class="job-card reveal group relative bg-white/90 backdrop-blur-sm rounded-2xl border border-green-100 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out overflow-hidden"
+            data-country="singapore">
+            <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#22c55e] to-[#FCD116]"></div>
+
+            <div class="p-6">
+                <div class="flex items-start justify-between mb-4">
+                    <span class="px-3 py-1 rounded-full bg-green-100 text-green-700 text-xs font-semibold">
+                        Singapore
+                    </span>
+                    <span class="text-sm text-gray-500">Posted 5 days ago</span>
+                </div>
+
+                <h3
+                    class="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#0038A8] transition-colors duration-300">
+                    IT Support Specialist
+                </h3>
+
+                <div class="flex items-center gap-3 mb-4">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABWklEQVRYhe2W/W2DMBDFf0YdgE5Qb5Bkg2wAGzTdIBuUFTpB2SBkg4xAN2gmCJ3g+gdHdTKEkLRJW8lPOgn7Pt4D47MhIuI/Q8ALFALzWxOvBGoBMVYLrK5FmCqp1/EuIO9sp34vsBZIf4K0MgTLQEAlMDcxnYClyam0zqCYZIDYC5TAAXgFshGdtYOa1o4h0zqHTnBPgEAusNY5DzyamP1I8Smw+RmQK+daIE8ECmDTOQIsnK77pdD8xYArBza9JQiSxz7tOSKO1hkVcAtEAVHAnxKQfqt3nwHlSQHuzPyMtv2+XZl/BTx3g4S2Sdh2ObuygAfzvE8cVKZdvjDe+/1EkrG4D+U53ub1cCrN2J757wKNPhfqL3TcqP8r3tQoZfi8OQ1NbqR/AQkFhFadqj1pG7r2x/HAE7A9Eb7VuHs34Y3dFAEhdBvlQOP0xkM7VzpoLqkZEfFr+ASxoa2LdVDTrgAAAABJRU5ErkJggg=="
+                        alt="Singapore Tech Solutions Logo"
+                        class="w-12 h-12 object-contain rounded-lg bg-white p-1 border border-gray-200 shadow-sm">
+                    <p class="text-gray-600 text-sm font-medium">
+                        SINGAPORE TECH SOLUTIONS
+                    </p>
+                </div>
+
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">
+                        Technology
+                    </span>
+                    <span class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">
+                        Full-time
+                    </span>
+                </div>
+
+                <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                    <div>
+                        <p class="text-sm text-gray-500">Salary</p>
+                        <p class="font-semibold text-[#0038A8]">SGD 17,000 - SGD 29,000</p>
+                    </div>
+
+                    <button
+                        class="px-4 py-2 bg-green-600 text-white rounded-lg text-sm font-medium hover:bg-green-700 hover:scale-105 transition-all duration-300 shadow-md">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Job Card 5 -->
+        <div class="job-card reveal group relative bg-white/90 backdrop-blur-sm rounded-2xl border border-yellow-100 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out overflow-hidden"
+            data-country="qatar">
+            <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#FCD116] via-[#0038A8] to-[#CE1126]"></div>
+
+            <div class="p-6">
+                <div class="flex items-start justify-between mb-4">
+                    <span class="px-3 py-1 rounded-full bg-yellow-100 text-yellow-700 text-xs font-semibold">
+                        Qatar
+                    </span>
+                    <span class="text-sm text-gray-500">Posted 1 week ago</span>
+                </div>
+
+                <h3
+                    class="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#CE1126] transition-colors duration-300">
+                    Civil Engineer
+                </h3>
+
+                <div class="flex items-center gap-3 mb-4">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcBAMAAACAI8KnAAAALVBMVEUASE0ARUoAMzoAO0EHVFnr7+/19vfc4+OEo6b///+sw8U5bXGit7myxMVNfYHS4x5+AAAAbklEQVR4AWOgLhBSAgJjASiP0TUtLS21whnKZ66cCQIzHCFcpsj08vLysJkLBKDcAmNjwz2RMwyg3BKguGDbtI1IXEbZmYeRuAxymYXIXJFMMIXJRSjGNAphEaYzMB2J6gUGhAch0iDvKwN5VAUAsjQvMUhOv94AAAAASUVORK5CYII="
+                        alt="Doha Engineering Consultants Logo"
+                        class="w-12 h-12 object-contain rounded-lg bg-white p-1 border border-gray-200 shadow-sm">
+                    <p class="text-gray-600 text-sm font-medium">
+                        DOHA ENGINEERING CONSULTANTS
+                    </p>
+                </div>
+
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">
+                        Engineering
+                    </span>
+                    <span class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">
+                        Full-time
+                    </span>
+                    <span class="px-3 py-1 bg-red-100 rounded-full text-xs text-red-600 animate-pulse">
+                        Urgent
+                    </span>
+                </div>
+
+                <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                    <div>
+                        <p class="text-sm text-gray-500">Salary</p>
+                        <p class="font-semibold text-[#0038A8]">QAR 12,000 - QAR 18,000</p>
+                    </div>
+
+                    <button
+                        class="px-4 py-2 bg-[#FCD116] text-black rounded-lg text-sm font-medium hover:bg-[#e6bd12] hover:scale-105 transition-all duration-300 shadow-md">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Job Card 6 -->
+        <div class="job-card reveal group relative bg-white/90 backdrop-blur-sm rounded-2xl border border-blue-100 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out overflow-hidden"
+            data-country="japan">
+            <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]"></div>
+
+            <div class="p-6">
+                <div class="flex items-start justify-between mb-4">
+                    <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-semibold">
+                        Japan
+                    </span>
+                    <span class="text-sm text-gray-500">Posted 4 days ago</span>
+                </div>
+
+                <h3
+                    class="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#0038A8] transition-colors duration-300">
+                    Caregiver
+                </h3>
+
+                <div class="flex items-center gap-3 mb-4">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAqFBMVEUBSJgARJYAQZUAPpQAOZI/aahzj7yTpMYANpE4Zaa0w9n09/r////j6fEfVqC9y94rXaHt8vYjWJ9aerCGnsMAKo3X3+kAGYkAJIyru9QAMZBJbqqjtNASUJx+lr8AIIqYrc1igLLP2ejLy8vs7Oze3t7R0dHIyMh1dXVsbGyhoaGVlZWCgoJjY2MNDQ1WVlYgICC8vLyrq6tHR0d/f38wMDDa2tqurq4b7gv0AAABVklEQVR4AWyOA4IEQRAE26yxjf8/8i7XimY52QtcSCk4+wFXQhtrjRbqK+58iHQhBu/ey0SAP9Fphje8Nhd5QaCs6ubyK3LxqMvhyFpyWezaIkM8v9cKWKXrBzuKqR3l2P7X3kpdQF1P80IrI1PRZDHXIcY9mrbbPo11LvdlGdQMj0djFQgMrKrHox4rI1YCQWFipDsKgu5GFIxxTQ/q3r1YmjNh6MmZvRhGMGn/CqcKw4ZhIFhGbfEkCrzayPtPFjqHScxwgCaFwCRKEoJh5PN1N/kb14MxZeJSY51gcjy21mnJOrN5lOKlJRy7e5D9cbA8i/+hLFrLeND4FUthppRnvgjJO7XxKwBh03Pp1thUOQtAAHyXAfABeB+0aM+DF9dBrf0CeFCmnVSFf4lVhIRA2Z5s8S7aidZFPyIbMmF3HcTNmvS9TDALgSFAYA+k+UDUd+2wAnrOKnXi8IzzAAAAAElFTkSuQmCC"
+                        alt="Osaka Elderly Care Center Logo"
+                        class="w-12 h-12 object-contain rounded-lg bg-white p-1 border border-gray-200 shadow-sm">
+                    <p class="text-gray-600 text-sm font-medium">
+                        OSAKA ELDERLY CARE CENTER
+                    </p>
+                </div>
+
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">
+                        Healthcare
+                    </span>
+                    <span class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">
+                        Full-time
+                    </span>
+                </div>
+
+                <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                    <div>
+                        <p class="text-sm text-gray-500">Salary</p>
+                        <p class="font-semibold text-[#0038A8]">JPY 135,000 - JPY 189,000</p>
+                    </div>
+
+                    <button
+                        class="px-4 py-2 bg-[#0038A8] text-white rounded-lg text-sm font-medium hover:bg-[#002d85] hover:scale-105 transition-all duration-300 shadow-md">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </section>
+
+    <!-- Licensed Agencies Section -->
+    <section id="agencies" class="py-24 lg:py-32 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-white to-transparent"></div>
+
+        <div class="container mx-auto px-4 lg:px-8 relative">
+            <!-- Section Header -->
+            <div class="flex flex-col items-center text-center gap-6 mb-12">
+
+                <div class="max-w-2xl">
+                    <span class="inline-block px-4 py-1 rounded-full text-xs font-semibold 
+bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
+                        Verified Partners
+                    </span>
+
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#0038A8] mb-4 reveal">
+                        Licensed
+                        <span class="bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116] 
+            bg-clip-text text-transparent">
+                            Recruitment Agencies
+                        </span>
+                    </h2>
+
+                    <p class="text-gray-600 reveal text-lg">
+                        Find accredited recruitment agencies with valid licenses to ensure safe and legal overseas
+                        employment.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Agencies List -->
+            <div class="grid md:grid-cols-2 gap-6" id="agenciesList">
+                <!-- Agency Card 1 -->
+                <div class="agency-card valid reveal">
+                    <div
+                        class="group relative overflow-hidden rounded-2xl border border-gold-100 bg-white p-5 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-400/40">
+
+                        <!-- Animated top border -->
+                        <div
+                            class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]">
+                        </div>
+
+                        <!-- Soft animated background glow -->
+                        <div
+                            class="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-blue-100/40 blur-3xl transition-all duration-700 group-hover:scale-125 group-hover:bg-blue-200/40">
+                        </div>
+
+                        <div
+                            class="absolute -left-10 -bottom-10 h-28 w-28 rounded-full bg-blue-200/40 blur-3xl transition-all duration-700 group-hover:scale-125">
+                        </div>
+
+                        <div class="relative flex items-start gap-4">
+
+                            <!-- Number / Logo -->
+                            <div
+                                class="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 to-white shadow-md transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
+                                <img src="https://poeajobs.ph/wp-content/uploads/2022/10/101-Mojo-Intl-Corporation-150x150.jpg"
+                                    alt="101 Mojo International Corporation Logo" class="h-full w-full object-cover">
+                                <div class="absolute inset-0 ring-1 ring-inset ring-white/40"></div>
+                            </div>
+
+                            <!-- Content -->
+                            <div class="min-w-0 flex-1">
+                                <div class="mb-2 flex flex-wrap items-center gap-2">
+                                    <h3
+                                        class="truncate text-base font-bold text-gray-900 transition-colors duration-300 group-hover:text-[#0038A8]">
+                                        101 MOJO INT'L CORPORATION
+                                    </h3>
+
+                                    <span
+                                        class="inline-flex items-center gap-1 rounded-full bg-green-100 px-2.5 py-1 text-[11px] font-semibold text-green-700 transition-all duration-300 group-hover:scale-105">
+                                        <span class="h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
+                                        Valid License
+                                    </span>
+                                </div>
+
+                                <p
+                                    class="mb-3 truncate text-sm text-gray-500 transition-colors duration-300 group-hover:text-gray-700">
+                                    Unit 301, 3/F Goodwill Condominium, A. Soriano St., Intramuros, Manila
+                                </p>
+
+                                <div class="flex flex-wrap items-center gap-3 text-sm">
+                                    <a href="tel:+63285271234"
+                                        class="inline-flex items-center gap-2 text-gray-600 transition-all duration-300 hover:text-[#0038A8] group-hover:translate-x-1">
+                                        <span
+                                            class="flex h-8 w-8 items-center justify-center rounded-full bg-blue-50 text-[#0038A8] transition-all duration-300 group-hover:bg-[#0038A8] group-hover:text-white">
+                                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                            </svg>
+                                        </span>
+                                        <span>(02) 8527-1234</span>
+                                    </a>
+
+                                    <span class="text-gray-300">|</span>
+
+                                    <div class="inline-flex items-center gap-2 text-gray-600">
+                                        <span
+                                            class="flex h-8 w-8 items-center justify-center rounded-full bg-yellow-50 text-[#F59E0B] transition-all duration-300 group-hover:rotate-6">
+                                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 7V3m8 4V3m-9 8h10m-11 9h12a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v11a2 2 0 002 2z" />
+                                            </svg>
+                                        </span>
+                                        <span>Valid until: <span class="font-semibold text-[#0038A8]">Dec
+                                                2026</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Agency Card 2 -->
+                <div class="agency-card valid reveal">
+                    <div
+                        class="group relative overflow-hidden rounded-2xl border border-gold-100 bg-white p-5 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-green-400/40">
+
+                        <!-- Animated top border -->
+                        <div
+                            class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]">
+                        </div>
+
+                        <!-- Background glow -->
+                        <div
+                            class="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-green-200/40 blur-3xl transition-all duration-700 group-hover:scale-125 group-hover:bg-green-400/40">
+                        </div>
+
+                        <div
+                            class="absolute -left-10 -bottom-10 h-28 w-28 rounded-full bg-green-100/40 blur-3xl transition-all duration-700 group-hover:scale-125">
+                        </div>
+
+                        <div class="relative flex items-start gap-4">
+
+                            <!-- Logo -->
+                            <div
+                                class="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-2xl border border-emerald-100 bg-gradient-to-br from-emerald-50 to-white shadow-md transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
+                                <img src="https://scontent.fmnl30-3.fna.fbcdn.net/v/t39.30808-6/431746968_406796581945459_4049465438965217254_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeF09K7Y-QM9YZJwgZiThfbgGZ2ZI6VXdHAZnZkjpVd0cK3iZHpQASTllbuQI_OY_5lynSi5DusdKskQYivMwWXi&_nc_ohc=rxu_eLry2UoQ7kNvwE7yx04&_nc_oc=AdnvDpos7RnS7l4OtaHdq_qIezs1ZJZg4-QFNt0hqqQgVJGxIaeV-dmCJI3cmjsWHOU&_nc_zt=23&_nc_ht=scontent.fmnl30-3.fna&_nc_gid=rzf3GMYGap8YnFmXQuQemA&_nc_ss=8&oh=00_Afzi3CKw0WGr3Cw6nSC8R1zXPwwNEEgRvKYojyBQv64lkw&oe=69B820B5"
+                                    alt="AAA International Manpower Services Logo" class="h-full w-full object-cover">
+                                <div class="absolute inset-0 ring-1 ring-inset ring-white/40"></div>
+                            </div>
+
+                            <!-- Content -->
+                            <div class="min-w-0 flex-1">
+                                <div class="mb-2 flex flex-wrap items-center gap-2">
+                                    <h3
+                                        class="truncate text-base font-bold text-gray-900 transition-colors duration-300 group-hover:text-[#0038A8]">
+                                        AAA INTERNATIONAL MANPOWER SERVICES
+                                    </h3>
+
+                                    <span
+                                        class="inline-flex items-center gap-1 rounded-full bg-green-100 px-2.5 py-1 text-[11px] font-semibold text-green-700 transition-all duration-300 group-hover:scale-105">
+                                        <span class="h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
+                                        Valid License
+                                    </span>
+                                </div>
+
+                                <p
+                                    class="mb-3 truncate text-sm text-gray-500 transition-colors duration-300 group-hover:text-gray-700">
+                                    5th Floor, Marc 2000 Bldg., Rizal Avenue, corner Quinto St., Sta. Cruz, Manila
+                                </p>
+
+                                <div class="flex flex-wrap items-center gap-3 text-sm">
+                                    <a href="tel:+63287451234"
+                                        class="inline-flex items-center gap-2 text-gray-600 transition-all duration-300 hover:text-[#0038A8] group-hover:translate-x-1">
+                                        <span
+                                            class="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-50 text-emerald-600 transition-all duration-300 group-hover:bg-emerald-600 group-hover:text-white">
+                                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                            </svg>
+                                        </span>
+                                        <span>(02) 8745-1234</span>
+                                    </a>
+
+                                    <span class="text-gray-300">|</span>
+
+                                    <div class="inline-flex items-center gap-2 text-gray-600">
+                                        <span
+                                            class="flex h-8 w-8 items-center justify-center rounded-full bg-yellow-50 text-[#F59E0B] transition-all duration-300 group-hover:rotate-6">
+                                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 7V3m8 4V3m-9 8h10m-11 9h12a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v11a2 2 0 002 2z" />
+                                            </svg>
+                                        </span>
+                                        <span>Valid until: <span class="font-semibold text-[#0038A8]">Mar
+                                                2026</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Agency Card 3 -->
+                <div class="agency-card valid reveal">
+                    <div
+                        class="group relative overflow-hidden rounded-2xl border border-gold-100 bg-white p-5 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-yellow-200/60">
+
+                        <!-- Animated Philippine color bar -->
+                        <div
+                            class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]">
+                        </div>
+
+                        <!-- Animated background glow -->
+                        <div
+                            class="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-yellow-100/40 blur-3xl transition-all duration-700 group-hover:scale-125">
+                        </div>
+                        <div
+                            class="absolute -left-10 -bottom-10 h-28 w-28 rounded-full bg-blue-100/40 blur-3xl transition-all duration-700 group-hover:scale-125">
+                        </div>
+
+                        <div class="relative flex items-start gap-4">
+
+                            <!-- Agency Logo -->
+                            <div
+                                class="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-2xl border border-yellow-100 bg-gradient-to-br from-yellow-50 to-white shadow-md transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
+                                <img src="https://scontent.fmnl30-2.fna.fbcdn.net/v/t39.30808-1/242954921_243631174444886_8296461485227506511_n.jpg?stp=c204.0.1640.1640a_dst-jpg_s200x200_tt6&_nc_cat=111&ccb=1-7&_nc_sid=2d3e12&_nc_eui2=AeFYysJiXVosQffozNTlgQsuatNXhSyTkFxq01eFLJOQXBae7lZbaxa_BxlT8YUnULO6wKu9e8e-3DDcILOOlEGq&_nc_ohc=94w0ysxMmAwQ7kNvwESuT-w&_nc_oc=AdlQ6p1WapnCDBnqDZC1MsN8b154zU4HX6EWuFHVqyRMJ0-eY2h-KPEfMFS7G57QjL8&_nc_zt=24&_nc_ht=scontent.fmnl30-2.fna&_nc_gid=eRj3NpBkiNTM042hEzt9Qw&_nc_ss=8&oh=00_AfxKIrhLlIbioH7wxWXF8RZpyg34wHl9fcD4bqCsBv1HaA&oe=69B82CA1"
+                                    alt="Absolute Manpower Agency Logo" class="h-full w-full object-cover">
+                            </div>
+
+                            <!-- Content -->
+                            <div class="min-w-0 flex-1">
+
+                                <div class="flex items-center gap-2 mb-2 flex-wrap">
+                                    <h3
+                                        class="font-bold text-gray-900 truncate transition-colors duration-300 group-hover:text-[#0038A8]">
+                                        ABSOLUTE MANPOWER AGENCY INC.
+                                    </h3>
+
+                                    <span
+                                        class="inline-flex items-center gap-1 px-2.5 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded-full transition-all duration-300 group-hover:scale-105">
+                                        <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                                        Valid License
+                                    </span>
+                                </div>
+
+                                <p
+                                    class="text-sm text-gray-500 mb-3 truncate transition-colors duration-300 group-hover:text-gray-700">
+                                    Room 301-302, 3rd Floor, Paramount Bldg., 444 E. Quinto St., Sampaloc, Manila
+                                </p>
+
+                                <div class="flex flex-wrap items-center gap-3 text-sm">
+
+                                    <a href="tel:+63287891234"
+                                        class="inline-flex items-center gap-2 text-gray-600 transition-all duration-300 hover:text-[#0038A8] group-hover:translate-x-1">
+
+                                        <span
+                                            class="flex h-8 w-8 items-center justify-center rounded-full bg-yellow-50 text-yellow-600 transition-all duration-300 group-hover:bg-yellow-500 group-hover:text-white">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                            </svg>
+                                        </span>
+
+                                        <span>(02) 8789-1234</span>
+                                    </a>
+
+                                    <span class="text-gray-300">|</span>
+
+                                    <div class="inline-flex items-center gap-2 text-gray-600">
+                                        <span
+                                            class="flex h-8 w-8 items-center justify-center rounded-full bg-blue-50 text-blue-600 transition-all duration-300 group-hover:rotate-6">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 7V3m8 4V3m-9 8h10m-11 9h12a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v11a2 2 0 002 2z" />
+                                            </svg>
+                                        </span>
+
+                                        <span>Valid until: <span class="font-semibold text-[#0038A8]">Jun
+                                                2026</span></span>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Agency Card 4 -->
+                <div class="agency-card valid reveal">
+                    <div
+                        class="group relative overflow-hidden rounded-2xl border border-gold-100 bg-white p-5 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#CE1126]/40">
+
+                        <!-- Animated top gradient -->
+                        <div
+                            class="agency-shimmer absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]">
+                        </div>
+
+                        <!-- Glow background -->
+                        <div
+                            class="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-red-200/40 blur-3xl transition-all duration-700 group-hover:scale-125 group-hover:bg-red-400/40">
+                        </div>
+
+                        <div
+                            class="absolute -left-10 -bottom-10 h-28 w-28 rounded-full bg-red-100/40 blur-3xl transition-all duration-700 group-hover:scale-125">
+                        </div>
+
+                        <div class="relative flex items-start gap-4">
+
+                            <!-- Logo -->
+                            <div
+                                class="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-2xl border border-rose-100 bg-white p-1 shadow-md transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
+                                <img src="https://scontent.fmnl30-3.fna.fbcdn.net/v/t39.30808-1/300912910_394212562897772_4703719955248401717_n.png?stp=dst-png_s200x200&_nc_cat=108&ccb=1-7&_nc_sid=2d3e12&_nc_eui2=AeFJDBXHtHoKdHN5TnPXI-0k7CIHV2cGEW3sIgdXZwYRbYtHYajcZ67A6ljEJjObaCGnQdQTEbABLzG3w02iXSLu&_nc_ohc=dh0X3_KE3E8Q7kNvwHks2cu&_nc_oc=AdkPmOKcHBFHW5U1WC5ATWODi1cllvO7VcOWwugdAuEXjDrjpmXISYlZqaDJ2B3lo5A&_nc_zt=24&_nc_ht=scontent.fmnl30-3.fna&_nc_gid=DhquNTn-YbgG4gkUcPD9vg&_nc_ss=8&oh=00_Afz8iDsKpeL0_Zfq1f4BO_yA30JtkyoFrYcMVYzojqS_vg&oe=69B8211D"
+                                    alt="Access International Manpower Corp. Logo" class="h-full w-full object-contain">
+                            </div>
+
+                            <!-- Content -->
+                            <div class="min-w-0 flex-1">
+                                <div class="mb-2 flex flex-wrap items-center gap-2">
+                                    <h3
+                                        class="truncate text-base font-bold text-gray-900 transition-colors duration-300 group-hover:text-[#0038A8]">
+                                        ACCESS INTERNATIONAL MANPOWER CORP.
+                                    </h3>
+
+                                    <span
+                                        class="inline-flex items-center gap-1 rounded-full bg-green-100 px-2.5 py-1 text-[11px] font-semibold text-green-700 transition-all duration-300 group-hover:scale-105">
+                                        <span class="h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
+                                        Valid License
+                                    </span>
+                                </div>
+
+                                <p
+                                    class="mb-3 truncate text-sm text-gray-500 transition-colors duration-300 group-hover:text-gray-700">
+                                    Unit 505, 5th Floor, Sunnymede IT Center, 825 Aurora Blvd., Quezon City
+                                </p>
+
+                                <div class="flex flex-wrap items-center gap-3 text-sm">
+                                    <a href="tel:+63289121234"
+                                        class="inline-flex items-center gap-2 text-gray-600 transition-all duration-300 hover:text-[#0038A8] group-hover:translate-x-1">
+                                        <span
+                                            class="flex h-8 w-8 items-center justify-center rounded-full bg-rose-50 text-rose-600 transition-all duration-300 group-hover:bg-rose-600 group-hover:text-white">
+                                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                            </svg>
+                                        </span>
+                                        <span>(02) 8912-1234</span>
+                                    </a>
+
+                                    <span class="text-gray-300">|</span>
+
+                                    <div class="inline-flex items-center gap-2 text-gray-600">
+                                        <span
+                                            class="flex h-8 w-8 items-center justify-center rounded-full bg-blue-50 text-[#0038A8] transition-all duration-300 group-hover:rotate-6">
+                                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M8 7V3m8 4V3m-9 8h10m-11 9h12a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v11a2 2 0 002 2z" />
+                                            </svg>
+                                        </span>
+                                        <span>Valid until: <span class="font-semibold text-[#0038A8]">Sep
+                                                2026</span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More -->
+            <div class="text-center mt-12 reveal">
+                <button
+                    class="px-8 py-3 rounded-xl border-2 border-primary-500 text-primary-600 font-semibold hover:bg-primary-50 transition-all inline-flex items-center gap-2"
+                    id="loadMoreAgencies">
+                    <span>Load More Agencies</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10 Point Agenda Section -->
+    <section
+        class="py-24 lg:py-32 bg-gradient-to-br from-primary-600 via-primary-700 to-navy-800 relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0">
+            <div class="absolute top-0 left-0 w-96 h-96 bg-white/5 rounded-full -translate-x-1/2 -translate-y-1/2">
+            </div>
+            <div
+                class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-white/5 rounded-full translate-x-1/3 translate-y-1/3">
+            </div>
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] border border-white/10 rounded-full">
+            </div>
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-white/10 rounded-full">
+            </div>
+        </div>
+
+        <div class="container mx-auto px-4 lg:px-8 relative">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span
+                    class="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur rounded-full text-white/90 text-sm font-medium mb-6 reveal">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    Our Commitment
+                </span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-6 reveal">
+                    10 Point Agenda
+                </h2>
+                <p class="text-lg text-white/80 reveal">
+                    A comprehensive framework guiding our mission to protect and empower Filipino migrant workers
+                    worldwide.
+                </p>
+            </div>
+
+            <!-- Agenda Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+                <div
+                    class="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 hover:bg-white/20 transition-all group reveal">
+                    <div
+                        class="w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                        <span class="font-bold text-white text-lg">01</span>
+                    </div>
+                    <h3 class="font-semibold text-white mb-2">Protection of Rights</h3>
+                    <p class="text-sm text-white/70">Uphold and defend the fundamental rights of every OFW</p>
+                </div>
+
+                <div
+                    class="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 hover:bg-white/20 transition-all group reveal">
+                    <div
+                        class="w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                        <span class="font-bold text-white text-lg">02</span>
+                    </div>
+                    <h3 class="font-semibold text-white mb-2">Fair Recruitment</h3>
+                    <p class="text-sm text-white/70">Ensure ethical and transparent recruitment practices</p>
+                </div>
+
+                <div
+                    class="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 hover:bg-white/20 transition-all group reveal">
+                    <div
+                        class="w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                        <span class="font-bold text-white text-lg">03</span>
+                    </div>
+                    <h3 class="font-semibold text-white mb-2">Welfare Services</h3>
+                    <p class="text-sm text-white/70">Comprehensive support for OFW welfare and well-being</p>
+                </div>
+
+                <div
+                    class="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 hover:bg-white/20 transition-all group reveal">
+                    <div
+                        class="w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                        <span class="font-bold text-white text-lg">04</span>
+                    </div>
+                    <h3 class="font-semibold text-white mb-2">Legal Assistance</h3>
+                    <p class="text-sm text-white/70">Free legal aid and representation for OFWs in distress</p>
+                </div>
+
+                <div
+                    class="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 hover:bg-white/20 transition-all group reveal">
+                    <div
+                        class="w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                        <span class="font-bold text-white text-lg">05</span>
+                    </div>
+                    <h3 class="font-semibold text-white mb-2">Skills Development</h3>
+                    <p class="text-sm text-white/70">Continuous training and upskilling programs</p>
+                </div>
+
+                <div
+                    class="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 hover:bg-white/20 transition-all group reveal">
+                    <div
+                        class="w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                        <span class="font-bold text-white text-lg">06</span>
+                    </div>
+                    <h3 class="font-semibold text-white mb-2">Financial Literacy</h3>
+                    <p class="text-sm text-white/70">Programs for financial management and investment</p>
+                </div>
+
+                <div
+                    class="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 hover:bg-white/20 transition-all group reveal">
+                    <div
+                        class="w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                        <span class="font-bold text-white text-lg">07</span>
+                    </div>
+                    <h3 class="font-semibold text-white mb-2">Reintegration Support</h3>
+                    <p class="text-sm text-white/70">Help returning OFWs transition back home</p>
+                </div>
+
+                <div
+                    class="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 hover:bg-white/20 transition-all group reveal">
+                    <div
+                        class="w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                        <span class="font-bold text-white text-lg">08</span>
+                    </div>
+                    <h3 class="font-semibold text-white mb-2">Digital Services</h3>
+                    <p class="text-sm text-white/70">Modern digital platforms for easier access to services</p>
+                </div>
+
+                <div
+                    class="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 hover:bg-white/20 transition-all group reveal">
+                    <div
+                        class="w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                        <span class="font-bold text-white text-lg">09</span>
+                    </div>
+                    <h3 class="font-semibold text-white mb-2">Bilateral Agreements</h3>
+                    <p class="text-sm text-white/70">Strengthen international labor agreements</p>
+                </div>
+
+                <div
+                    class="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 hover:bg-white/20 transition-all group reveal">
+                    <div
+                        class="w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
+                        <span class="font-bold text-white text-lg">10</span>
+                    </div>
+                    <h3 class="font-semibold text-white mb-2">Family Support</h3>
+                    <p class="text-sm text-white/70">Programs supporting OFW families back home</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 lg:py-32 bg-white relative overflow-hidden">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+                <!-- FAQ Header -->
+                <div class="lg:sticky lg:top-32 lg:self-start">
+                    <span class="badge badge-blue mb-4 reveal">Support</span>
+                    <h2 class="section-title text-gray-900 mb-6 reveal">
+                        Frequently Asked <span class="gradient-text">Questions</span>
+                    </h2>
+                    <p class="text-gray-600 mb-8 reveal">
+                        Find answers to common questions about our services, requirements, and processes. Can't find
+                        what you're looking for? Contact our helpdesk.
+                    </p>
+                    <div class="reveal">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop"
+                            alt="Customer support" class="rounded-2xl shadow-lg w-full">
+                    </div>
+                </div>
+
+                <!-- FAQ List -->
+                <div class="space-y-4" id="faqList">
+                    <!-- FAQ Category -->
+                    <div class="reveal">
+                        <h3 class="font-semibold text-primary-500 text-sm uppercase tracking-wider mb-4">All About
+                            Direct Hiring</h3>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                            <span>What is direct hiring and how does it work?</span>
+                            <svg class="faq-icon w-5 h-5 text-primary-500 flex-shrink-0" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </div>
+                        <div class="faq-answer text-gray-600">
+                            <p>Direct hiring is a process where a foreign employer directly hires a Filipino worker
+                                without going through a recruitment agency. The employer must be accredited by the DMW,
+                                and the worker's documents will be processed directly through the Department.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                            <span>What are the requirements for direct hiring?</span>
+                            <svg class="faq-icon w-5 h-5 text-primary-500 flex-shrink-0" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </div>
+                        <div class="faq-answer text-gray-600">
+                            <p>Requirements include: valid passport, employment contract authenticated by the Philippine
+                                Embassy/Consulate, employer's accreditation certificate, worker's credentials and
+                                certificates, medical examination results, and other country-specific requirements.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                            <span>How long does the direct hiring process take?</span>
+                            <svg class="faq-icon w-5 h-5 text-primary-500 flex-shrink-0" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </div>
+                        <div class="faq-answer text-gray-600">
+                            <p>The processing time varies depending on the destination country and completeness of
+                                documents. On average, it takes 2-4 weeks after submission of complete requirements.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Category 2 -->
+                    <div class="reveal mt-8">
+                        <h3 class="font-semibold text-primary-500 text-sm uppercase tracking-wider mb-4">DMW
+                            E-Registration</h3>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                            <span>How do I register for an E-Registration account?</span>
+                            <svg class="faq-icon w-5 h-5 text-primary-500 flex-shrink-0" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </div>
+                        <div class="faq-answer text-gray-600">
+                            <p>Visit the DMW E-Registration portal and click "Create Account." You'll need to provide
+                                your personal information, valid ID, and contact details. A verification email will be
+                                sent to complete your registration.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                            <span>What should I do if I forgot my password?</span>
+                            <svg class="faq-icon w-5 h-5 text-primary-500 flex-shrink-0" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </div>
+                        <div class="faq-answer text-gray-600">
+                            <p>Click "Forgot Password" on the login page. Enter your registered email address and follow
+                                the instructions sent to your email to reset your password.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Category 3 -->
+                    <div class="reveal mt-8">
+                        <h3 class="font-semibold text-primary-500 text-sm uppercase tracking-wider mb-4">Deployment and
+                            Records</h3>
+                    </div>
+
+                    <div class="faq-item reveal">
+                        <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+                            <span>How can I request a copy of my employment records?</span>
+                            <svg class="faq-icon w-5 h-5 text-primary-500 flex-shrink-0" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </div>
+                        <div class="faq-answer text-gray-600">
+                            <p>Log in to your E-Registration account and navigate to the "Records" section. You can
+                                request and download certified copies of your employment history, contracts, and other
+                                deployment documents.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="py-24 lg:py-32 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
+        <div class="container mx-auto px-4 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="badge badge-gold mb-4 reveal">Updates</span>
+                <h2 class="section-title text-gray-900 mb-6 reveal">
+                    Latest <span class="gradient-text">News</span>
+                </h2>
+                <p class="text-gray-600 text-lg max-w-2xl mx-auto reveal">
+                    Stay informed with the latest announcements, policy updates, and important notices from the
+                    Department of Migrant Workers.
+                </p>
+            </div>
+
+            <!-- News Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- News Card 1 -->
+                <article class="news-card reveal">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=600&h=400&fit=crop"
+                            alt="DMW News" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="badge badge-blue">Announcement</span>
+                            <span class="text-sm text-gray-500">Jan 15, 2026</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                            DMW Launches Enhanced Digital Services Platform
+                        </h3>
+                        <p class="text-gray-600 mb-4 line-clamp-3">
+                            The Department of Migrant Workers unveils its new integrated digital platform, offering
+                            streamlined services for OFWs worldwide.
+                        </p>
+                        <a href="#"
+                            class="inline-flex items-center gap-2 text-primary-500 font-semibold hover:gap-3 transition-all">
+                            <span>Read More</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- News Card 2 -->
+                <article class="news-card reveal">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&h=400&fit=crop"
+                            alt="DMW News" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="badge badge-green">Advisory</span>
+                            <span class="text-sm text-gray-500">Jan 12, 2026</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                            New Protection Measures for Domestic Workers in Middle East
+                        </h3>
+                        <p class="text-gray-600 mb-4 line-clamp-3">
+                            DMW implements additional safeguards for Filipino domestic workers deployed to GCC
+                            countries.
+                        </p>
+                        <a href="#"
+                            class="inline-flex items-center gap-2 text-primary-500 font-semibold hover:gap-3 transition-all">
+                            <span>Read More</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- News Card 3 -->
+                <article class="news-card reveal">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?w=600&h=400&fit=crop"
+                            alt="DMW News" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="badge badge-gold">Event</span>
+                            <span class="text-sm text-gray-500">Jan 10, 2026</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                            Free Skills Training Program for Returning OFWs
+                        </h3>
+                        <p class="text-gray-600 mb-4 line-clamp-3">
+                            DMW partners with TESDA to offer free livelihood and skills training for returning overseas
+                            Filipino workers.
+                        </p>
+                        <a href="#"
+                            class="inline-flex items-center gap-2 text-primary-500 font-semibold hover:gap-3 transition-all">
+                            <span>Read More</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- View All News -->
+            <div class="text-center mt-12 reveal">
+                <a href="#"
+                    class="px-8 py-3 rounded-xl border-2 border-primary-500 text-primary-600 font-semibold hover:bg-primary-50 transition-all inline-flex items-center gap-2">
+                    <span>View All News</span>
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-24 lg:py-32 bg-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-[0.02]"
+            style="background-image: radial-gradient(#0038a8 1px, transparent 1px); background-size: 30px 30px;"></div>
+
+        <div class="container mx-auto px-4 lg:px-8 relative">
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="badge badge-blue mb-4 reveal">Testimonials</span>
+                <h2 class="section-title text-gray-900 mb-6 reveal">
+                    Voices of Our <span class="gradient-text">OFWs</span>
+                </h2>
+            </div>
+
+            <!-- Testimonials Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="testimonial-card reveal">
+                    <div class="relative z-10">
+                        <p class="text-gray-600 mb-6 italic">
+                            "DMW made my deployment process seamless. The online services saved me multiple trips to the
+                            office. Thank you for modernizing government services!"
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=faces"
+                                alt="Testimonial" class="w-12 h-12 rounded-full object-cover">
+                            <div>
+                                <p class="font-semibold text-gray-900">Juan Dela Cruz</p>
+                                <p class="text-sm text-gray-500">OFW in Japan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal">
+                    <div class="relative z-10">
+                        <p class="text-gray-600 mb-6 italic">
+                            "When I had problems with my employer, DMW's helpdesk responded immediately. They helped me
+                            resolve my issue within days. Forever grateful!"
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=faces"
+                                alt="Testimonial" class="w-12 h-12 rounded-full object-cover">
+                            <div>
+                                <p class="font-semibold text-gray-900">Maria Santos</p>
+                                <p class="text-sm text-gray-500">OFW in UAE</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card reveal">
+                    <div class="relative z-10">
+                        <p class="text-gray-600 mb-6 italic">
+                            "The PEOS online seminar was very informative. I felt prepared and confident before my
+                            deployment. The program covered everything I needed to know."
+                        </p>
+                        <div class="flex items-center gap-4">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=faces"
+                                alt="Testimonial" class="w-12 h-12 rounded-full object-cover">
+                            <div>
+                                <p class="font-semibold text-gray-900">Carlos Reyes</p>
+                                <p class="text-sm text-gray-500">OFW in Saudi Arabia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 lg:py-32 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary-500/5 to-transparent"></div>
+
+        <div class="container mx-auto px-4 lg:px-8 relative">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+                <!-- Contact Info -->
+                <div>
+                    <span class="badge badge-green mb-4 reveal">Get in Touch</span>
+                    <h2 class="section-title text-gray-900 mb-6 reveal">
+                        We're Here to <span class="gradient-text">Help</span>
+                    </h2>
+                    <p class="text-gray-600 mb-8 reveal">
+                        Have questions or need assistance? Our team is ready to help you with your concerns. Reach out
+                        through any of the channels below.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4 reveal">
+                            <div
+                                class="w-12 h-12 bg-gradient-to-br from-primary-100 to-primary-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-primary-500" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-1">Main Office</h3>
+                                <p class="text-gray-600">DMW Building, 2nd Street, EDSA corner, Guadalupe Viejo, Makati
+                                    City, Philippines</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 reveal">
+                            <div
+                                class="w-12 h-12 bg-gradient-to-br from-emerald-100 to-emerald-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-1">Hotline</h3>
+                                <p class="text-gray-600">+63 2 8854-DMW1 (3691)</p>
+                                <p class="text-sm text-gray-500">Available 24/7</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 reveal">
+                            <div
+                                class="w-12 h-12 bg-gradient-to-br from-gold-100 to-gold-50 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-gold-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-1">Email</h3>
+                                <p class="text-gray-600">dmw.mwo2026@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="mt-10 reveal">
+                        <h3 class="font-semibold text-gray-900 mb-4">Follow Us</h3>
+                        <div class="flex gap-4">
+                            <a href="#"
+                                class="w-12 h-12 bg-white border border-gray-200 rounded-xl flex items-center justify-center text-gray-600 hover:bg-primary-500 hover:text-white hover:border-primary-500 transition-all"
+                                aria-label="Facebook">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                </svg>
+                            </a>
+                            <a href="#"
+                                class="w-12 h-12 bg-white border border-gray-200 rounded-xl flex items-center justify-center text-gray-600 hover:bg-primary-500 hover:text-white hover:border-primary-500 transition-all"
+                                aria-label="Twitter">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                                </svg>
+                            </a>
+                            <a href="#"
+                                class="w-12 h-12 bg-white border border-gray-200 rounded-xl flex items-center justify-center text-gray-600 hover:bg-primary-500 hover:text-white hover:border-primary-500 transition-all"
+                                aria-label="Instagram">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                                </svg>
+                            </a>
+                            <a href="#"
+                                class="w-12 h-12 bg-white border border-gray-200 rounded-xl flex items-center justify-center text-gray-600 hover:bg-primary-500 hover:text-white hover:border-primary-500 transition-all"
+                                aria-label="YouTube">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="reveal">
+                    <div class="bg-white rounded-3xl p-8 lg:p-10 shadow-xl border border-gray-100">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h3>
+                        <form id="contactForm" class="space-y-6">
+                            <div class="grid sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">First
+                                        Name</label>
+                                    <input type="text" id="firstName" name="firstName" class="input-field"
+                                        placeholder="Juan" required>
+                                </div>
+                                <div>
+                                    <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">Last
+                                        Name</label>
+                                    <input type="text" id="lastName" name="lastName" class="input-field"
+                                        placeholder="Dela Cruz" required>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email
+                                    Address</label>
+                                <input type="email" id="email" name="email" class="input-field"
+                                    placeholder="juan@example.com" required>
+                            </div>
+                            <div>
+                                <label for="subject"
+                                    class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                                <select id="subject" name="subject" class="input-field" required>
+                                    <option value="">Select a topic</option>
+                                    <option value="deployment">Deployment Inquiry</option>
+                                    <option value="records">Records Request</option>
+                                    <option value="complaint">File a Complaint</option>
+                                    <option value="agency">Agency Verification</option>
+                                    <option value="other">Other Concerns</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="message"
+                                    class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                                <textarea id="message" name="message" rows="5" class="input-field resize-none"
+                                    placeholder="How can we help you?" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-premium w-full flex items-center justify-center gap-2">
+                                <span>Send Message</span>
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+        class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white pt-20 pb-8 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5"
+            style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 40px 40px;"></div>
+
+        <div class="container mx-auto px-4 lg:px-8 relative">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand Column -->
+                <div>
+                    <div class="flex items-center gap-4 mb-6">
+                        <div
+                            class="w-16 h-16 rounded-xl bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center shadow-lg">
+                            <img src="https://z-cdn-media.chatglm.cn/files/1c58a356-6f8d-4a3c-b8d5-ec3c707c699d.png?auth_key=1873251906-07b2e7f6ed17478fb0a8fed6d6c1b95b-0-9a4902917ccf2e535c7bc9997225fdca"
+                                alt="DMW Logo" class="h-12 w-auto">
+                        </div>
+                        <div>
+                            <p class="font-display font-bold text-gold-400 text-lg">DMW | MWO</p>
+                            <p class="text-sm text-gray-400">
+                                Department of Migrant Workers
+                            </p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        Protecting and promoting the welfare of Filipino migrant workers worldwide through comprehensive
+                        services and support.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-semibold text-lg mb-6 text-white">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-gold-400 transition-colors">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-gold-400 transition-colors">Services</a>
+                        </li>
+                        <li><a href="#jobs" class="text-gray-400 hover:text-gold-400 transition-colors">Job Orders</a>
+                        </li>
+                        <li><a href="#agencies" class="text-gray-400 hover:text-gold-400 transition-colors">Agencies</a>
+                        </li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-gold-400 transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="font-semibold text-lg mb-6 text-white">Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-gold-400 transition-colors">PEOS Online</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-gold-400 transition-colors">E-Registration</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-gold-400 transition-colors">OFW Records</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-gold-400 transition-colors">Balik-Manggagawa</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-semibold text-lg mb-6 text-white">Contact Us</h4>
+                    <p class="text-gray-400 mb-2">DMW Building, EDSA corner Guadalupe Viejo, Makati City</p>
+                    <p class="text-gray-400 mb-2">+63 2 8854-DMW1</p>
+                    <p class="text-gray-400">dmw.mwo2026@gmail.com</p>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-700 pt-8 mt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p class="text-gray-500 text-sm text-center md:text-left">
+                        &copy; 2026 Department of Migrant Workers. All rights reserved.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-6 text-sm">
+                        <a href="#" class="text-gray-500 hover:text-white transition-colors">Privacy Policy</a>
+                        <a href="#" class="text-gray-500 hover:text-white transition-colors">Terms of Service</a>
+                        <a href="#" class="text-gray-500 hover:text-white transition-colors">Sitemap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Register GSAP plugins
+            gsap.registerPlugin(ScrollTrigger);
+
+            // ==========================================
+            // 1. Preloader
+            // ==========================================
+            const preloader = document.getElementById('preloader');
+            if (preloader) {
+                window.addEventListener('load', () => {
+                    setTimeout(() => {
+                        gsap.to(preloader, {
+                            opacity: 0,
+                            duration: 0.5,
+                            onComplete: () => {
+                                preloader.style.visibility = 'hidden';
+                                document.body.style.overflow = 'auto';
+                                // Trigger entrance animations
+                                initEntranceAnimations();
+                            }
+                        });
+                    }, 800);
+                });
+            }
+
+            // ==========================================
+            // 2. Header Scroll Effect
+            // ==========================================
+            const header = document.getElementById('header');
+            const headerBg = document.getElementById('headerBg');
+            let lastScroll = 0;
+
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+
+                if (currentScroll > 50) {
+                    headerBg.style.opacity = '1';
+                    header.classList.add('shadow-lg');
+                } else {
+                    headerBg.style.opacity = '0';
+                    header.classList.remove('shadow-lg');
+                }
+
+                lastScroll = currentScroll;
+            });
+
+            // ==========================================
+            // 3. Mobile Menu Toggle
+            // ==========================================
+            const menuBtn = document.getElementById('menuBtn');
+            const closeMenuBtn = document.getElementById('closeMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileOverlay = document.getElementById('mobileOverlay');
+
+            function toggleMenu() {
+                mobileMenu.classList.toggle('active');
+                mobileOverlay.classList.toggle('active');
+                document.body.classList.toggle('overflow-hidden');
+            }
+
+            if (menuBtn) menuBtn.addEventListener('click', toggleMenu);
+            if (closeMenuBtn) closeMenuBtn.addEventListener('click', toggleMenu);
+            if (mobileOverlay) mobileOverlay.addEventListener('click', toggleMenu);
+
+            // Close menu when clicking links
+            const mobileLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (mobileMenu.classList.contains('active')) {
+                        toggleMenu();
+                    }
+                });
+            });
+
+            // ==========================================
+            // 4. GSAP Scroll Animations
+            // ==========================================
+            function initEntranceAnimations() {
+                // Reveal animations
+                gsap.utils.toArray('.reveal').forEach((elem, i) => {
+                    gsap.fromTo(elem,
+                        { opacity: 0, y: 50 },
+                        {
+                            opacity: 1,
+                            y: 0,
+                            duration: 0.8,
+                            ease: 'power3.out',
+                            scrollTrigger: {
+                                trigger: elem,
+                                start: 'top 85%',
+                                toggleActions: 'play none none none'
+                            },
+                            delay: i * 0.05
+                        }
+                    );
+                });
+
+                // Counter animations
+                const counters = document.querySelectorAll('.counter');
+                counters.forEach(counter => {
+                    const target = parseFloat(counter.getAttribute('data-target'));
+                    const isDecimal = target % 1 !== 0;
+
+                    ScrollTrigger.create({
+                        trigger: counter,
+                        start: 'top 80%',
+                        onEnter: () => {
+                            gsap.to(counter, {
+                                duration: 2,
+                                ease: 'power2.out',
+                                onUpdate: function () {
+                                    const progress = this.progress();
+                                    const current = target * progress;
+                                    counter.innerText = isDecimal
+                                        ? current.toFixed(1)
+                                        : Math.ceil(current);
+                                },
+                                onComplete: () => {
+                                    counter.innerText = isDecimal
+                                        ? target.toFixed(1)
+                                        : target;
+                                }
+                            });
+                        },
+                        once: true
+                    });
+                });
+            }
+
+            // ==========================================
+            // 5. FAQ Accordion
+            // ==========================================
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                const icon = item.querySelector('.faq-icon');
+
+                question.addEventListener('click', () => {
+                    const isActive = answer.classList.contains('active');
+
+                    // Close all
+                    faqItems.forEach(otherItem => {
+                        otherItem.querySelector('.faq-answer').classList.remove('active');
+                        otherItem.querySelector('.faq-icon').classList.remove('active');
+                    });
+
+                    // Toggle current
+                    if (!isActive) {
+                        answer.classList.add('active');
+                        icon.classList.add('active');
+                    }
+                });
+
+                question.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter') question.click();
+                });
+            });
+
+            // ==========================================
+            // 6. Job Filtering Tabs
+            // ==========================================
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const jobCards = document.querySelectorAll('.job-card');
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filter = btn.getAttribute('data-country');
+
+                    jobCards.forEach(card => {
+                        const country = card.getAttribute('data-country');
+                        if (filter === 'all' || country === filter) {
+                            gsap.to(card, { opacity: 1, scale: 1, duration: 0.3, display: 'block' });
+                        } else {
+                            gsap.to(card, { opacity: 0, scale: 0.95, duration: 0.3, display: 'none' });
+                        }
+                    });
+                });
+            });
+
+            // ==========================================
+            // 7. Contact Form
+            // ==========================================
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const btn = contactForm.querySelector('button[type="submit"]');
+                    const originalText = btn.innerHTML;
+                    btn.innerHTML = '<span>Sending...</span>';
+                    btn.disabled = true;
+
+                    setTimeout(() => {
+                        alert('Thank you for your message! We will get back to you shortly.');
+                        contactForm.reset();
+                        btn.innerHTML = originalText;
+                        btn.disabled = false;
+                    }, 1500);
+                });
+            }            // ==========================================
+            // 8. Agency Search (Simple Filter)
+            // ==========================================
+            const agencySearch = document.getElementById('agencySearch');
+            const agencyCards = document.querySelectorAll('.agency-card');
+
+            if (agencySearch) {
+                agencySearch.addEventListener('input', (e) => {
+                    const searchTerm = e.target.value.toLowerCase();
+
+                    agencyCards.forEach(card => {
+                        const text = card.textContent.toLowerCase();
+                        if (text.includes(searchTerm)) {
+                            gsap.to(card, { opacity: 1, scale: 1, duration: 0.3, display: 'flex' });
+                        } else {
+                            gsap.to(card, { opacity: 0, scale: 0.95, duration: 0.3, display: 'none' });
+                        }
+                    });
+                });
+            }
+
+            // ==========================================
+            // 9. Smooth Scroll for Anchor Links
+            // ==========================================
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        // Close mobile menu if open
+                        if (mobileMenu && mobileMenu.classList.contains('active')) {
+                            toggleMenu();
+                        }
+
+                        const headerOffset = 80;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+        }); // End DOMContentLoaded
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const preloader = document.getElementById('preloader');
+            const preloaderContent = document.getElementById('preloader-content');
+
+            function hidePreloader() {
+                if (!preloader) return;
+
+                if (preloaderContent) {
+                    preloaderContent.style.transform = 'translateY(8px)';
+                    preloaderContent.style.opacity = '0';
+                }
+
+                preloader.style.transition = 'opacity 0.45s ease, visibility 0.45s ease';
+                preloader.style.opacity = '0';
+                preloader.style.visibility = 'hidden';
+
+                setTimeout(() => {
+                    preloader.style.display = 'none';
+                }, 450);
+            }
+
+            window.addEventListener('load', function () {
+                setTimeout(hidePreloader, 250);
+            });
+
+            setTimeout(hidePreloader, 1200);
+        });
+    </script>
+</body>
+
+</html>
