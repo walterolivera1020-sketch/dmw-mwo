@@ -863,6 +863,48 @@
             opacity: 0.5;
             pointer-events: none;
         }
+        .tab-btn {
+    padding: 12px 24px;
+    border-radius: 9999px;
+    font-weight: 600;
+    transition: all 0.35s ease;
+    color: #64748b;
+    background: transparent;
+    border: 2px solid transparent;
+}
+
+.tab-btn:hover {
+    transform: translateY(-2px);
+}
+
+.tab-btn.active {
+    color: white;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.tab-btn.all-active {
+    background: #0038A8;
+}
+
+.tab-btn.japan-active {
+    background: #2563eb;
+}
+
+.tab-btn.saudi-active {
+    background: #7c3aed;
+}
+
+.tab-btn.uae-active {
+    background: #dc2626;
+}
+
+.tab-btn.singapore-active {
+    background: #16a34a;
+}
+
+.tab-btn.qatar-active {
+    background: #eab308;
+}
     </style>
 </head>
 
@@ -1212,7 +1254,7 @@
                     <div
                         class="w-20 h-20 rounded-3xl bg-white flex items-center justify-center mx-auto mb-6 ring-8 ring-[#0038A8]/10 shadow-lg">
 
-                        <img src="https://cdn-icons-gif.flaticon.com/15332/15332375.gif"
+                        <img src="https://cdn-icons-png.flaticon.com/128/15188/15188833.png"
                             class="w-12 h-12 object-contain transition-transform duration-700 group-hover:scale-110"
                             alt="OFW Workers">
 
@@ -1239,7 +1281,7 @@
                     <!-- Icon -->
                     <div
                         class="w-20 h-20 rounded-3xl bg-white flex items-center justify-center mx-auto mb-6 ring-8 ring-emerald-50 shadow-lg">
-                        <img src="https://cdn-icons-gif.flaticon.com/17904/17904197.gif"
+                        <img src="https://cdn-icons-png.flaticon.com/128/3616/3616413.png"
                             class="w-12 h-12 object-contain transition-transform duration-700 group-hover:scale-110"
                             alt="Licensed Agencies">
                     </div>
@@ -1267,7 +1309,7 @@
                     <!-- Icon -->
                     <div
                         class="w-20 h-20 rounded-3xl bg-white flex items-center justify-center mx-auto mb-6 ring-8 ring-amber-50 shadow-lg">
-                        <img src="https://cdn-icons-gif.flaticon.com/17997/17997864.gif"
+                        <img src="https://cdn-icons-png.flaticon.com/128/8635/8635653.png"
                             class="w-12 h-12 object-contain transition-transform duration-700 group-hover:scale-110"
                             alt="Countries Served">
                     </div>
@@ -1295,7 +1337,7 @@
                     <!-- Icon -->
                     <div
                         class="w-20 h-20 rounded-3xl bg-white flex items-center justify-center mx-auto mb-6 ring-8 ring-rose-50 shadow-lg">
-                        <img src="https://cdn-icons-gif.flaticon.com/18818/18818463.gif"
+                        <img src="https://cdn-icons-png.flaticon.com/128/11360/11360427.png"
                             class="w-12 h-12 object-contain transition-transform duration-700 group-hover:scale-110"
                             alt="Remittances">
                     </div>
@@ -1688,6 +1730,7 @@
         <button class="tab-btn" data-country="singapore">Singapore</button>
         <button class="tab-btn" data-country="qatar">Qatar</button>
     </div>
+    
 
     <!-- Jobs Grid -->
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="jobsGrid">
@@ -3362,6 +3405,38 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
             setTimeout(hidePreloader, 1200);
         });
     </script>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const buttons = document.querySelectorAll(".tab-btn");
+
+    buttons.forEach(button => {
+        button.addEventListener("click", function () {
+            buttons.forEach(btn => {
+                btn.classList.remove(
+                    "active",
+                    "all-active",
+                    "japan-active",
+                    "saudi-active",
+                    "uae-active",
+                    "singapore-active",
+                    "qatar-active"
+                );
+            });
+
+            this.classList.add("active");
+
+            const country = this.dataset.country;
+
+            if (country === "all") this.classList.add("all-active");
+            if (country === "japan") this.classList.add("japan-active");
+            if (country === "saudi") this.classList.add("saudi-active");
+            if (country === "uae") this.classList.add("uae-active");
+            if (country === "singapore") this.classList.add("singapore-active");
+            if (country === "qatar") this.classList.add("qatar-active");
+        });
+    });
+});
+</script>
 </body>
 
 </html>
