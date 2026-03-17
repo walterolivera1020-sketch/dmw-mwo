@@ -922,7 +922,7 @@
             </div>
 
             <p class="text-white/80 text-lg font-medium tracking-wide">
-                Loading Official Portal...
+                Loading Official Portal
             </p>
         </div>
     </div>
@@ -1101,9 +1101,14 @@
                             Explore Services
                         </a>
 
-                        <a href="#jobs"
-                            class="px-8 py-4 rounded-xl border-2 border-blue-600 text-blue-600 font-semibold hover:bg-blue-50 transition-all duration-300">
-                            Find Jobs
+                        <a href="#jobs" class="relative px-8 py-4 rounded-xl border-2 border-blue-600 text-blue-600 font-semibold overflow-hidden
+   transition-all duration-300 hover:bg-blue-50 hover:scale-105 hover:shadow-lg
+   before:absolute before:inset-0 before:bg-blue-600/10 before:opacity-0 before:transition-all before:duration-500
+   hover:before:opacity-100">
+
+                            <span class="relative z-10 flex items-center gap-2">
+                                Find Jobs
+
                         </a>
 
                     </div>
@@ -1220,16 +1225,11 @@
             <div class="text-center mb-16">
 
                 <h2 class="font-display text-4xl lg:text-5xl font-bold text-[#0F172A] mb-4">
-
                     Global Impact of
-
-                    <span
-                        class="bg-gradient-to-r from-[#0038A8] via-[#FCD116] to-[#CE1126] bg-clip-text text-transparent">
-
+                    <span class="bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116] 
+    bg-clip-text text-transparent">
                         Filipino Workers
-
                     </span>
-
                 </h2>
 
                 <p class="text-slate-600 max-w-2xl mx-auto text-lg">
@@ -1392,8 +1392,8 @@
                 <!-- Title -->
                 <h2 class="font-display text-4xl lg:text-5xl font-bold text-[#0F172A] mb-6 reveal">
                     Comprehensive Services for
-                    <span
-                        class="bg-gradient-to-r from-[#0038A8] via-[#FCD116] to-[#CE1126] bg-clip-text text-transparent">
+                    <span class="bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116] 
+    bg-clip-text text-transparent">
                         OFWs
                     </span>
                 </h2>
@@ -2061,16 +2061,14 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
             <!-- Agencies List -->
             <div class="grid md:grid-cols-2 gap-6" id="agenciesList">
                 <!-- Agency Card 1 -->
-                <div class="agency-card valid reveal">
+                <div class="agency-card valid reveal h-full">
                     <div
-                        class="group relative overflow-hidden rounded-2xl border border-gold-100 bg-white p-5 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-400/40">
+                        class="group relative overflow-hidden rounded-2xl border border-gold-100 bg-white p-5 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-400/40 h-full">
 
-                        <!-- Animated top border -->
                         <div
                             class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]">
                         </div>
 
-                        <!-- Soft animated background glow -->
                         <div
                             class="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-blue-100/40 blur-3xl transition-all duration-700 group-hover:scale-125 group-hover:bg-blue-200/40">
                         </div>
@@ -2079,42 +2077,47 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                             class="absolute -left-10 -bottom-10 h-28 w-28 rounded-full bg-blue-200/40 blur-3xl transition-all duration-700 group-hover:scale-125">
                         </div>
 
-                        <div class="relative flex items-start gap-4">
+                        <div
+                            class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 transition-all duration-1000 group-hover:translate-x-full group-hover:opacity-100">
+                        </div>
 
-                            <!-- Number / Logo -->
+                        <div class="relative flex items-start gap-4 h-full">
+
                             <div
-                                class="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 to-white shadow-md transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
+                                class="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 to-white shadow-md transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-xl">
                                 <img src="https://poeajobs.ph/wp-content/uploads/2022/10/101-Mojo-Intl-Corporation-150x150.jpg"
-                                    alt="101 Mojo International Corporation Logo" class="h-full w-full object-cover">
+                                    alt="101 Mojo International Corporation Logo"
+                                    class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110">
                                 <div class="absolute inset-0 ring-1 ring-inset ring-white/40"></div>
                             </div>
 
-                            <!-- Content -->
-                            <div class="min-w-0 flex-1">
-                                <div class="mb-2 flex flex-wrap items-center gap-2">
+                            <div class="min-w-0 flex-1 flex flex-col h-full">
+
+                                <div class="mb-2 flex flex-wrap items-start gap-2 min-h-[56px]">
                                     <h3
-                                        class="truncate text-base font-bold text-gray-900 transition-colors duration-300 group-hover:text-[#0038A8]">
+                                        class="text-base font-bold text-gray-900 leading-snug break-words transition-all duration-300 group-hover:text-[#0038A8]">
                                         101 MOJO INT'L CORPORATION
                                     </h3>
 
                                     <span
-                                        class="inline-flex items-center gap-1 rounded-full bg-green-100 px-2.5 py-1 text-[11px] font-semibold text-green-700 transition-all duration-300 group-hover:scale-105">
+                                        class="inline-flex items-center gap-1 rounded-full bg-green-100 px-2.5 py-1 text-[11px] font-semibold text-green-700 transition-all duration-300 group-hover:scale-110">
                                         <span class="h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
                                         Valid License
                                     </span>
                                 </div>
 
                                 <p
-                                    class="mb-3 truncate text-sm text-gray-500 transition-colors duration-300 group-hover:text-gray-700">
-                                    Unit 301, 3/F Goodwill Condominium, A. Soriano St., Intramuros, Manila
+                                    class="mb-3 text-sm text-gray-500 leading-relaxed break-words transition-all duration-300 group-hover:text-gray-700 min-h-[84px]">
+                                    Unit 301, 3rd Floor Goodwill Condominium, A. Soriano St., Intramuros, Manila
                                 </p>
 
-                                <div class="flex flex-wrap items-center gap-3 text-sm">
+                                <div class="flex flex-wrap items-center gap-3 text-sm mt-auto">
                                     <a href="tel:+63285271234"
-                                        class="inline-flex items-center gap-2 text-gray-600 transition-all duration-300 hover:text-[#0038A8] group-hover:translate-x-1">
+                                        class="inline-flex items-center gap-2 text-gray-600 transition-all duration-300 hover:text-[#0038A8] hover:translate-x-1 hover:scale-[1.02]">
                                         <span
-                                            class="flex h-8 w-8 items-center justify-center rounded-full bg-blue-50 text-[#0038A8] transition-all duration-300 group-hover:bg-[#0038A8] group-hover:text-white">
-                                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            class="flex h-8 w-8 items-center justify-center rounded-full bg-blue-50 text-[#0038A8] transition-all duration-300 group-hover:bg-[#0038A8] group-hover:text-white group-hover:scale-110">
+                                            <svg class="h-4 w-4 transition-transform duration-300 group-hover:rotate-12"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                                             </svg>
@@ -2126,8 +2129,9 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
 
                                     <div class="inline-flex items-center gap-2 text-gray-600">
                                         <span
-                                            class="flex h-8 w-8 items-center justify-center rounded-full bg-yellow-50 text-[#F59E0B] transition-all duration-300 group-hover:rotate-6">
-                                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            class="flex h-8 w-8 items-center justify-center rounded-full bg-yellow-50 text-[#F59E0B] transition-all duration-300 group-hover:rotate-6 group-hover:scale-110">
+                                            <svg class="h-4 w-4 transition-transform duration-300 group-hover:rotate-12"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                     d="M8 7V3m8 4V3m-9 8h10m-11 9h12a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v11a2 2 0 002 2z" />
                                             </svg>
@@ -2136,22 +2140,21 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                                                 2026</span></span>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Agency Card 2 -->
-                <div class="agency-card valid reveal">
+                <div class="agency-card valid reveal h-full">
                     <div
-                        class="group relative overflow-hidden rounded-2xl border border-gold-100 bg-white p-5 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-green-400/40">
+                        class="group relative overflow-hidden rounded-2xl border border-gold-100 bg-white p-5 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-green-400/40 h-full">
 
-                        <!-- Animated top border -->
                         <div
                             class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]">
                         </div>
 
-                        <!-- Background glow -->
                         <div
                             class="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-green-200/40 blur-3xl transition-all duration-700 group-hover:scale-125 group-hover:bg-green-400/40">
                         </div>
@@ -2160,21 +2163,25 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                             class="absolute -left-10 -bottom-10 h-28 w-28 rounded-full bg-green-100/40 blur-3xl transition-all duration-700 group-hover:scale-125">
                         </div>
 
-                        <div class="relative flex items-start gap-4">
+                        <div
+                            class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 transition-all duration-1000 group-hover:translate-x-full group-hover:opacity-100">
+                        </div>
 
-                            <!-- Logo -->
+                        <div class="relative flex items-start gap-4 h-full">
+
                             <div
-                                class="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-2xl border border-emerald-100 bg-gradient-to-br from-emerald-50 to-white shadow-md transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
+                                class="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-2xl border border-emerald-100 bg-gradient-to-br from-emerald-50 to-white shadow-md transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg">
                                 <img src="https://scontent.fmnl30-3.fna.fbcdn.net/v/t39.30808-6/431746968_406796581945459_4049465438965217254_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeF09K7Y-QM9YZJwgZiThfbgGZ2ZI6VXdHAZnZkjpVd0cK3iZHpQASTllbuQI_OY_5lynSi5DusdKskQYivMwWXi&_nc_ohc=rxu_eLry2UoQ7kNvwE7yx04&_nc_oc=AdnvDpos7RnS7l4OtaHdq_qIezs1ZJZg4-QFNt0hqqQgVJGxIaeV-dmCJI3cmjsWHOU&_nc_zt=23&_nc_ht=scontent.fmnl30-3.fna&_nc_gid=rzf3GMYGap8YnFmXQuQemA&_nc_ss=8&oh=00_Afzi3CKw0WGr3Cw6nSC8R1zXPwwNEEgRvKYojyBQv64lkw&oe=69B820B5"
-                                    alt="AAA International Manpower Services Logo" class="h-full w-full object-cover">
+                                    alt="AAA International Manpower Services Logo"
+                                    class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110">
                                 <div class="absolute inset-0 ring-1 ring-inset ring-white/40"></div>
                             </div>
 
-                            <!-- Content -->
-                            <div class="min-w-0 flex-1">
-                                <div class="mb-2 flex flex-wrap items-center gap-2">
+                            <div class="min-w-0 flex-1 flex flex-col h-full">
+
+                                <div class="mb-2 flex flex-wrap items-start gap-2 min-h-[56px]">
                                     <h3
-                                        class="truncate text-base font-bold text-gray-900 transition-colors duration-300 group-hover:text-[#0038A8]">
+                                        class="text-base font-bold text-gray-900 leading-snug break-words transition-colors duration-300 group-hover:text-[#0038A8]">
                                         AAA INTERNATIONAL MANPOWER SERVICES
                                     </h3>
 
@@ -2186,16 +2193,17 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                                 </div>
 
                                 <p
-                                    class="mb-3 truncate text-sm text-gray-500 transition-colors duration-300 group-hover:text-gray-700">
+                                    class="mb-3 text-sm text-gray-500 leading-relaxed break-words transition-colors duration-300 group-hover:text-gray-700 min-h-[84px]">
                                     5th Floor, Marc 2000 Bldg., Rizal Avenue, corner Quinto St., Sta. Cruz, Manila
                                 </p>
 
-                                <div class="flex flex-wrap items-center gap-3 text-sm">
+                                <div class="flex flex-wrap items-center gap-3 text-sm mt-auto">
                                     <a href="tel:+63287451234"
-                                        class="inline-flex items-center gap-2 text-gray-600 transition-all duration-300 hover:text-[#0038A8] group-hover:translate-x-1">
+                                        class="inline-flex items-center gap-2 text-gray-600 transition-all duration-300 hover:text-[#0038A8] hover:translate-x-1">
                                         <span
-                                            class="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-50 text-emerald-600 transition-all duration-300 group-hover:bg-emerald-600 group-hover:text-white">
-                                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            class="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-50 text-emerald-600 transition-all duration-300 group-hover:bg-emerald-600 group-hover:text-white group-hover:scale-110">
+                                            <svg class="h-4 w-4 transition-transform duration-300 group-hover:rotate-12"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                                             </svg>
@@ -2207,8 +2215,9 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
 
                                     <div class="inline-flex items-center gap-2 text-gray-600">
                                         <span
-                                            class="flex h-8 w-8 items-center justify-center rounded-full bg-yellow-50 text-[#F59E0B] transition-all duration-300 group-hover:rotate-6">
-                                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            class="flex h-8 w-8 items-center justify-center rounded-full bg-yellow-50 text-[#F59E0B] transition-all duration-300 group-hover:rotate-6 group-hover:scale-110">
+                                            <svg class="h-4 w-4 transition-transform duration-300 group-hover:rotate-12"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                     d="M8 7V3m8 4V3m-9 8h10m-11 9h12a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v11a2 2 0 002 2z" />
                                             </svg>
@@ -2217,22 +2226,22 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                                                 2026</span></span>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <!-- Agency Card 3 -->
                 <div class="agency-card valid reveal">
                     <div
                         class="group relative overflow-hidden rounded-2xl border border-gold-100 bg-white p-5 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-yellow-200/60">
 
-                        <!-- Animated Philippine color bar -->
+                        <!-- Top Gradient -->
                         <div
                             class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]">
                         </div>
 
-                        <!-- Animated background glow -->
+                        <!-- Glow -->
                         <div
                             class="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-yellow-100/40 blur-3xl transition-all duration-700 group-hover:scale-125">
                         </div>
@@ -2240,21 +2249,27 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                             class="absolute -left-10 -bottom-10 h-28 w-28 rounded-full bg-blue-100/40 blur-3xl transition-all duration-700 group-hover:scale-125">
                         </div>
 
+                        <!-- Shine -->
+                        <div
+                            class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 transition-all duration-1000 group-hover:translate-x-full group-hover:opacity-100">
+                        </div>
+
                         <div class="relative flex items-start gap-4">
 
-                            <!-- Agency Logo -->
+                            <!-- Logo -->
                             <div
-                                class="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-2xl border border-yellow-100 bg-gradient-to-br from-yellow-50 to-white shadow-md transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
-                                <img src="https://scontent.fmnl30-2.fna.fbcdn.net/v/t39.30808-1/242954921_243631174444886_8296461485227506511_n.jpg?stp=c204.0.1640.1640a_dst-jpg_s200x200_tt6&_nc_cat=111&ccb=1-7&_nc_sid=2d3e12&_nc_eui2=AeFYysJiXVosQffozNTlgQsuatNXhSyTkFxq01eFLJOQXBae7lZbaxa_BxlT8YUnULO6wKu9e8e-3DDcILOOlEGq&_nc_ohc=94w0ysxMmAwQ7kNvwESuT-w&_nc_oc=AdlQ6p1WapnCDBnqDZC1MsN8b154zU4HX6EWuFHVqyRMJ0-eY2h-KPEfMFS7G57QjL8&_nc_zt=24&_nc_ht=scontent.fmnl30-2.fna&_nc_gid=eRj3NpBkiNTM042hEzt9Qw&_nc_ss=8&oh=00_AfxKIrhLlIbioH7wxWXF8RZpyg34wHl9fcD4bqCsBv1HaA&oe=69B82CA1"
-                                    alt="Absolute Manpower Agency Logo" class="h-full w-full object-cover">
+                                class="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-2xl border border-yellow-100 bg-gradient-to-br from-yellow-50 to-white shadow-md transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPsAAADJCAMAAADSHrQyAAAAjVBMVEX///8AAADl5eU9PT9DQ0X5+fk2NjZGRkapqanJycne3t4vLS48PD4mJCWVlZVEREbv7++NjY3q6upOTk6fn5/19fVnZ2d/f38sKitKSkzS0tK9vb3Dw8MyMDGKiorY2NgWFhZbW1sNDQ14eHhycnKurq4iICGamppjY2MUFBRYWFgcHB0yMzJ1dHUdHh0MW7q4AAAIR0lEQVR4nO2biXaiShCGaXZQkB0EAWVxATPv/3i3u1kEQ2Lu1Qwkt74zRwMSp36qu6q6mjAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPxwBHVXmnnhFf6pVNi5rfmLhI59RENWXvm/0K+aAZGb1UctWMVxHATHPTmxLYW5TftmwgPVjWUT3aIorjmO4/l1gPVniTW3ed+IamPley3AyldUubhutG8kiV/hz5Jf63sfq6u1Tnp8k47Fb7bbrZihLJrbyG8hzKhyKj0eeb2VvrVtEaGzO7ehr0fHE/qoaRMDHiun0ol4W0NZOLepr8ZrnD7w+vrO60S5bVccQuXcxr4UwW6cPvB6J33DN+OdSK8I9gU5c9v7QjrpQeP1ayd97PQtJ66O+yzDceE0t8UvQ6g+lN5NdT4eV3ry3Da/ivxdlBNHUW6tZeieX5LrnA+lk6nOBe+FE9S5zX4FIUIf5TZJEutJ4RjpF5R4LoeT2zHmmxJ+nNbFy0fKMfrclj+PiTLtuN5FpjYu5rDy/SfKMencpj+LSkb80bORzo2lrz8c7R3V3LY/S4HXbZrGx1rBD3Lbhg8eKcfs5jb+OVKEmrS+Eq9Dp3820Xv4ua1/jhzVRHqw0lbxraL5itMJytzmP4OVUbfXWykJK61N69zDmd5xntv+Z5DRHjtdlF3sQbfcEq9v8Bqd80tFVcr8eqe10qMw3TleX+0Y+PaVni3ZRWQ032hEb/jQK2/tLTWppDG8N5PcERXSVqu6ZAyTHJUxlh4je9eVLW7EDZQXfSln6e0pmTG7yKDRxZ2stYdZ195KJsYL95dlTsGiDEe5OmKUhBzuYn4TjNdogt/ZexlNbtrZQ8iWhjNAEM6DQ5G6/m1qriwhSJaoxsXcMWJSWqeE1432bpHitNLv6ne89nvH4TA61FzyP0wh/iV9n5EjUswduzxtiVq7ODWixDN3TWeuGbSNdLZM/LKp54R+Oti6rPODAW3Kp+bGHBiGXlTIdyxgEShIiJTwWmeKkbW1mtMEsz9Nc4rYT2+Jm7f+pZs0aqu1uXO9g5vfUejPikFeF9noMFBGChqtm8ksQlRV0fuQhgGsY0UvF7vTTbuyCQVd5zJqPuruY0oOzniNiOpF7mioaC8OtVvIJm86ukH9vWreBnHtQvSw5Ce//zZ6x27Zi0yVmrh/v0jtO6SROrbXHtIBaw2jUkbS9onkcVwLDKAaySS/LeaUodvbKbHrB8/ScFBA6thN5xiFRrSh25vpu0PkUzkxB5A4aOLPbzsVdBgMsgGd8DTo8XrPKVrI1oaOVlh63HecI6rxMNKeMySZT/++/Fi7gt6xjGGAtePFS9wXLSeqnRtZSga38UENSsKb0R9Nar8bRRTpe9T8O3QU48WLmBj9MXm1R4YW+IzxQZei/IL2qeqm+CY9/4ZGOx80aUrASYukuHEBTiaEEZDPQ+WO0H885hmyRsrtnjW6u2ouqHaebwc92jdhOh1pJ3fDQGRdMrUoQejWrf1I+xhaBiygzVmimDThRep3o+5GozeQRgOTQe+JO6n99m1f006/fQGdvhQFpBUt4hyttPmZDGH3VsRU1K1GU/OEN8WkuSPV/0k7GT4LiHYWqjf8ZrPG2o9WU9PQMs3tPO83I9poRaRtUbunNbsQjFV8UbuGFhHshDiTNpvtOsRF2K6xvbU29CXOTrqaDWs/0rsgRB7PVXJTC3n9nGiY0h6pd+xoFlnAOg6bz5PHaBQcgcwuxk3EYLIas++3oEx69eAxhCnt+WSM2C9hO8tBa6y9ZrEQrpvO2bjrTnxPV6Lb0ZKk6+cMTk5p96ekL6Ovj4Md1o7zmI0yZteZ5g/6jB5pxTYRvpZv7tq14VAbfNmXtS9hxGPvidnW5pAlxOjSLcCJ64tItQxLLT3yWJXrsu15MVFYw2BTpy/9hrX5l7RfOH8pT6cmiLc1UVBJwI5GRu5XzU7kXrxeh63q42g7frgdKbAsqw5mMj5kDfYOawlTvSFFKxs7LyLJbax9yPTDB+hRz3E5Mqep0PVqkXrDabWvdFRwSLqsRTtGYl7jie1LARfbmRScj7ieuV45/hKLF/tPgs4yk6upy6ZCalihq1pWyrJC6qqsozKJrKaW4wolebdSQcVhREnxhUvZu46Q7zLKmrTdGu2mX/nS25t3rt78uirMNwk5hWcn68Qu8rOUn3PPq/zc96Xcv0SJWpRykignx3d2vmn6kePk+GdHt5iTk6R6EoWmnChyvjvpeFm0M0PzpCykfSHY0e5ANJ+adtwlF3P/cPCK8xmrrArfWyHfPmcHZHqFdz5Ius1zq6Lwqszz5J1aKbr8VrpvTuHIpi7LrFKaJ0eJypDRZbPUT7ou604pO8ZJ1iNG0RlHl8OFhLsus5W0+0amdrY/Ig3VNco09Cc7IhTEe3yeF7Ms0/YeyjKUXUgtH+AJ7QqC4QoMfil1Fh8w+J+BXwSDcQ3GEATXFeg7I7hCyNALyNEyOHcR+6sbzz0//9HSNnmvpc+Fvucwt+UvQH4sc5KFTNrn8B7rnGAZlemzuPF/kL6MTvPzsI+l3vOjnzYZkT4WO+bdav4HEz6WO6T6RdLxQv1LD9S1LOJRoRdifD2/m3Pb+nqm+0vvuPyO5HaHoj1Wjjzj8Rf9RISJTdMx4iLajN+D5X8W88Sfv3r5FMtZTwvPDr/Y5z2hLt17Xzv8P/74n8AqTlFJ9M8otge/DH9pgPsEwXXdX1XBAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMC38A+aOJQYnnxuIwAAAABJRU5ErkJggg=="
+                                    alt="Absolute Manpower Agency Logo"
+                                    class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110">
                             </div>
 
                             <!-- Content -->
                             <div class="min-w-0 flex-1">
 
-                                <div class="flex items-center gap-2 mb-2 flex-wrap">
+                                <div class="flex items-start gap-2 mb-2 flex-wrap">
                                     <h3
-                                        class="font-bold text-gray-900 truncate transition-colors duration-300 group-hover:text-[#0038A8]">
+                                        class="text-base font-bold text-gray-900 leading-snug break-words transition-colors duration-300 group-hover:text-[#0038A8]">
                                         ABSOLUTE MANPOWER AGENCY INC.
                                     </h3>
 
@@ -2266,18 +2281,19 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                                 </div>
 
                                 <p
-                                    class="text-sm text-gray-500 mb-3 truncate transition-colors duration-300 group-hover:text-gray-700">
+                                    class="text-sm text-gray-500 mb-3 leading-relaxed break-words transition-colors duration-300 group-hover:text-gray-700">
                                     Room 301-302, 3rd Floor, Paramount Bldg., 444 E. Quinto St., Sampaloc, Manila
                                 </p>
 
                                 <div class="flex flex-wrap items-center gap-3 text-sm">
 
                                     <a href="tel:+63287891234"
-                                        class="inline-flex items-center gap-2 text-gray-600 transition-all duration-300 hover:text-[#0038A8] group-hover:translate-x-1">
+                                        class="inline-flex items-center gap-2 text-gray-600 transition-all duration-300 hover:text-[#0038A8] hover:translate-x-1">
 
                                         <span
-                                            class="flex h-8 w-8 items-center justify-center rounded-full bg-yellow-50 text-yellow-600 transition-all duration-300 group-hover:bg-yellow-500 group-hover:text-white">
-                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            class="flex h-8 w-8 items-center justify-center rounded-full bg-yellow-50 text-yellow-600 transition-all duration-300 group-hover:bg-yellow-500 group-hover:text-white group-hover:scale-110">
+                                            <svg class="w-4 h-4 transition-transform duration-300 group-hover:rotate-12"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                                             </svg>
@@ -2290,8 +2306,9 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
 
                                     <div class="inline-flex items-center gap-2 text-gray-600">
                                         <span
-                                            class="flex h-8 w-8 items-center justify-center rounded-full bg-blue-50 text-blue-600 transition-all duration-300 group-hover:rotate-6">
-                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            class="flex h-8 w-8 items-center justify-center rounded-full bg-blue-50 text-blue-600 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110">
+                                            <svg class="w-4 h-4 transition-transform duration-300 group-hover:rotate-12"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                     d="M8 7V3m8 4V3m-9 8h10m-11 9h12a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v11a2 2 0 002 2z" />
                                             </svg>
@@ -2327,20 +2344,26 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                             class="absolute -left-10 -bottom-10 h-28 w-28 rounded-full bg-red-100/40 blur-3xl transition-all duration-700 group-hover:scale-125">
                         </div>
 
+                        <!-- Shine Effect -->
+                        <div
+                            class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 transition-all duration-1000 group-hover:translate-x-full group-hover:opacity-100">
+                        </div>
+
                         <div class="relative flex items-start gap-4">
 
                             <!-- Logo -->
                             <div
-                                class="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-2xl border border-rose-100 bg-white p-1 shadow-md transition-all duration-500 group-hover:scale-110 group-hover:rotate-3">
+                                class="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-2xl border border-rose-100 bg-white p-1 shadow-md transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg">
                                 <img src="https://scontent.fmnl30-3.fna.fbcdn.net/v/t39.30808-1/300912910_394212562897772_4703719955248401717_n.png?stp=dst-png_s200x200&_nc_cat=108&ccb=1-7&_nc_sid=2d3e12&_nc_eui2=AeFJDBXHtHoKdHN5TnPXI-0k7CIHV2cGEW3sIgdXZwYRbYtHYajcZ67A6ljEJjObaCGnQdQTEbABLzG3w02iXSLu&_nc_ohc=dh0X3_KE3E8Q7kNvwHks2cu&_nc_oc=AdkPmOKcHBFHW5U1WC5ATWODi1cllvO7VcOWwugdAuEXjDrjpmXISYlZqaDJ2B3lo5A&_nc_zt=24&_nc_ht=scontent.fmnl30-3.fna&_nc_gid=DhquNTn-YbgG4gkUcPD9vg&_nc_ss=8&oh=00_Afz8iDsKpeL0_Zfq1f4BO_yA30JtkyoFrYcMVYzojqS_vg&oe=69B8211D"
-                                    alt="Access International Manpower Corp. Logo" class="h-full w-full object-contain">
+                                    alt="Access International Manpower Corp. Logo"
+                                    class="h-full w-full object-contain transition-transform duration-500 group-hover:scale-110">
                             </div>
 
                             <!-- Content -->
                             <div class="min-w-0 flex-1">
-                                <div class="mb-2 flex flex-wrap items-center gap-2">
+                                <div class="mb-2 flex flex-wrap items-start gap-2">
                                     <h3
-                                        class="truncate text-base font-bold text-gray-900 transition-colors duration-300 group-hover:text-[#0038A8]">
+                                        class="text-base font-bold text-gray-900 leading-snug break-words transition-colors duration-300 group-hover:text-[#0038A8]">
                                         ACCESS INTERNATIONAL MANPOWER CORP.
                                     </h3>
 
@@ -2352,16 +2375,17 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                                 </div>
 
                                 <p
-                                    class="mb-3 truncate text-sm text-gray-500 transition-colors duration-300 group-hover:text-gray-700">
+                                    class="mb-3 text-sm text-gray-500 leading-relaxed break-words transition-colors duration-300 group-hover:text-gray-700">
                                     Unit 505, 5th Floor, Sunnymede IT Center, 825 Aurora Blvd., Quezon City
                                 </p>
 
                                 <div class="flex flex-wrap items-center gap-3 text-sm">
                                     <a href="tel:+63289121234"
-                                        class="inline-flex items-center gap-2 text-gray-600 transition-all duration-300 hover:text-[#0038A8] group-hover:translate-x-1">
+                                        class="inline-flex items-center gap-2 text-gray-600 transition-all duration-300 hover:text-[#0038A8] hover:translate-x-1">
                                         <span
-                                            class="flex h-8 w-8 items-center justify-center rounded-full bg-rose-50 text-rose-600 transition-all duration-300 group-hover:bg-rose-600 group-hover:text-white">
-                                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            class="flex h-8 w-8 items-center justify-center rounded-full bg-rose-50 text-rose-600 transition-all duration-300 group-hover:bg-rose-600 group-hover:text-white group-hover:scale-110">
+                                            <svg class="h-4 w-4 transition-transform duration-300 group-hover:rotate-12"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                                             </svg>
@@ -2373,8 +2397,9 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
 
                                     <div class="inline-flex items-center gap-2 text-gray-600">
                                         <span
-                                            class="flex h-8 w-8 items-center justify-center rounded-full bg-blue-50 text-[#0038A8] transition-all duration-300 group-hover:rotate-6">
-                                            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            class="flex h-8 w-8 items-center justify-center rounded-full bg-blue-50 text-[#0038A8] transition-all duration-300 group-hover:rotate-6 group-hover:scale-110">
+                                            <svg class="h-4 w-4 transition-transform duration-300 group-hover:rotate-12"
+                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                     d="M8 7V3m8 4V3m-9 8h10m-11 9h12a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v11a2 2 0 002 2z" />
                                             </svg>
@@ -2389,17 +2414,6 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                 </div>
             </div>
 
-            <!-- Load More -->
-            <div class="text-center mt-12 reveal">
-                <button
-                    class="px-8 py-3 rounded-xl border-2 border-primary-500 text-primary-600 font-semibold hover:bg-primary-50 transition-all inline-flex items-center gap-2"
-                    id="loadMoreAgencies">
-                    <span>Load More Agencies</span>
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                    </svg>
-                </button>
-            </div>
         </div>
     </section>
 
@@ -2443,106 +2457,264 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
             </div>
 
             <!-- Agenda Grid -->
+            <style>
+                .agenda-card {
+                    position: relative;
+                    overflow: hidden;
+                    transition: transform 0.35s ease, background-color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+                    animation: agendaFloat 5s ease-in-out infinite;
+                }
+
+                .agenda-card:hover {
+                    transform: translateY(-8px) scale(1.02);
+                    background: rgba(255, 255, 255, 0.18);
+                    border-color: rgba(255, 255, 255, 0.3);
+                    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+                }
+
+                .agenda-card::before {
+                    content: "";
+                    position: absolute;
+                    inset: -40% auto auto -60%;
+                    width: 80%;
+                    height: 180%;
+                    background: linear-gradient(120deg,
+                            transparent 0%,
+                            rgba(255, 255, 255, 0.06) 45%,
+                            rgba(255, 255, 255, 0.16) 50%,
+                            rgba(255, 255, 255, 0.06) 55%,
+                            transparent 100%);
+                    transform: rotate(18deg) translateX(-120%);
+                    transition: transform 0.8s ease;
+                    pointer-events: none;
+                }
+
+                .agenda-card:hover::before {
+                    transform: rotate(18deg) translateX(240%);
+                }
+
+                .agenda-icon-wrap {
+                    transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease;
+                    animation: iconPulse 3.5s ease-in-out infinite;
+                }
+
+                .agenda-card:hover .agenda-icon-wrap {
+                    transform: scale(1.12) rotate(4deg);
+                    box-shadow: 0 0 20px rgba(255, 215, 0, 0.18);
+                    background: rgba(255, 255, 255, 0.16);
+                }
+
+                .agenda-icon {
+                    transition: transform 0.35s ease, filter 0.35s ease;
+                }
+
+                .agenda-card:hover .agenda-icon {
+                    transform: scale(1.1);
+                    filter: drop-shadow(0 6px 12px rgba(255, 255, 255, 0.2));
+                }
+
+                .agenda-title {
+                    transition: transform 0.3s ease, color 0.3s ease;
+                }
+
+                .agenda-card:hover .agenda-title {
+                    transform: translateX(4px);
+                    color: #fff;
+                }
+
+                .agenda-text {
+                    transition: color 0.3s ease, opacity 0.3s ease;
+                }
+
+                .agenda-card:hover .agenda-text {
+                    color: rgba(255, 255, 255, 0.88);
+                }
+
+                .agenda-card:nth-child(2) {
+                    animation-delay: 0.2s;
+                }
+
+                .agenda-card:nth-child(3) {
+                    animation-delay: 0.4s;
+                }
+
+                .agenda-card:nth-child(4) {
+                    animation-delay: 0.6s;
+                }
+
+                .agenda-card:nth-child(5) {
+                    animation-delay: 0.8s;
+                }
+
+                .agenda-card:nth-child(6) {
+                    animation-delay: 1s;
+                }
+
+                .agenda-card:nth-child(7) {
+                    animation-delay: 1.2s;
+                }
+
+                .agenda-card:nth-child(8) {
+                    animation-delay: 1.4s;
+                }
+
+                .agenda-card:nth-child(9) {
+                    animation-delay: 1.6s;
+                }
+
+                .agenda-card:nth-child(10) {
+                    animation-delay: 1.8s;
+                }
+
+                @keyframes agendaFloat {
+
+                    0%,
+                    100% {
+                        transform: translateY(0);
+                    }
+
+                    50% {
+                        transform: translateY(-4px);
+                    }
+                }
+
+                @keyframes iconPulse {
+
+                    0%,
+                    100% {
+                        transform: scale(1);
+                    }
+
+                    50% {
+                        transform: scale(1.04);
+                    }
+                }
+
+                @media (prefers-reduced-motion: reduce) {
+
+                    .agenda-card,
+                    .agenda-icon-wrap {
+                        animation: none;
+                    }
+
+                    .agenda-card,
+                    .agenda-card::before,
+                    .agenda-icon-wrap,
+                    .agenda-icon,
+                    .agenda-title,
+                    .agenda-text {
+                        transition: none;
+                    }
+                }
+            </style>
+
             <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
-                <div
-                    class="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 hover:bg-white/20 transition-all group reveal">
+
+                <div class="agenda-card bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 group reveal">
                     <div
-                        class="w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
-                        <span class="font-bold text-white text-lg">01</span>
+                        class="agenda-icon-wrap w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-4 shadow-lg">
+                        <img src="https://cdn-icons-png.flaticon.com/128/2592/2592317.png"
+                            class="agenda-icon w-7 h-7 object-contain" />
                     </div>
-                    <h3 class="font-semibold text-white mb-2">Protection of Rights</h3>
-                    <p class="text-sm text-white/70">Uphold and defend the fundamental rights of every OFW</p>
+                    <h3 class="agenda-title font-semibold text-white mb-2">Protection of Rights</h3>
+                    <p class="agenda-text text-sm text-white/70">Uphold and defend the fundamental rights of every OFW
+                    </p>
                 </div>
 
-                <div
-                    class="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 hover:bg-white/20 transition-all group reveal">
+                <div class="agenda-card bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 group reveal">
                     <div
-                        class="w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
-                        <span class="font-bold text-white text-lg">02</span>
+                        class="agenda-icon-wrap w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-4 shadow-lg">
+                        <img src="https://cdn-icons-png.flaticon.com/128/7938/7938318.png"
+                            class="agenda-icon w-7 h-7 object-contain" />
                     </div>
-                    <h3 class="font-semibold text-white mb-2">Fair Recruitment</h3>
-                    <p class="text-sm text-white/70">Ensure ethical and transparent recruitment practices</p>
+                    <h3 class="agenda-title font-semibold text-white mb-2">Fair Recruitment</h3>
+                    <p class="agenda-text text-sm text-white/70">Ensure ethical and transparent recruitment practices
+                    </p>
                 </div>
 
-                <div
-                    class="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 hover:bg-white/20 transition-all group reveal">
+                <div class="agenda-card bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 group reveal">
                     <div
-                        class="w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
-                        <span class="font-bold text-white text-lg">03</span>
+                        class="agenda-icon-wrap w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-4 shadow-lg">
+                        <img src="https://cdn-icons-png.flaticon.com/128/3260/3260189.png"
+                            class="agenda-icon w-7 h-7 object-contain" />
                     </div>
-                    <h3 class="font-semibold text-white mb-2">Welfare Services</h3>
-                    <p class="text-sm text-white/70">Comprehensive support for OFW welfare and well-being</p>
+                    <h3 class="agenda-title font-semibold text-white mb-2">Welfare Services</h3>
+                    <p class="agenda-text text-sm text-white/70">Comprehensive support for OFW welfare and well-being
+                    </p>
                 </div>
 
-                <div
-                    class="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 hover:bg-white/20 transition-all group reveal">
+                <div class="agenda-card bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 group reveal">
                     <div
-                        class="w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
-                        <span class="font-bold text-white text-lg">04</span>
+                        class="agenda-icon-wrap w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-4 shadow-lg">
+                        <img src="https://cdn-icons-png.flaticon.com/128/3122/3122246.png"
+                            class="agenda-icon w-7 h-7 object-contain" />
                     </div>
-                    <h3 class="font-semibold text-white mb-2">Legal Assistance</h3>
-                    <p class="text-sm text-white/70">Free legal aid and representation for OFWs in distress</p>
+                    <h3 class="agenda-title font-semibold text-white mb-2">Legal Assistance</h3>
+                    <p class="agenda-text text-sm text-white/70">Free legal aid and representation for OFWs in distress
+                    </p>
                 </div>
 
-                <div
-                    class="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 hover:bg-white/20 transition-all group reveal">
+                <div class="agenda-card bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 group reveal">
                     <div
-                        class="w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
-                        <span class="font-bold text-white text-lg">05</span>
+                        class="agenda-icon-wrap w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-4 shadow-lg">
+                        <img src="https://cdn-icons-png.flaticon.com/128/10617/10617769.png"
+                            class="agenda-icon w-7 h-7 object-contain" />
                     </div>
-                    <h3 class="font-semibold text-white mb-2">Skills Development</h3>
-                    <p class="text-sm text-white/70">Continuous training and upskilling programs</p>
+                    <h3 class="agenda-title font-semibold text-white mb-2">Skills Development</h3>
+                    <p class="agenda-text text-sm text-white/70">Continuous training and upskilling programs</p>
                 </div>
 
-                <div
-                    class="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 hover:bg-white/20 transition-all group reveal">
+                <div class="agenda-card bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 group reveal">
                     <div
-                        class="w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
-                        <span class="font-bold text-white text-lg">06</span>
+                        class="agenda-icon-wrap w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-4 shadow-lg">
+                        <img src="https://cdn-icons-png.flaticon.com/128/15636/15636902.png"
+                            class="agenda-icon w-7 h-7 object-contain" />
                     </div>
-                    <h3 class="font-semibold text-white mb-2">Financial Literacy</h3>
-                    <p class="text-sm text-white/70">Programs for financial management and investment</p>
+                    <h3 class="agenda-title font-semibold text-white mb-2">Financial Literacy</h3>
+                    <p class="agenda-text text-sm text-white/70">Programs for financial management and investment</p>
                 </div>
 
-                <div
-                    class="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 hover:bg-white/20 transition-all group reveal">
+                <div class="agenda-card bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 group reveal">
                     <div
-                        class="w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
-                        <span class="font-bold text-white text-lg">07</span>
+                        class="agenda-icon-wrap w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-4 shadow-lg">
+                        <img src="https://cdn-icons-png.flaticon.com/128/619/619032.png"
+                            class="agenda-icon w-7 h-7 object-contain" />
                     </div>
-                    <h3 class="font-semibold text-white mb-2">Reintegration Support</h3>
-                    <p class="text-sm text-white/70">Help returning OFWs transition back home</p>
+                    <h3 class="agenda-title font-semibold text-white mb-2">Reintegration Support</h3>
+                    <p class="agenda-text text-sm text-white/70">Help returning OFWs transition back home</p>
                 </div>
 
-                <div
-                    class="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 hover:bg-white/20 transition-all group reveal">
+                <div class="agenda-card bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 group reveal">
                     <div
-                        class="w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
-                        <span class="font-bold text-white text-lg">08</span>
+                        class="agenda-icon-wrap w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-4 shadow-lg">
+                        <img src="https://cdn-icons-png.flaticon.com/128/1236/1236575.png"
+                            class="agenda-icon w-7 h-7 object-contain" />
                     </div>
-                    <h3 class="font-semibold text-white mb-2">Digital Services</h3>
-                    <p class="text-sm text-white/70">Modern digital platforms for easier access to services</p>
+                    <h3 class="agenda-title font-semibold text-white mb-2">Digital Services</h3>
+                    <p class="agenda-text text-sm text-white/70">Modern digital platforms for easier access to services
+                    </p>
                 </div>
 
-                <div
-                    class="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 hover:bg-white/20 transition-all group reveal">
+                <div class="agenda-card bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 group reveal">
                     <div
-                        class="w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
-                        <span class="font-bold text-white text-lg">09</span>
+                        class="agenda-icon-wrap w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-4 shadow-lg">
+                        <img src="https://cdn-icons-png.flaticon.com/128/11921/11921122.png"
+                            class="agenda-icon w-7 h-7 object-contain" />
                     </div>
-                    <h3 class="font-semibold text-white mb-2">Bilateral Agreements</h3>
-                    <p class="text-sm text-white/70">Strengthen international labor agreements</p>
+                    <h3 class="agenda-title font-semibold text-white mb-2">Bilateral Agreements</h3>
+                    <p class="agenda-text text-sm text-white/70">Strengthen international labor agreements</p>
                 </div>
 
-                <div
-                    class="bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 hover:bg-white/20 transition-all group reveal">
+                <div class="agenda-card bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 group reveal">
                     <div
-                        class="w-12 h-12 bg-gradient-to-br from-gold-400 to-gold-500 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-lg">
-                        <span class="font-bold text-white text-lg">10</span>
+                        class="agenda-icon-wrap w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-4 shadow-lg">
+                        <img src="https://cdn-icons-png.flaticon.com/128/13560/13560979.png"
+                            class="agenda-icon w-7 h-7 object-contain" />
                     </div>
-                    <h3 class="font-semibold text-white mb-2">Family Support</h3>
-                    <p class="text-sm text-white/70">Programs supporting OFW families back home</p>
+                    <h3 class="agenda-title font-semibold text-white mb-2">Family Support</h3>
+                    <p class="agenda-text text-sm text-white/70">Programs supporting OFW families back home</p>
                 </div>
+
             </div>
         </div>
     </section>
@@ -2555,14 +2727,18 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                 <div class="lg:sticky lg:top-32 lg:self-start">
                     <span class="badge badge-blue mb-4 reveal">Support</span>
                     <h2 class="section-title text-gray-900 mb-6 reveal">
-                        Frequently Asked <span class="gradient-text">Questions</span>
+                        Frequently Asked
+                        <span class="bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116] 
+    bg-clip-text text-transparent">
+                            Questions
+                        </span>
                     </h2>
                     <p class="text-gray-600 mb-8 reveal">
                         Find answers to common questions about our services, requirements, and processes. Can't find
                         what you're looking for? Contact our helpdesk.
                     </p>
                     <div class="reveal">
-                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop"
+                        <img src="https://www.l5.com.br/wp-content/uploads/2025/04/help-desk-l5-networks-c.webp"
                             alt="Customer support" class="rounded-2xl shadow-lg w-full">
                     </div>
                 </div>
@@ -2692,7 +2868,11 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="badge badge-gold mb-4 reveal">Updates</span>
                 <h2 class="section-title text-gray-900 mb-6 reveal">
-                    Latest <span class="gradient-text">News</span>
+                    Latest
+                    <span class="bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116] 
+    bg-clip-text text-transparent">
+                        News
+                    </span>
                 </h2>
                 <p class="text-gray-600 text-lg max-w-2xl mx-auto reveal">
                     Stay informed with the latest announcements, policy updates, and important notices from the
@@ -2705,36 +2885,36 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                 <!-- News Card 1 -->
                 <article class="news-card reveal">
                     <div class="aspect-video overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?w=600&h=400&fit=crop"
-                            alt="DMW News" class="w-full h-full object-cover">
+                        <img src="https://ibctv13.com/wp-content/uploads/2025/10/human-righrs.webp" alt="DMW News"
+                            class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <div class="flex items-center gap-3 mb-4">
                             <span class="badge badge-blue">Announcement</span>
                             <span class="text-sm text-gray-500">Jan 15, 2026</span>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-                            DMW Launches Enhanced Digital Services Platform
-                        </h3>
-                        <p class="text-gray-600 mb-4 line-clamp-3">
-                            The Department of Migrant Workers unveils its new integrated digital platform, offering
-                            streamlined services for OFWs worldwide.
-                        </p>
-                        <a href="#"
-                            class="inline-flex items-center gap-2 text-primary-500 font-semibold hover:gap-3 transition-all">
-                            <span>Read More</span>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                            </svg>
-                        </a>
+                        <div class="space-y-4">
+
+                            <!-- Title -->
+                            <h3 class="text-xl font-semibold text-[#0F172A] leading-snug 
+    group-hover:text-[#0038A8] transition-colors duration-300">
+                                DMW Launches Enhanced Digital Services Platform
+                            </h3>
+
+                            <p class="text-gray-600 text-sm leading-relaxed">
+                                The Department of Migrant Workers unveils its new integrated digital platform, offering
+                                streamlined services for OFWs worldwide.
+                            </p>
+
+
+                        </div>
                     </div>
                 </article>
 
                 <!-- News Card 2 -->
                 <article class="news-card reveal">
                     <div class="aspect-video overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=600&h=400&fit=crop"
+                        <img src="https://eastasiaforum.org/wp-content/uploads/2020/03/2018-02-23T053622Z_2019254778_RC1BDEAC7D60_RTRMADP_3_PHILIPPINES-KUWAIT-LABOUR-600x425.jpg"
                             alt="DMW News" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
@@ -2742,50 +2922,38 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                             <span class="badge badge-green">Advisory</span>
                             <span class="text-sm text-gray-500">Jan 12, 2026</span>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                        <h3 class="text-xl font-semibold text-[#0F172A] leading-snug mb-3 min-h-[56px] 
+    group-hover:text-[#0038A8] transition-colors duration-300">
                             New Protection Measures for Domestic Workers in Middle East
                         </h3>
-                        <p class="text-gray-600 mb-4 line-clamp-3">
+
+                        <p class="text-gray-600 text-sm leading-relaxed min-h-[60px]">
                             DMW implements additional safeguards for Filipino domestic workers deployed to GCC
                             countries.
                         </p>
-                        <a href="#"
-                            class="inline-flex items-center gap-2 text-primary-500 font-semibold hover:gap-3 transition-all">
-                            <span>Read More</span>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                            </svg>
-                        </a>
                     </div>
                 </article>
 
                 <!-- News Card 3 -->
                 <article class="news-card reveal">
                     <div class="aspect-video overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?w=600&h=400&fit=crop"
-                            alt="DMW News" class="w-full h-full object-cover">
+                        <img src="images/11 (1).png" alt="DMW News" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
                         <div class="flex items-center gap-3 mb-4">
                             <span class="badge badge-gold">Event</span>
                             <span class="text-sm text-gray-500">Jan 10, 2026</span>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                        <h3 class="text-xl font-semibold text-[#0F172A] leading-snug mb-3 min-h-[56px] 
+    group-hover:text-[#0038A8] transition-colors duration-300">
                             Free Skills Training Program for Returning OFWs
                         </h3>
-                        <p class="text-gray-600 mb-4 line-clamp-3">
+
+                        <p class="text-gray-600 text-sm leading-relaxed min-h-[60px]">
                             DMW partners with TESDA to offer free livelihood and skills training for returning overseas
                             Filipino workers.
                         </p>
-                        <a href="#"
-                            class="inline-flex items-center gap-2 text-primary-500 font-semibold hover:gap-3 transition-all">
-                            <span>Read More</span>
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                            </svg>
-                        </a>
+
                     </div>
                 </article>
             </div>
@@ -2814,7 +2982,11 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="badge badge-blue mb-4 reveal">Testimonials</span>
                 <h2 class="section-title text-gray-900 mb-6 reveal">
-                    Voices of Our <span class="gradient-text">OFWs</span>
+                    Voices of Our
+                    <span class="bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116] 
+    bg-clip-text text-transparent">
+                        OFWs
+                    </span>
                 </h2>
             </div>
 
@@ -2827,7 +2999,7 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                             office. Thank you for modernizing government services!"
                         </p>
                         <div class="flex items-center gap-4">
-                            <img src="https://images.unsplash.com/photo-1695927621677-ec96e048dce2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHByb2ZpbGUlMjBwaWN0dXJlfGVufDB8fDB8fHww"
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW0MXCbV6LZ0ptSXI1Ozb-T6tgev3EAOI869BJoUptQA&s"
                                 alt="Testimonial" class="w-12 h-12 rounded-full object-cover">
                             <div>
                                 <p class="font-semibold text-gray-900">Keith Pelonia</p>
@@ -2844,7 +3016,7 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                             resolve my issue within days. Forever grateful!"
                         </p>
                         <div class="flex items-center gap-4">
-                            <img src="https://images.unsplash.com/photo-1619895862022-09114b41f16f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZmlsZSUyMHBpY3R1cmV8ZW58MHx8MHx8fDA%3D"
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdldDBD2IfcMolnekdHEYWH_6JN05KlCCAiSO7GD_fIg&s"
                                 alt="Testimonial" class="w-12 h-12 rounded-full object-cover">
                             <div>
                                 <p class="font-semibold text-gray-900">Maria Santos</p>
@@ -2861,7 +3033,7 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                             deployment. The program covered everything I needed to know."
                         </p>
                         <div class="flex items-center gap-4">
-                            <img src="https://media.istockphoto.com/id/1300972574/photo/millennial-male-team-leader-organize-virtual-workshop-with-employees-online.jpg?s=612x612&w=0&k=20&c=uP9rKidKETywVil0dbvg_vAKyv2wjXMwWJDNPHzc_Ug="
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfGNNkW8UnHKN-nSPtoxbbhaq_vm5ZzIbjmw&s"
                                 alt="Testimonial" class="w-12 h-12 rounded-full object-cover">
                             <div>
                                 <p class="font-semibold text-gray-900">Carlos Reyes</p>
@@ -2884,7 +3056,11 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                 <div>
                     <span class="badge badge-green mb-4 reveal">Get in Touch</span>
                     <h2 class="section-title text-gray-900 mb-6 reveal">
-                        We're Here to <span class="gradient-text">Help</span>
+                        We're Here to
+                        <span class="bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116] 
+    bg-clip-text text-transparent">
+                            Help
+                        </span>
                     </h2>
                     <p class="text-gray-600 mb-8 reveal">
                         Have questions or need assistance? Our team is ready to help you with your concerns. Reach out
@@ -2892,48 +3068,50 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                     </p>
 
                     <div class="space-y-6">
-                        <div class="flex items-start gap-4 reveal">
+                        <div
+                            class="flex items-start gap-4 reveal group hover:translate-x-1 transition-all duration-300">
+
+                            <!-- Icon -->
                             <div
-                                class="w-12 h-12 bg-gradient-to-br from-primary-100 to-primary-50 rounded-xl flex items-center justify-center flex-shrink-0">
-                                <svg class="w-6 h-6 text-primary-500" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                                </svg>
+                                class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
+                                <img src="https://cdn-icons-png.flaticon.com/512/2776/2776067.png" alt="Location Icon"
+                                    class="w-6 h-6 object-contain" />
                             </div>
-                            <div>
-                                <h3 class="font-semibold text-gray-900 mb-1">Main Office</h3>
-                                <p class="text-gray-600">DMW Building, 2nd Street, EDSA corner, Guadalupe Viejo, Makati
-                                    City, Philippines</p>
+
+                            <!-- Text -->
+                            <div class="flex-1">
+                                <h3 class="text-sm font-semibold text-gray-900 mb-1">
+                                    Main Office
+                                </h3>
+                                <p class="text-sm text-gray-600 leading-relaxed">
+                                    DMW Building, 2nd Street, EDSA corner, Guadalupe Viejo, Makati City, Philippines
+                                </p>
                             </div>
+
                         </div>
 
-                        <div class="flex items-start gap-4 reveal">
+                        <div
+                            class="flex items-start gap-4 reveal group hover:translate-x-1 transition-all duration-300">
+
                             <div
-                                class="w-12 h-12 bg-gradient-to-br from-emerald-100 to-emerald-50 rounded-xl flex items-center justify-center flex-shrink-0">
-                                <svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                </svg>
+                                class="w-12 h-12 bg-emerald-50 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
+                                <img src="https://cdn-icons-png.flaticon.com/128/16076/16076069.png" alt="Phone Icon"
+                                    class="w-6 h-6 object-contain mix-blend-multiply" />
                             </div>
+
                             <div>
                                 <h3 class="font-semibold text-gray-900 mb-1">Hotline</h3>
-                                <p class="text-gray-600">+63 2 8854-DMW1 (3691)</p>
+                                <p class="text-gray-600">+63 2 8854 3691</p>
                                 <p class="text-sm text-gray-500">Available 24/7</p>
                             </div>
+
                         </div>
 
                         <div class="flex items-start gap-4 reveal">
                             <div
-                                class="w-12 h-12 bg-gradient-to-br from-gold-100 to-gold-50 rounded-xl flex items-center justify-center flex-shrink-0">
-                                <svg class="w-6 h-6 text-gold-600" fill="none" stroke="currentColor"
-                                    viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                </svg>
+                                class="w-12 h-12 bg-yellow-50 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
+                                <img src="https://cdn-icons-png.flaticon.com/128/732/732200.png" alt="Email Icon"
+                                    class="w-6 h-6 object-contain mix-blend-multiply" />
                             </div>
                             <div>
                                 <h3 class="font-semibold text-gray-900 mb-1">Email</h3>
@@ -2945,39 +3123,37 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                     <!-- Social Media -->
                     <div class="mt-10 reveal">
                         <h3 class="font-semibold text-gray-900 mb-4">Follow Us</h3>
+
                         <div class="flex gap-4">
-                            <a href="#"
-                                class="w-12 h-12 bg-white border border-gray-200 rounded-xl flex items-center justify-center text-gray-600 hover:bg-primary-500 hover:text-white hover:border-primary-500 transition-all"
-                                aria-label="Facebook">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                    <path
-                                        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                                </svg>
+
+                            <!-- Facebook -->
+                            <a href="https://web.facebook.com/" target="_blank" class="group w-12 h-12 bg-white border border-gray-200 rounded-xl flex items-center justify-center
+                   hover:scale-110 hover:shadow-lg transition-all duration-300" aria-label="Facebook">
+                                <img src="https://cdn-icons-png.flaticon.com/128/5968/5968764.png"
+                                    class="w-6 h-6 object-contain group-hover:scale-110 transition-transform duration-300" />
                             </a>
-                            <a href="#"
-                                class="w-12 h-12 bg-white border border-gray-200 rounded-xl flex items-center justify-center text-gray-600 hover:bg-primary-500 hover:text-white hover:border-primary-500 transition-all"
-                                aria-label="Twitter">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                    <path
-                                        d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
-                                </svg>
+
+                            <!-- Twitter / X -->
+                            <a href="https://x.com/" target="_blank" class="group w-12 h-12 bg-white border border-gray-200 rounded-xl flex items-center justify-center
+                   hover:scale-110 hover:shadow-lg transition-all duration-300" aria-label="Twitter">
+                                <img src="https://cdn-icons-png.flaticon.com/128/733/733579.png"
+                                    class="w-6 h-6 object-contain group-hover:scale-110 transition-transform duration-300" />
                             </a>
-                            <a href="#"
-                                class="w-12 h-12 bg-white border border-gray-200 rounded-xl flex items-center justify-center text-gray-600 hover:bg-primary-500 hover:text-white hover:border-primary-500 transition-all"
-                                aria-label="Instagram">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                    <path
-                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
-                                </svg>
+
+                            <!-- Instagram -->
+                            <a href="https://www.instagram.com/" target="_blank" class="group w-12 h-12 bg-white border border-gray-200 rounded-xl flex items-center justify-center
+                   hover:scale-110 hover:shadow-lg transition-all duration-300" aria-label="Instagram">
+                                <img src="https://cdn-icons-png.flaticon.com/128/15713/15713420.png"
+                                    class="w-6 h-6 object-contain group-hover:scale-110 transition-transform duration-300" />
                             </a>
-                            <a href="#"
-                                class="w-12 h-12 bg-white border border-gray-200 rounded-xl flex items-center justify-center text-gray-600 hover:bg-primary-500 hover:text-white hover:border-primary-500 transition-all"
-                                aria-label="YouTube">
-                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                    <path
-                                        d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
-                                </svg>
+
+                            <!-- YouTube -->
+                            <a href="https://www.youtube.com/" target="_blank" class="group w-12 h-12 bg-white border border-gray-200 rounded-xl flex items-center justify-center
+                   hover:scale-110 hover:shadow-lg transition-all duration-300" aria-label="YouTube">
+                                <img src="https://cdn-icons-png.flaticon.com/128/1384/1384060.png"
+                                    class="w-6 h-6 object-contain group-hover:scale-110 transition-transform duration-300" />
                             </a>
+
                         </div>
                     </div>
                 </div>
