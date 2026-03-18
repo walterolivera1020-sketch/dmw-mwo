@@ -906,6 +906,360 @@
         .tab-btn.qatar-active {
             background: #eab308;
         }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.45s ease, transform 0.45s ease;
+            will-change: opacity, transform;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .job-card,
+        .service-card,
+        .news-card,
+        .testimonial-card,
+        .agency-card,
+        .agenda-card {
+            will-change: transform;
+            transform: translateZ(0);
+            backface-visibility: hidden;
+        }
+
+        .agenda-card {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.35s ease, background-color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+            animation: agendaFloat 5s ease-in-out infinite;
+        }
+
+        .agenda-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            background: rgba(255, 255, 255, 0.18);
+            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+        }
+
+        .agenda-card::before {
+            content: "";
+            position: absolute;
+            inset: -40% auto auto -60%;
+            width: 80%;
+            height: 180%;
+            background: linear-gradient(120deg,
+                    transparent 0%,
+                    rgba(255, 255, 255, 0.06) 45%,
+                    rgba(255, 255, 255, 0.16) 50%,
+                    rgba(255, 255, 255, 0.06) 55%,
+                    transparent 100%);
+            transform: rotate(18deg) translateX(-120%);
+            transition: transform 0.8s ease;
+            pointer-events: none;
+        }
+
+        .agenda-card:hover::before {
+            transform: rotate(18deg) translateX(240%);
+        }
+
+        .agenda-icon-wrap {
+            transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease;
+            animation: iconPulse 3.5s ease-in-out infinite;
+        }
+
+        .agenda-card:hover .agenda-icon-wrap {
+            transform: scale(1.12) rotate(4deg);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.18);
+            background: rgba(255, 255, 255, 0.16);
+        }
+
+        .agenda-icon {
+            transition: transform 0.35s ease, filter 0.35s ease;
+        }
+
+        .agenda-card:hover .agenda-icon {
+            transform: scale(1.1);
+            filter: drop-shadow(0 6px 12px rgba(255, 255, 255, 0.2));
+        }
+
+        .agenda-title {
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .agenda-card:hover .agenda-title {
+            transform: translateX(4px);
+            color: #fff;
+        }
+
+        .agenda-text {
+            transition: color 0.3s ease, opacity 0.3s ease;
+        }
+
+        .agenda-card:hover .agenda-text {
+            color: rgba(255, 255, 255, 0.88);
+        }
+
+        .agenda-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .agenda-card:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .agenda-card:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+
+        .agenda-card:nth-child(5) {
+            animation-delay: 0.8s;
+        }
+
+        .agenda-card:nth-child(6) {
+            animation-delay: 1s;
+        }
+
+        .agenda-card:nth-child(7) {
+            animation-delay: 1.2s;
+        }
+
+        .agenda-card:nth-child(8) {
+            animation-delay: 1.4s;
+        }
+
+        .agenda-card:nth-child(9) {
+            animation-delay: 1.6s;
+        }
+
+        .agenda-card:nth-child(10) {
+            animation-delay: 1.8s;
+        }
+
+        @keyframes agendaFloat {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-4px);
+            }
+        }
+
+        @keyframes iconPulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.04);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .agenda-card,
+            .agenda-icon-wrap {
+                animation: none;
+            }
+
+            .agenda-card,
+            .agenda-card::before,
+            .agenda-icon-wrap,
+            .agenda-icon,
+            .agenda-title,
+            .agenda-text {
+                transition: none;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.45s ease, transform 0.45s ease;
+            will-change: opacity, transform;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .job-card,
+        .service-card,
+        .news-card,
+        .testimonial-card,
+        .agency-card,
+        .agenda-card {
+            will-change: transform;
+            transform: translateZ(0);
+            backface-visibility: hidden;
+        }
+
+        /* Testimonial live animation */
+        .testimonial-live {
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.45s ease, box-shadow 0.45s ease, border-color 0.45s ease;
+            animation: testimonialFloat 5s ease-in-out infinite;
+            will-change: transform;
+        }
+
+        .testimonial-live:nth-child(2) {
+            animation-delay: 0.8s;
+        }
+
+        .testimonial-live:nth-child(3) {
+            animation-delay: 1.6s;
+        }
+
+        .testimonial-live:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 24px 50px rgba(0, 56, 168, 0.14);
+        }
+
+        .testimonial-glow {
+            position: absolute;
+            top: -30px;
+            right: -30px;
+            width: 130px;
+            height: 130px;
+            border-radius: 9999px;
+            background: radial-gradient(circle, rgba(0, 56, 168, 0.12) 0%, rgba(252, 209, 22, 0.10) 45%, transparent 75%);
+            filter: blur(10px);
+            opacity: 0.9;
+            transition: transform 0.6s ease, opacity 0.6s ease;
+            pointer-events: none;
+        }
+
+        .testimonial-live:hover .testimonial-glow {
+            transform: scale(1.25);
+            opacity: 1;
+        }
+
+        .testimonial-live::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(120deg,
+                    transparent 0%,
+                    rgba(255, 255, 255, 0.14) 35%,
+                    rgba(255, 255, 255, 0.45) 50%,
+                    rgba(255, 255, 255, 0.14) 65%,
+                    transparent 100%);
+            transform: translateX(-130%);
+            transition: transform 0.9s ease;
+            pointer-events: none;
+        }
+
+        .testimonial-live:hover::after {
+            transform: translateX(130%);
+        }
+
+        .testimonial-avatar-wrap {
+            position: relative;
+            display: inline-flex;
+            border-radius: 9999px;
+            padding: 3px;
+            background: linear-gradient(135deg, #0038A8, #CE1126, #FCD116);
+            animation: avatarPulseGlow 3s ease-in-out infinite;
+        }
+
+        .testimonial-avatar {
+            transition: transform 0.4s ease, filter 0.4s ease;
+            display: block;
+        }
+
+        .testimonial-live:hover .testimonial-avatar {
+            transform: scale(1.08);
+            filter: saturate(1.08);
+        }
+
+        .testimonial-live p,
+        .testimonial-live .text-sm {
+            transition: color 0.35s ease;
+        }
+
+        .testimonial-live:hover .font-semibold {
+            color: #0038A8;
+        }
+
+        @keyframes testimonialFloat {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-6px);
+            }
+        }
+
+        @keyframes avatarPulseGlow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 rgba(0, 56, 168, 0.00);
+            }
+
+            50% {
+                box-shadow: 0 0 18px rgba(0, 56, 168, 0.18);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .testimonial-live,
+            .testimonial-avatar-wrap {
+                animation: none;
+            }
+
+            .testimonial-live,
+            .testimonial-glow,
+            .testimonial-live::after,
+            .testimonial-avatar,
+            .testimonial-live p,
+            .testimonial-live .text-sm {
+                transition: none;
+            }
+        }
+
+        .testimonial-card {
+            backdrop-filter: blur(10px);
+        }
+
+        .testimonial-card:hover img {
+            transform: scale(1.06);
+        }
+
+        .testimonial-card img {
+            transition: all 0.4s ease;
+        }
     </style>
 </head>
 
@@ -915,15 +1269,6 @@
         class="fixed inset-0 z-[200] flex items-center justify-center bg-gradient-to-br from-primary-900 via-primary-800 to-navy-900">
         <div class="text-center transition-all duration-500" id="preloader-content">
             <div class="loading-spinner mx-auto mb-8"></div>
-
-            <div class="flex items-center justify-center gap-3 mb-4">
-                <img src="https://z-cdn-media.chatglm.cn/files/1c58a356-6f8d-4a3c-b8d5-ec3c707c699d.png?auth_key=1873251906-07b2e7f6ed17478fb0a8fed6d6c1b95b-0-9a4902917ccf2e535c7bc9997225fdca"
-                    alt="DMW Logo" class="h-16 w-auto opacity-95">
-            </div>
-
-            <p class="text-white/80 text-lg font-medium tracking-wide">
-                Loading Official Portal
-            </p>
         </div>
     </div>
 
@@ -1105,10 +1450,9 @@
    transition-all duration-300 hover:bg-blue-50 hover:scale-105 hover:shadow-lg
    before:absolute before:inset-0 before:bg-blue-600/10 before:opacity-0 before:transition-all before:duration-500
    hover:before:opacity-100">
-
                             <span class="relative z-10 flex items-center gap-2">
                                 Find Jobs
-
+                            </span>
                         </a>
 
                     </div>
@@ -1162,7 +1506,7 @@
                         <div class="flex items-center gap-3">
 
                             <!-- Icon -->
-                            <img src="https://cdn-icons-gif.flaticon.com/16664/16664303.gif"
+                            <img src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png"
                                 class="w-8 h-8 object-contain" alt="Verified Agencies">
 
                             <!-- Text -->
@@ -1187,7 +1531,7 @@
                         <div class="flex items-center gap-3">
 
                             <!-- Icon -->
-                            <img src="https://cdn-icons-gif.flaticon.com/16104/16104275.gif"
+                            <img src="https://cdn-icons-png.flaticon.com/128/1048/1048953.png"
                                 class="w-8 h-8 object-contain" alt="Job Opportunities">
 
                             <!-- Text -->
@@ -2060,7 +2404,7 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
 
             <!-- Agencies List -->
             <div class="grid md:grid-cols-2 gap-6" id="agenciesList">
-                
+
                 <!-- Agency Card 1 -->
                 <div class="agency-card valid reveal">
                     <div
@@ -2456,158 +2800,6 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                     worldwide.
                 </p>
             </div>
-
-            <!-- Agenda Grid -->
-            <style>
-                .agenda-card {
-                    position: relative;
-                    overflow: hidden;
-                    transition: transform 0.35s ease, background-color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
-                    animation: agendaFloat 5s ease-in-out infinite;
-                }
-
-                .agenda-card:hover {
-                    transform: translateY(-8px) scale(1.02);
-                    background: rgba(255, 255, 255, 0.18);
-                    border-color: rgba(255, 255, 255, 0.3);
-                    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
-                }
-
-                .agenda-card::before {
-                    content: "";
-                    position: absolute;
-                    inset: -40% auto auto -60%;
-                    width: 80%;
-                    height: 180%;
-                    background: linear-gradient(120deg,
-                            transparent 0%,
-                            rgba(255, 255, 255, 0.06) 45%,
-                            rgba(255, 255, 255, 0.16) 50%,
-                            rgba(255, 255, 255, 0.06) 55%,
-                            transparent 100%);
-                    transform: rotate(18deg) translateX(-120%);
-                    transition: transform 0.8s ease;
-                    pointer-events: none;
-                }
-
-                .agenda-card:hover::before {
-                    transform: rotate(18deg) translateX(240%);
-                }
-
-                .agenda-icon-wrap {
-                    transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease;
-                    animation: iconPulse 3.5s ease-in-out infinite;
-                }
-
-                .agenda-card:hover .agenda-icon-wrap {
-                    transform: scale(1.12) rotate(4deg);
-                    box-shadow: 0 0 20px rgba(255, 215, 0, 0.18);
-                    background: rgba(255, 255, 255, 0.16);
-                }
-
-                .agenda-icon {
-                    transition: transform 0.35s ease, filter 0.35s ease;
-                }
-
-                .agenda-card:hover .agenda-icon {
-                    transform: scale(1.1);
-                    filter: drop-shadow(0 6px 12px rgba(255, 255, 255, 0.2));
-                }
-
-                .agenda-title {
-                    transition: transform 0.3s ease, color 0.3s ease;
-                }
-
-                .agenda-card:hover .agenda-title {
-                    transform: translateX(4px);
-                    color: #fff;
-                }
-
-                .agenda-text {
-                    transition: color 0.3s ease, opacity 0.3s ease;
-                }
-
-                .agenda-card:hover .agenda-text {
-                    color: rgba(255, 255, 255, 0.88);
-                }
-
-                .agenda-card:nth-child(2) {
-                    animation-delay: 0.2s;
-                }
-
-                .agenda-card:nth-child(3) {
-                    animation-delay: 0.4s;
-                }
-
-                .agenda-card:nth-child(4) {
-                    animation-delay: 0.6s;
-                }
-
-                .agenda-card:nth-child(5) {
-                    animation-delay: 0.8s;
-                }
-
-                .agenda-card:nth-child(6) {
-                    animation-delay: 1s;
-                }
-
-                .agenda-card:nth-child(7) {
-                    animation-delay: 1.2s;
-                }
-
-                .agenda-card:nth-child(8) {
-                    animation-delay: 1.4s;
-                }
-
-                .agenda-card:nth-child(9) {
-                    animation-delay: 1.6s;
-                }
-
-                .agenda-card:nth-child(10) {
-                    animation-delay: 1.8s;
-                }
-
-                @keyframes agendaFloat {
-
-                    0%,
-                    100% {
-                        transform: translateY(0);
-                    }
-
-                    50% {
-                        transform: translateY(-4px);
-                    }
-                }
-
-                @keyframes iconPulse {
-
-                    0%,
-                    100% {
-                        transform: scale(1);
-                    }
-
-                    50% {
-                        transform: scale(1.04);
-                    }
-                }
-
-                @media (prefers-reduced-motion: reduce) {
-
-                    .agenda-card,
-                    .agenda-icon-wrap {
-                        animation: none;
-                    }
-
-                    .agenda-card,
-                    .agenda-card::before,
-                    .agenda-icon-wrap,
-                    .agenda-icon,
-                    .agenda-title,
-                    .agenda-text {
-                        transition: none;
-                    }
-                }
-            </style>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
 
@@ -3068,51 +3260,220 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
 
             <!-- Testimonials Grid -->
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="testimonial-card reveal">
+                <!-- Testimonial 1 -->
+                <div
+                    class="testimonial-card reveal group relative overflow-hidden rounded-3xl bg-white border border-slate-200 p-8 shadow-md transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-blue-200/40">
+
+                    <!-- top gradient -->
+                    <div
+                        class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]">
+                    </div>
+
+                    <!-- glow -->
+                    <div
+                        class="absolute -top-10 -right-10 w-28 h-28 bg-blue-100/50 rounded-full blur-3xl transition-all duration-700 group-hover:scale-125">
+                    </div>
+
+                    <!-- shine -->
+                    <div
+                        class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 transition-all duration-1000 group-hover:translate-x-full group-hover:opacity-100">
+                    </div>
+
                     <div class="relative z-10">
-                        <p class="text-gray-600 mb-6 italic">
+                        <!-- quote icon -->
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-all duration-500">
+                            <svg class="w-6 h-6 text-[#0038A8]" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M7.17 6A5.001 5.001 0 002 11v7h7v-7H6.08A3.001 3.001 0 019 8.17V6H7.17zm10 0A5.001 5.001 0 0012 11v7h7v-7h-2.92A3.001 3.001 0 0119 8.17V6h-1.83z" />
+                            </svg>
+                        </div>
+
+                        <!-- stars -->
+                        <div class="flex items-center gap-1 mb-4">
+                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                        </div>
+
+                        <p class="text-gray-600 mb-6 italic leading-relaxed">
                             "DMW made my deployment process seamless. The online services saved me multiple trips to the
                             office. Thank you for modernizing government services!"
                         </p>
-                        <div class="flex items-center gap-4">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW0MXCbV6LZ0ptSXI1Ozb-T6tgev3EAOI869BJoUptQA&s"
-                                alt="Testimonial" class="w-12 h-12 rounded-full object-cover">
+
+                        <div class="flex items-center gap-4 pt-5 border-t border-slate-100">
+                            <div class="relative">
+                                <div
+                                    class="absolute inset-0 rounded-full bg-gradient-to-r from-[#0038A8] to-[#FCD116] blur-md opacity-30">
+                                </div>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQW0MXCbV6LZ0ptSXI1Ozb-T6tgev3EAOI869BJoUptQA&s"
+                                    alt="Testimonial"
+                                    class="relative w-14 h-14 rounded-full object-cover ring-2 ring-white shadow-md">
+                            </div>
                             <div>
-                                <p class="font-semibold text-gray-900">Keith Pelonia</p>
+                                <p
+                                    class="font-semibold text-gray-900 group-hover:text-[#0038A8] transition-colors duration-300">
+                                    Keith Pelonia
+                                </p>
                                 <p class="text-sm text-gray-500">OFW in Japan</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="testimonial-card reveal">
+                <!-- Testimonial 2 -->
+                <div
+                    class="testimonial-card reveal group relative overflow-hidden rounded-3xl bg-white border border-slate-200 p-8 shadow-md transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-rose-200/40">
+
+                    <div
+                        class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]">
+                    </div>
+                    <div
+                        class="absolute -top-10 -right-10 w-28 h-28 bg-rose-100/50 rounded-full blur-3xl transition-all duration-700 group-hover:scale-125">
+                    </div>
+                    <div
+                        class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 transition-all duration-1000 group-hover:translate-x-full group-hover:opacity-100">
+                    </div>
+
                     <div class="relative z-10">
-                        <p class="text-gray-600 mb-6 italic">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-rose-50 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-all duration-500">
+                            <svg class="w-6 h-6 text-[#CE1126]" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M7.17 6A5.001 5.001 0 002 11v7h7v-7H6.08A3.001 3.001 0 019 8.17V6H7.17zm10 0A5.001 5.001 0 0012 11v7h7v-7h-2.92A3.001 3.001 0 0119 8.17V6h-1.83z" />
+                            </svg>
+                        </div>
+
+                        <div class="flex items-center gap-1 mb-4">
+                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                        </div>
+
+                        <p class="text-gray-600 mb-6 italic leading-relaxed">
                             "When I had problems with my employer, DMW's helpdesk responded immediately. They helped me
                             resolve my issue within days. Forever grateful!"
                         </p>
-                        <div class="flex items-center gap-4">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdldDBD2IfcMolnekdHEYWH_6JN05KlCCAiSO7GD_fIg&s"
-                                alt="Testimonial" class="w-12 h-12 rounded-full object-cover">
+
+                        <div class="flex items-center gap-4 pt-5 border-t border-slate-100">
+                            <div class="relative">
+                                <div
+                                    class="absolute inset-0 rounded-full bg-gradient-to-r from-[#CE1126] to-[#FCD116] blur-md opacity-30">
+                                </div>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdldDBD2IfcMolnekdHEYWH_6JN05KlCCAiSO7GD_fIg&s"
+                                    alt="Testimonial"
+                                    class="relative w-14 h-14 rounded-full object-cover ring-2 ring-white shadow-md">
+                            </div>
                             <div>
-                                <p class="font-semibold text-gray-900">Maria Santos</p>
+                                <p
+                                    class="font-semibold text-gray-900 group-hover:text-[#CE1126] transition-colors duration-300">
+                                    Maria Santos
+                                </p>
                                 <p class="text-sm text-gray-500">OFW in UAE</p>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="testimonial-card reveal">
+                <!-- Testimonial 3 -->
+                <div
+                    class="testimonial-card reveal group relative overflow-hidden rounded-3xl bg-white border border-slate-200 p-8 shadow-md transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-yellow-200/40">
+
+                    <div
+                        class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]">
+                    </div>
+                    <div
+                        class="absolute -top-10 -right-10 w-28 h-28 bg-yellow-100/50 rounded-full blur-3xl transition-all duration-700 group-hover:scale-125">
+                    </div>
+                    <div
+                        class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 transition-all duration-1000 group-hover:translate-x-full group-hover:opacity-100">
+                    </div>
+
                     <div class="relative z-10">
-                        <p class="text-gray-600 mb-6 italic">
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-yellow-50 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-all duration-500">
+                            <svg class="w-6 h-6 text-[#F59E0B]" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M7.17 6A5.001 5.001 0 002 11v7h7v-7H6.08A3.001 3.001 0 019 8.17V6H7.17zm10 0A5.001 5.001 0 0012 11v7h7v-7h-2.92A3.001 3.001 0 0119 8.17V6h-1.83z" />
+                            </svg>
+                        </div>
+
+                        <div class="flex items-center gap-1 mb-4">
+                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                        </div>
+
+                        <p class="text-gray-600 mb-6 italic leading-relaxed">
                             "The PEOS online seminar was very informative. I felt prepared and confident before my
                             deployment. The program covered everything I needed to know."
                         </p>
-                        <div class="flex items-center gap-4">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfGNNkW8UnHKN-nSPtoxbbhaq_vm5ZzIbjmw&s"
-                                alt="Testimonial" class="w-12 h-12 rounded-full object-cover">
+
+                        <div class="flex items-center gap-4 pt-5 border-t border-slate-100">
+                            <div class="relative">
+                                <div
+                                    class="absolute inset-0 rounded-full bg-gradient-to-r from-[#FCD116] to-[#0038A8] blur-md opacity-30">
+                                </div>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfGNNkW8UnHKN-nSPtoxbbhaq_vm5ZzIbjmw&s"
+                                    alt="Testimonial"
+                                    class="relative w-14 h-14 rounded-full object-cover ring-2 ring-white shadow-md">
+                            </div>
                             <div>
-                                <p class="font-semibold text-gray-900">Carlos Reyes</p>
+                                <p
+                                    class="font-semibold text-gray-900 group-hover:text-[#F59E0B] transition-colors duration-300">
+                                    Carlos Reyes
+                                </p>
                                 <p class="text-sm text-gray-500">OFW in Saudi Arabia</p>
                             </div>
                         </div>
@@ -3183,7 +3544,7 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
 
                         </div>
 
-                        <div class="flex items-start gap-4 reveal">
+                        <div class="flex items-start gap-4 reveal group hover:translate-x-1 transition-all duration-300"">
                             <div
                                 class="w-12 h-12 bg-yellow-50 rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
                                 <img src="https://cdn-icons-png.flaticon.com/128/732/732200.png" alt="Email Icon"
@@ -3374,27 +3735,26 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
     <!-- JavaScript -->
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Register GSAP plugins
             gsap.registerPlugin(ScrollTrigger);
 
             // ==========================================
             // 1. Preloader
             // ==========================================
             const preloader = document.getElementById('preloader');
+
             if (preloader) {
                 window.addEventListener('load', () => {
-                    setTimeout(() => {
-                        gsap.to(preloader, {
-                            opacity: 0,
-                            duration: 0.5,
-                            onComplete: () => {
-                                preloader.style.visibility = 'hidden';
-                                document.body.style.overflow = 'auto';
-                                // Trigger entrance animations
-                                initEntranceAnimations();
-                            }
-                        });
-                    }, 800);
+                    gsap.to(preloader, {
+                        opacity: 0,
+                        duration: 0.35,
+                        delay: 0.1,
+                        ease: 'power1.out',
+                        onComplete: () => {
+                            preloader.style.display = 'none';
+                            preloader.style.visibility = 'hidden';
+                            document.body.style.overflow = 'auto';
+                        }
+                    });
                 });
             }
 
@@ -3403,21 +3763,29 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
             // ==========================================
             const header = document.getElementById('header');
             const headerBg = document.getElementById('headerBg');
-            let lastScroll = 0;
 
-            window.addEventListener('scroll', () => {
+            let ticking = false;
+
+            function handleHeaderScroll() {
                 const currentScroll = window.pageYOffset;
 
                 if (currentScroll > 50) {
-                    headerBg.style.opacity = '1';
-                    header.classList.add('shadow-lg');
+                    if (headerBg) headerBg.style.opacity = '1';
+                    if (header) header.classList.add('shadow-lg');
                 } else {
-                    headerBg.style.opacity = '0';
-                    header.classList.remove('shadow-lg');
+                    if (headerBg) headerBg.style.opacity = '0';
+                    if (header) header.classList.remove('shadow-lg');
                 }
 
-                lastScroll = currentScroll;
-            });
+                ticking = false;
+            }
+
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    window.requestAnimationFrame(handleHeaderScroll);
+                    ticking = true;
+                }
+            }, { passive: true });
 
             // ==========================================
             // 3. Mobile Menu Toggle
@@ -3428,8 +3796,8 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
             const mobileOverlay = document.getElementById('mobileOverlay');
 
             function toggleMenu() {
-                mobileMenu.classList.toggle('active');
-                mobileOverlay.classList.toggle('active');
+                if (mobileMenu) mobileMenu.classList.toggle('active');
+                if (mobileOverlay) mobileOverlay.classList.toggle('active');
                 document.body.classList.toggle('overflow-hidden');
             }
 
@@ -3437,73 +3805,79 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
             if (closeMenuBtn) closeMenuBtn.addEventListener('click', toggleMenu);
             if (mobileOverlay) mobileOverlay.addEventListener('click', toggleMenu);
 
-            // Close menu when clicking links
             const mobileLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
             mobileLinks.forEach(link => {
                 link.addEventListener('click', () => {
-                    if (mobileMenu.classList.contains('active')) {
+                    if (mobileMenu && mobileMenu.classList.contains('active')) {
                         toggleMenu();
                     }
                 });
             });
 
             // ==========================================
-            // 4. GSAP Scroll Animations
+            // 4. Lightweight Reveal Animation
             // ==========================================
-            function initEntranceAnimations() {
-                // Reveal animations
-                gsap.utils.toArray('.reveal').forEach((elem, i) => {
-                    gsap.fromTo(elem,
-                        { opacity: 0, y: 50 },
-                        {
-                            opacity: 1,
-                            y: 0,
-                            duration: 0.8,
-                            ease: 'power3.out',
-                            scrollTrigger: {
-                                trigger: elem,
-                                start: 'top 85%',
-                                toggleActions: 'play none none none'
-                            },
-                            delay: i * 0.05
-                        }
-                    );
-                });
+            const revealElements = document.querySelectorAll('.reveal');
 
-                // Counter animations
-                const counters = document.querySelectorAll('.counter');
-                counters.forEach(counter => {
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.12,
+                rootMargin: '0px 0px -40px 0px'
+            });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+
+            // ==========================================
+            // 5. Counter Animations
+            // ==========================================
+            const counters = document.querySelectorAll('.counter');
+
+            const counterObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+
+                    const counter = entry.target;
                     const target = parseFloat(counter.getAttribute('data-target'));
                     const isDecimal = target % 1 !== 0;
+                    const duration = 1200;
+                    const startTime = performance.now();
 
-                    ScrollTrigger.create({
-                        trigger: counter,
-                        start: 'top 80%',
-                        onEnter: () => {
-                            gsap.to(counter, {
-                                duration: 2,
-                                ease: 'power2.out',
-                                onUpdate: function () {
-                                    const progress = this.progress();
-                                    const current = target * progress;
-                                    counter.innerText = isDecimal
-                                        ? current.toFixed(1)
-                                        : Math.ceil(current);
-                                },
-                                onComplete: () => {
-                                    counter.innerText = isDecimal
-                                        ? target.toFixed(1)
-                                        : target;
-                                }
-                            });
-                        },
-                        once: true
-                    });
+                    function updateCounter(currentTime) {
+                        const elapsed = currentTime - startTime;
+                        const progress = Math.min(elapsed / duration, 1);
+                        const eased = 1 - Math.pow(1 - progress, 3);
+                        const value = target * eased;
+
+                        counter.textContent = isDecimal
+                            ? value.toFixed(1)
+                            : Math.ceil(value);
+
+                        if (progress < 1) {
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            counter.textContent = isDecimal
+                                ? target.toFixed(1)
+                                : target;
+                        }
+                    }
+
+                    requestAnimationFrame(updateCounter);
+                    observer.unobserve(counter);
                 });
-            }
+            }, {
+                threshold: 0.4
+            });
+
+            counters.forEach(counter => counterObserver.observe(counter));
 
             // ==========================================
-            // 5. FAQ Accordion
+            // 6. FAQ Accordion
             // ==========================================
             const faqItems = document.querySelectorAll('.faq-item');
 
@@ -3512,16 +3886,18 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                 const answer = item.querySelector('.faq-answer');
                 const icon = item.querySelector('.faq-icon');
 
+                if (!question || !answer || !icon) return;
+
                 question.addEventListener('click', () => {
                     const isActive = answer.classList.contains('active');
 
-                    // Close all
                     faqItems.forEach(otherItem => {
-                        otherItem.querySelector('.faq-answer').classList.remove('active');
-                        otherItem.querySelector('.faq-icon').classList.remove('active');
+                        const otherAnswer = otherItem.querySelector('.faq-answer');
+                        const otherIcon = otherItem.querySelector('.faq-icon');
+                        if (otherAnswer) otherAnswer.classList.remove('active');
+                        if (otherIcon) otherIcon.classList.remove('active');
                     });
 
-                    // Toggle current
                     if (!isActive) {
                         answer.classList.add('active');
                         icon.classList.add('active');
@@ -3529,43 +3905,65 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                 });
 
                 question.addEventListener('keydown', (e) => {
-                    if (e.key === 'Enter') question.click();
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        question.click();
+                    }
                 });
             });
 
             // ==========================================
-            // 6. Job Filtering Tabs
+            // 7. Job Filtering Tabs
             // ==========================================
             const tabBtns = document.querySelectorAll('.tab-btn');
             const jobCards = document.querySelectorAll('.job-card');
 
             tabBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
-                    tabBtns.forEach(b => b.classList.remove('active'));
+                    tabBtns.forEach(b => {
+                        b.classList.remove(
+                            'active',
+                            'all-active',
+                            'japan-active',
+                            'saudi-active',
+                            'uae-active',
+                            'singapore-active',
+                            'qatar-active'
+                        );
+                    });
+
                     btn.classList.add('active');
 
-                    const filter = btn.getAttribute('data-country');
+                    const country = btn.dataset.country;
+                    if (country === 'all') btn.classList.add('all-active');
+                    if (country === 'japan') btn.classList.add('japan-active');
+                    if (country === 'saudi') btn.classList.add('saudi-active');
+                    if (country === 'uae') btn.classList.add('uae-active');
+                    if (country === 'singapore') btn.classList.add('singapore-active');
+                    if (country === 'qatar') btn.classList.add('qatar-active');
 
                     jobCards.forEach(card => {
-                        const country = card.getAttribute('data-country');
-                        if (filter === 'all' || country === filter) {
-                            gsap.to(card, { opacity: 1, scale: 1, duration: 0.3, display: 'block' });
-                        } else {
-                            gsap.to(card, { opacity: 0, scale: 0.95, duration: 0.3, display: 'none' });
-                        }
+                        const cardCountry = card.dataset.country;
+                        const show = country === 'all' || cardCountry === country;
+
+                        card.style.display = show ? 'block' : 'none';
+                        card.style.opacity = show ? '1' : '0';
+                        card.style.transform = show ? 'translateY(0)' : 'translateY(10px)';
                     });
                 });
             });
 
             // ==========================================
-            // 7. Contact Form
+            // 8. Contact Form
             // ==========================================
             const contactForm = document.getElementById('contactForm');
+
             if (contactForm) {
                 contactForm.addEventListener('submit', (e) => {
                     e.preventDefault();
                     const btn = contactForm.querySelector('button[type="submit"]');
                     const originalText = btn.innerHTML;
+
                     btn.innerHTML = '<span>Sending...</span>';
                     btn.disabled = true;
 
@@ -3574,26 +3972,7 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                         contactForm.reset();
                         btn.innerHTML = originalText;
                         btn.disabled = false;
-                    }, 1500);
-                });
-            }            // ==========================================
-            // 8. Agency Search (Simple Filter)
-            // ==========================================
-            const agencySearch = document.getElementById('agencySearch');
-            const agencyCards = document.querySelectorAll('.agency-card');
-
-            if (agencySearch) {
-                agencySearch.addEventListener('input', (e) => {
-                    const searchTerm = e.target.value.toLowerCase();
-
-                    agencyCards.forEach(card => {
-                        const text = card.textContent.toLowerCase();
-                        if (text.includes(searchTerm)) {
-                            gsap.to(card, { opacity: 1, scale: 1, duration: 0.3, display: 'flex' });
-                        } else {
-                            gsap.to(card, { opacity: 0, scale: 0.95, duration: 0.3, display: 'none' });
-                        }
-                    });
+                    }, 1000);
                 });
             }
 
@@ -3607,83 +3986,20 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                     if (targetId === '#') return;
 
                     const targetElement = document.querySelector(targetId);
-                    if (targetElement) {
-                        // Close mobile menu if open
-                        if (mobileMenu && mobileMenu.classList.contains('active')) {
-                            toggleMenu();
-                        }
+                    if (!targetElement) return;
 
-                        const headerOffset = 80;
-                        const elementPosition = targetElement.getBoundingClientRect().top;
-                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                        window.scrollTo({
-                            top: offsetPosition,
-                            behavior: 'smooth'
-                        });
+                    if (mobileMenu && mobileMenu.classList.contains('active')) {
+                        toggleMenu();
                     }
-                });
-            });
 
-        }); // End DOMContentLoaded
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const preloader = document.getElementById('preloader');
-            const preloaderContent = document.getElementById('preloader-content');
+                    const headerOffset = 80;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-            function hidePreloader() {
-                if (!preloader) return;
-
-                if (preloaderContent) {
-                    preloaderContent.style.transform = 'translateY(8px)';
-                    preloaderContent.style.opacity = '0';
-                }
-
-                preloader.style.transition = 'opacity 0.45s ease, visibility 0.45s ease';
-                preloader.style.opacity = '0';
-                preloader.style.visibility = 'hidden';
-
-                setTimeout(() => {
-                    preloader.style.display = 'none';
-                }, 450);
-            }
-
-            window.addEventListener('load', function () {
-                setTimeout(hidePreloader, 250);
-            });
-
-            setTimeout(hidePreloader, 1200);
-        });
-    </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const buttons = document.querySelectorAll(".tab-btn");
-
-            buttons.forEach(button => {
-                button.addEventListener("click", function () {
-                    buttons.forEach(btn => {
-                        btn.classList.remove(
-                            "active",
-                            "all-active",
-                            "japan-active",
-                            "saudi-active",
-                            "uae-active",
-                            "singapore-active",
-                            "qatar-active"
-                        );
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
                     });
-
-                    this.classList.add("active");
-
-                    const country = this.dataset.country;
-
-                    if (country === "all") this.classList.add("all-active");
-                    if (country === "japan") this.classList.add("japan-active");
-                    if (country === "saudi") this.classList.add("saudi-active");
-                    if (country === "uae") this.classList.add("uae-active");
-                    if (country === "singapore") this.classList.add("singapore-active");
-                    if (country === "qatar") this.classList.add("qatar-active");
                 });
             });
         });
