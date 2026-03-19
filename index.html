@@ -2065,18 +2065,6 @@
         }
     </style>
 
-    <!-- Country Filter Tabs -->
-    <!-- Filter Buttons -->
-    <div class="flex flex-wrap justify-center gap-3 mb-12 reveal">
-        <button class="tab-btn active" data-country="all">All Countries</button>
-        <button class="tab-btn" data-country="japan">Japan</button>
-        <button class="tab-btn" data-country="saudi">Saudi Arabia</button>
-        <button class="tab-btn" data-country="uae">UAE</button>
-        <button class="tab-btn" data-country="singapore">Singapore</button>
-        <button class="tab-btn" data-country="qatar">Qatar</button>
-    </div>
-
-
     <!-- Jobs Grid -->
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="jobsGrid">
         <!-- Job Card 1 -->
@@ -2376,20 +2364,19 @@
     <section id="agencies" class="py-24 lg:py-32 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
         <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-white to-transparent"></div>
 
-        <div class="container mx-auto px-4 lg:px-8 relative">
+        <div class="w-full px-4 lg:px-8 relative">
             <!-- Section Header -->
             <div class="flex flex-col items-center text-center gap-6 mb-12">
-
                 <div class="max-w-2xl">
-                    <span class="inline-block px-4 py-1 rounded-full text-xs font-semibold 
-bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
+                    <span
+                        class="inline-block px-4 py-1 rounded-full text-xs font-semibold bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                         Verified Partners
                     </span>
 
                     <h2 class="text-3xl md:text-4xl font-bold text-[#0038A8] mb-4 reveal">
                         Licensed
-                        <span class="bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116] 
-            bg-clip-text text-transparent">
+                        <span
+                            class="bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116] bg-clip-text text-transparent">
                             Recruitment Agencies
                         </span>
                     </h2>
@@ -2399,366 +2386,352 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                         employment.
                     </p>
                 </div>
-
             </div>
 
-            <!-- Agencies List -->
-            <div class="grid md:grid-cols-2 gap-6" id="agenciesList">
+            <!-- Agencies Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 w-full" id="agenciesList">
 
                 <!-- Agency Card 1 -->
-                <div class="agency-card valid reveal">
+                <div class="agency-card valid reveal h-full">
                     <div
-                        class="group relative overflow-hidden rounded-2xl border border-gold-100 bg-white p-5 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-400/40">
-
+                        class="group relative h-full bg-white/90 backdrop-blur-sm rounded-2xl border border-blue-100 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out overflow-hidden">
                         <div
                             class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]">
                         </div>
 
-                        <div
-                            class="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-blue-100/40 blur-3xl transition-all duration-700 group-hover:scale-125 group-hover:bg-blue-200/40">
-                        </div>
-
-                        <div
-                            class="absolute -left-10 -bottom-10 h-28 w-28 rounded-full bg-blue-200/40 blur-3xl transition-all duration-700 group-hover:scale-125">
-                        </div>
-
-                        <div
-                            class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 transition-all duration-1000 group-hover:translate-x-full group-hover:opacity-100">
-                        </div>
-
-                        <div class="relative flex items-start gap-4">
-
-                            <div
-                                class="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 to-white shadow-md transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-xl">
-                                <img src="https://poeajobs.ph/wp-content/uploads/2022/10/101-Mojo-Intl-Corporation-150x150.jpg"
-                                    alt="101 Mojo International Corporation Logo"
-                                    class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110">
-                                <div class="absolute inset-0 ring-1 ring-inset ring-white/40"></div>
+                        <div class="p-6 flex flex-col h-full">
+                            <div class="flex items-start justify-between mb-4 gap-3">
+                                <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-semibold">
+                                    Licensed Agency
+                                </span>
                             </div>
 
-                            <div class="min-w-0 flex-1">
+                            <h3
+                                class="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#0038A8] transition-colors duration-300">
+                                101 MOJO INTERNATIONAL CORPORATION
+                            </h3>
 
-                                <div class="mb-2 flex flex-wrap items-start gap-2">
-                                    <h3
-                                        class="text-base font-bold text-gray-900 leading-snug break-words transition-all duration-300 group-hover:text-[#0038A8]">
-                                        101 MOJO INTERNATIONAL CORPORATION
-                                    </h3>
-
-                                    <span
-                                        class="inline-flex items-center gap-1 rounded-full bg-green-100 px-2.5 py-1 text-[11px] font-semibold text-green-700 transition-all duration-300 group-hover:scale-110">
-                                        <span class="h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
-                                        Valid License
-                                    </span>
-                                </div>
-
-                                <p
-                                    class="mb-3 text-sm text-gray-500 leading-relaxed break-words transition-all duration-300 group-hover:text-gray-700">
-                                    Unit 301, 3rd Floor Goodwill Condominium, A. Soriano St., Intramuros, Manila
+                            <div class="flex items-center gap-3 mb-4">
+                                <img src="https://poeajobs.ph/wp-content/uploads/2022/10/101-Mojo-Intl-Corporation-150x150.jpg"
+                                    alt="101 Mojo International Corporation Logo"
+                                    class="w-10 h-10 object-contain bg-white p-1 rounded-md shadow-sm border border-gray-100">
+                                <p class="text-gray-600 text-sm font-medium">
+                                    Intramuros, Manila
                                 </p>
+                            </div>
 
-                                <div class="flex flex-wrap items-center gap-3 text-sm">
-                                    <a href="tel:+63285271234"
-                                        class="inline-flex items-center gap-2 text-gray-600 transition-all duration-300 hover:text-[#0038A8] hover:translate-x-1 hover:scale-[1.02]">
-                                        <span
-                                            class="flex h-8 w-8 items-center justify-center rounded-full bg-blue-50 text-[#0038A8] transition-all duration-300 group-hover:bg-[#0038A8] group-hover:text-white group-hover:scale-110">
-                                            <svg class="h-4 w-4 transition-transform duration-300 group-hover:rotate-12"
-                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                            </svg>
-                                        </span>
-                                        <span>(02) 8527-1234</span>
-                                    </a>
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                                Unit 301, 3rd Floor Goodwill Condominium, A. Soriano St., Intramuros, Manila
+                            </p>
 
-                                    <span class="text-gray-300">|</span>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">Recruitment</span>
+                                <span class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">Overseas
+                                    Jobs</span>
 
-                                    <div class="inline-flex items-center gap-2 text-gray-600">
-                                        <span
-                                            class="flex h-8 w-8 items-center justify-center rounded-full bg-yellow-50 text-[#F59E0B] transition-all duration-300 group-hover:rotate-6 group-hover:scale-110">
-                                            <svg class="h-4 w-4 transition-transform duration-300 group-hover:rotate-12"
-                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M8 7V3m8 4V3m-9 8h10m-11 9h12a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v11a2 2 0 002 2z" />
-                                            </svg>
-                                        </span>
-                                        <span>Valid until: <span class="font-semibold text-[#0038A8]">Dec
-                                                2026</span></span>
-                                    </div>
+                            </div>
+
+                            <div class="mt-auto flex items-center justify-between pt-4 border-t border-gray-100 gap-4">
+                                <div>
+                                    <p class="text-sm text-gray-500">Contact</p>
+                                    <p class="font-semibold text-[#0038A8]">(02) 8527-1234</p>
+                                    <p class="text-xs text-gray-500">Valid until Dec 2026</p>
                                 </div>
 
+                                <button
+                                    class="px-4 py-2 bg-[#0038A8] text-white rounded-lg text-sm font-medium hover:bg-[#002d85] hover:scale-105 transition-all duration-300 shadow-md">
+                                    View Details
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Agency Card 2 -->
-                <div class="agency-card valid reveal">
+                <div class="agency-card valid reveal h-full">
                     <div
-                        class="group relative overflow-hidden rounded-2xl border border-gold-100 bg-white p-5 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-green-400/40">
-
+                        class="group relative h-full bg-white/90 backdrop-blur-sm rounded-2xl border border-emerald-100 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out overflow-hidden">
                         <div
-                            class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]">
+                            class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-emerald-500 via-green-500 to-lime-400">
                         </div>
 
-                        <div
-                            class="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-green-200/40 blur-3xl transition-all duration-700 group-hover:scale-125 group-hover:bg-green-400/40">
-                        </div>
-
-                        <div
-                            class="absolute -left-10 -bottom-10 h-28 w-28 rounded-full bg-green-100/40 blur-3xl transition-all duration-700 group-hover:scale-125">
-                        </div>
-
-                        <div
-                            class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 transition-all duration-1000 group-hover:translate-x-full group-hover:opacity-100">
-                        </div>
-
-                        <div class="relative flex items-start gap-4">
-
-                            <div
-                                class="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-2xl border border-emerald-100 bg-gradient-to-br from-emerald-50 to-white shadow-md transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg">
-                                <img src="images/AAA.png"
-                                    alt="AAA International Manpower Services Logo"
-                                    class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110">
-                                <div class="absolute inset-0 ring-1 ring-inset ring-white/40"></div>
+                        <div class="p-6 flex flex-col h-full">
+                            <div class="flex items-start justify-between mb-4 gap-3">
+                                <span
+                                    class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 text-xs font-semibold">
+                                    Licensed Agency
+                                </span>
+                        
                             </div>
 
-                            <div class="min-w-0 flex-1">
+                            <h3
+                                class="text-lg font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors duration-300">
+                                AAA INTERNATIONAL MANPOWER SERVICES
+                            </h3>
 
-                                <div class="mb-2 flex flex-wrap items-start gap-2">
-                                    <h3
-                                        class="text-base font-bold text-gray-900 leading-snug break-words transition-colors duration-300 group-hover:text-[#0038A8]">
-                                        AAA INTERNATIONAL MANPOWER SERVICES
-                                    </h3>
-
-                                    <span
-                                        class="inline-flex items-center gap-1 rounded-full bg-green-100 px-2.5 py-1 text-[11px] font-semibold text-green-700 transition-all duration-300 group-hover:scale-105">
-                                        <span class="h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
-                                        Valid License
-                                    </span>
-                                </div>
-
-                                <p
-                                    class="mb-3 text-sm text-gray-500 leading-relaxed break-words transition-colors duration-300 group-hover:text-gray-700">
-                                    5th Floor, Marc 2000 Bldg., Rizal Avenue, corner Quinto St., Sta. Cruz, Manila
+                            <div class="flex items-center gap-3 mb-4">
+                                <img src="images/AAA.png" alt="AAA International Manpower Services Logo"
+                                    class="w-12 h-12 object-contain rounded-lg bg-white p-1 border border-gray-200 shadow-sm">
+                                <p class="text-gray-600 text-sm font-medium">
+                                    Sta. Cruz, Manila
                                 </p>
+                            </div>
 
-                                <div class="flex flex-wrap items-center gap-3 text-sm">
-                                    <a href="tel:+63287451234"
-                                        class="inline-flex items-center gap-2 text-gray-600 transition-all duration-300 hover:text-[#0038A8] hover:translate-x-1">
-                                        <span
-                                            class="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-50 text-emerald-600 transition-all duration-300 group-hover:bg-emerald-600 group-hover:text-white group-hover:scale-110">
-                                            <svg class="h-4 w-4 transition-transform duration-300 group-hover:rotate-12"
-                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                            </svg>
-                                        </span>
-                                        <span>(02) 8745-1234</span>
-                                    </a>
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                                5th Floor, Marc 2000 Bldg., Rizal Avenue, corner Quinto St., Sta. Cruz, Manila
+                            </p>
 
-                                    <span class="text-gray-300">|</span>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">Manpower</span>
+                                <span
+                                    class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">International</span>
+                                
+                            </div>
 
-                                    <div class="inline-flex items-center gap-2 text-gray-600">
-                                        <span
-                                            class="flex h-8 w-8 items-center justify-center rounded-full bg-yellow-50 text-[#F59E0B] transition-all duration-300 group-hover:rotate-6 group-hover:scale-110">
-                                            <svg class="h-4 w-4 transition-transform duration-300 group-hover:rotate-12"
-                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M8 7V3m8 4V3m-9 8h10m-11 9h12a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v11a2 2 0 002 2z" />
-                                            </svg>
-                                        </span>
-                                        <span>Valid until: <span class="font-semibold text-[#0038A8]">Mar
-                                                2026</span></span>
-                                    </div>
+                            <div class="mt-auto flex items-center justify-between pt-4 border-t border-gray-100 gap-4">
+                                <div>
+                                    <p class="text-sm text-gray-500">Contact</p>
+                                    <p class="font-semibold text-emerald-600">(02) 8745-1234</p>
+                                    <p class="text-xs text-gray-500">Valid until Mar 2026</p>
                                 </div>
 
+                                <button
+                                    class="px-4 py-2 bg-emerald-600 text-white rounded-lg text-sm font-medium hover:bg-emerald-700 hover:scale-105 transition-all duration-300 shadow-md">
+                                    View Details
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <!-- Agency Card 3 -->
-                <div class="agency-card valid reveal">
+                <div class="agency-card valid reveal h-full">
                     <div
-                        class="group relative overflow-hidden rounded-2xl border border-gold-100 bg-white p-5 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-yellow-200/60">
-
-                        <!-- Top Gradient -->
+                        class="group relative h-full bg-white/90 backdrop-blur-sm rounded-2xl border border-yellow-100 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out overflow-hidden">
                         <div
-                            class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]">
+                            class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-400">
                         </div>
 
-                        <!-- Glow -->
-                        <div
-                            class="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-yellow-100/40 blur-3xl transition-all duration-700 group-hover:scale-125">
-                        </div>
-                        <div
-                            class="absolute -left-10 -bottom-10 h-28 w-28 rounded-full bg-blue-100/40 blur-3xl transition-all duration-700 group-hover:scale-125">
-                        </div>
-
-                        <!-- Shine -->
-                        <div
-                            class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 transition-all duration-1000 group-hover:translate-x-full group-hover:opacity-100">
-                        </div>
-
-                        <div class="relative flex items-start gap-4">
-
-                            <!-- Logo -->
-                            <div
-                                class="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-2xl border border-yellow-100 bg-gradient-to-br from-yellow-50 to-white shadow-md transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg">
-                                <img src="data:image/png;base64,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"
-                                    alt="Absolute Manpower Agency Logo"
-                                    class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="p-6 flex flex-col h-full">
+                            <div class="flex items-start justify-between mb-4 gap-3">
+                                <span
+                                    class="px-3 py-1 rounded-full bg-yellow-100 text-yellow-700 text-xs font-semibold">
+                                    Licensed Agency
+                                </span>
+                               
                             </div>
 
-                            <!-- Content -->
-                            <div class="min-w-0 flex-1">
+                            <h3
+                                class="text-lg font-bold text-gray-900 mb-3 group-hover:text-yellow-600 transition-colors duration-300">
+                                ABSOLUTE MANPOWER AGENCY INC.
+                            </h3>
 
-                                <div class="flex items-start gap-2 mb-2 flex-wrap">
-                                    <h3
-                                        class="text-base font-bold text-gray-900 leading-snug break-words transition-colors duration-300 group-hover:text-[#0038A8]">
-                                        ABSOLUTE MANPOWER AGENCY INC.
-                                    </h3>
-
-                                    <span
-                                        class="inline-flex items-center gap-1 px-2.5 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded-full transition-all duration-300 group-hover:scale-105">
-                                        <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                                        Valid License
-                                    </span>
-                                </div>
-
-                                <p
-                                    class="text-sm text-gray-500 mb-3 leading-relaxed break-words transition-colors duration-300 group-hover:text-gray-700">
-                                    Room 301-302, 3rd Floor, Paramount Bldg., 444 E. Quinto St., Sampaloc, Manila
+                            <div class="flex items-center gap-3 mb-4">
+                                <img src="data:image/png;base64,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"
+                                    alt="Absolute Manpower Agency Logo"
+                                    class="w-12 h-12 object-contain rounded-lg bg-white p-1 border border-gray-200 shadow-sm">
+                                <p class="text-gray-600 text-sm font-medium">
+                                    Sampaloc, Manila
                                 </p>
+                            </div>
 
-                                <div class="flex flex-wrap items-center gap-3 text-sm">
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                                Room 301-302, 3rd Floor, Paramount Bldg., 444 E. Quinto St., Sampaloc, Manila
+                            </p>
 
-                                    <a href="tel:+63287891234"
-                                        class="inline-flex items-center gap-2 text-gray-600 transition-all duration-300 hover:text-[#0038A8] hover:translate-x-1">
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">Manpower</span>
+                                <span
+                                    class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">Recruitment</span>
+                                
+                            </div>
 
-                                        <span
-                                            class="flex h-8 w-8 items-center justify-center rounded-full bg-yellow-50 text-yellow-600 transition-all duration-300 group-hover:bg-yellow-500 group-hover:text-white group-hover:scale-110">
-                                            <svg class="w-4 h-4 transition-transform duration-300 group-hover:rotate-12"
-                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                            </svg>
-                                        </span>
-
-                                        <span>(02) 8789-1234</span>
-                                    </a>
-
-                                    <span class="text-gray-300">|</span>
-
-                                    <div class="inline-flex items-center gap-2 text-gray-600">
-                                        <span
-                                            class="flex h-8 w-8 items-center justify-center rounded-full bg-blue-50 text-blue-600 transition-all duration-300 group-hover:rotate-6 group-hover:scale-110">
-                                            <svg class="w-4 h-4 transition-transform duration-300 group-hover:rotate-12"
-                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M8 7V3m8 4V3m-9 8h10m-11 9h12a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v11a2 2 0 002 2z" />
-                                            </svg>
-                                        </span>
-
-                                        <span>Valid until: <span class="font-semibold text-[#0038A8]">Jun
-                                                2026</span></span>
-                                    </div>
-
+                            <div class="mt-auto flex items-center justify-between pt-4 border-t border-gray-100 gap-4">
+                                <div>
+                                    <p class="text-sm text-gray-500">Contact</p>
+                                    <p class="font-semibold text-yellow-600">(02) 8789-1234</p>
+                                    <p class="text-xs text-gray-500">Valid until Jun 2026</p>
                                 </div>
 
+                                <button
+                                    class="px-4 py-2 bg-yellow-500 text-black rounded-lg text-sm font-medium hover:bg-yellow-600 hover:scale-105 transition-all duration-300 shadow-md">
+                                    View Details
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Agency Card 4 -->
-                <div class="agency-card valid reveal">
+                <div class="agency-card valid reveal h-full">
                     <div
-                        class="group relative overflow-hidden rounded-2xl border border-gold-100 bg-white p-5 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#CE1126]/40">
-
-                        <!-- Animated top gradient -->
+                        class="group relative h-full bg-white/90 backdrop-blur-sm rounded-2xl border border-rose-100 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out overflow-hidden">
                         <div
-                            class="agency-shimmer absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]">
+                            class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-rose-500 via-red-500 to-pink-500">
                         </div>
 
-                        <!-- Glow background -->
-                        <div
-                            class="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-red-200/40 blur-3xl transition-all duration-700 group-hover:scale-125 group-hover:bg-red-400/40">
-                        </div>
-
-                        <div
-                            class="absolute -left-10 -bottom-10 h-28 w-28 rounded-full bg-red-100/40 blur-3xl transition-all duration-700 group-hover:scale-125">
-                        </div>
-
-                        <!-- Shine Effect -->
-                        <div
-                            class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 transition-all duration-1000 group-hover:translate-x-full group-hover:opacity-100">
-                        </div>
-
-                        <div class="relative flex items-start gap-4">
-
-                            <!-- Logo -->
-                            <div
-                                class="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-2xl border border-rose-100 bg-white p-1 shadow-md transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-lg">
-                                <img src="images/Access.png"
-                                    alt="Access International Manpower Corp. Logo"
-                                    class="h-full w-full object-contain transition-transform duration-500 group-hover:scale-110">
+                        <div class="p-6 flex flex-col h-full">
+                            <div class="flex items-start justify-between mb-4 gap-3">
+                                <span class="px-3 py-1 rounded-full bg-rose-100 text-rose-700 text-xs font-semibold">
+                                    Licensed Agency
+                                </span>
+                                
                             </div>
 
-                            <!-- Content -->
-                            <div class="min-w-0 flex-1">
-                                <div class="mb-2 flex flex-wrap items-start gap-2">
-                                    <h3
-                                        class="text-base font-bold text-gray-900 leading-snug break-words transition-colors duration-300 group-hover:text-[#0038A8]">
-                                        ACCESS INTERNATIONAL MANPOWER CORP.
-                                    </h3>
+                            <h3
+                                class="text-lg font-bold text-gray-900 mb-3 group-hover:text-rose-600 transition-colors duration-300">
+                                ACCESS INTERNATIONAL MANPOWER CORP.
+                            </h3>
 
-                                    <span
-                                        class="inline-flex items-center gap-1 rounded-full bg-green-100 px-2.5 py-1 text-[11px] font-semibold text-green-700 transition-all duration-300 group-hover:scale-105">
-                                        <span class="h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
-                                        Valid License
-                                    </span>
-                                </div>
-
-                                <p
-                                    class="mb-3 text-sm text-gray-500 leading-relaxed break-words transition-colors duration-300 group-hover:text-gray-700">
-                                    Unit 505, 5th Floor, Sunnymede IT Center, 825 Aurora Blvd., Quezon City
+                            <div class="flex items-center gap-3 mb-4">
+                                <img src="images/Access.png" alt="Access International Manpower Corp. Logo"
+                                    class="w-12 h-12 object-contain rounded-lg bg-white p-1 border border-gray-200 shadow-sm">
+                                <p class="text-gray-600 text-sm font-medium">
+                                    Quezon City
                                 </p>
+                            </div>
 
-                                <div class="flex flex-wrap items-center gap-3 text-sm">
-                                    <a href="tel:+63289121234"
-                                        class="inline-flex items-center gap-2 text-gray-600 transition-all duration-300 hover:text-[#0038A8] hover:translate-x-1">
-                                        <span
-                                            class="flex h-8 w-8 items-center justify-center rounded-full bg-rose-50 text-rose-600 transition-all duration-300 group-hover:bg-rose-600 group-hover:text-white group-hover:scale-110">
-                                            <svg class="h-4 w-4 transition-transform duration-300 group-hover:rotate-12"
-                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                                            </svg>
-                                        </span>
-                                        <span>(02) 8912-1234</span>
-                                    </a>
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                                Unit 505, 5th Floor, Sunnymede IT Center, 825 Aurora Blvd., Quezon City
+                            </p>
 
-                                    <span class="text-gray-300">|</span>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">Global
+                                    Hiring</span>
+                            </div>
 
-                                    <div class="inline-flex items-center gap-2 text-gray-600">
-                                        <span
-                                            class="flex h-8 w-8 items-center justify-center rounded-full bg-blue-50 text-[#0038A8] transition-all duration-300 group-hover:rotate-6 group-hover:scale-110">
-                                            <svg class="h-4 w-4 transition-transform duration-300 group-hover:rotate-12"
-                                                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M8 7V3m8 4V3m-9 8h10m-11 9h12a2 2 0 002-2V7a2 2 0 00-2-2H6a2 2 0 00-2 2v11a2 2 0 002 2z" />
-                                            </svg>
-                                        </span>
-                                        <span>Valid until: <span class="font-semibold text-[#0038A8]">Sep
-                                                2026</span></span>
-                                    </div>
+                            <div class="mt-auto flex items-center justify-between pt-4 border-t border-gray-100 gap-4">
+                                <div>
+                                    <p class="text-sm text-gray-500">Contact</p>
+                                    <p class="font-semibold text-rose-600">(02) 8912-1234</p>
+                                    <p class="text-xs text-gray-500">Valid until Sep 2026</p>
                                 </div>
+
+                                <button
+                                    class="px-4 py-2 bg-rose-600 text-white rounded-lg text-sm font-medium hover:bg-rose-700 hover:scale-105 transition-all duration-300 shadow-md">
+                                    View Details
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
+                <!-- Agency Card 5 -->
+                <div class="agency-card valid reveal h-full">
+                    <div
+                        class="group relative h-full bg-white/90 backdrop-blur-sm rounded-2xl border border-sky-100 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out overflow-hidden">
+                        <div
+                            class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-sky-500 via-cyan-500 to-blue-500">
+                        </div>
+
+                        <div class="p-6 flex flex-col h-full">
+                            <div class="flex items-start justify-between mb-4 gap-3">
+                                <span class="px-3 py-1 rounded-full bg-sky-100 text-sky-700 text-xs font-semibold">
+                                    Licensed Agency
+                                </span>
+                               
+                            </div>
+
+                            <h3
+                                class="text-lg font-bold text-gray-900 mb-3 group-hover:text-sky-600 transition-colors duration-300">
+                                GLOBAL LINK MANPOWER SERVICES INC.
+                            </h3>
+
+                            <div class="flex items-center gap-3 mb-4">
+                                <img src="data:image/png;base64,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"
+                                    alt="Global Link Manpower Services Logo"
+                                    class="w-12 h-12 object-contain rounded-lg bg-white p-1 border border-gray-200 shadow-sm">
+                                <p class="text-gray-600 text-sm font-medium">
+                                    Mandaluyong City
+                                </p>
+                            </div>
+
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                                Unit 804, 8th Floor, Cityland Center, Shaw Blvd., Mandaluyong City
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">Recruitment</span>
+                            </div>
+
+                            <div class="mt-auto flex items-center justify-between pt-4 border-t border-gray-100 gap-4">
+                                <div>
+                                    <p class="text-sm text-gray-500">Contact</p>
+                                    <p class="font-semibold text-sky-600">(02) 8815-1234</p>
+                                    <p class="text-xs text-gray-500">Valid until Nov 2026</p>
+                                </div>
+
+                                <button
+                                    class="px-4 py-2 bg-sky-600 text-white rounded-lg text-sm font-medium hover:bg-sky-700 hover:scale-105 transition-all duration-300 shadow-md">
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Agency Card 6 -->
+                <div class="agency-card valid reveal h-full">
+                    <div
+                        class="group relative h-full bg-white/90 backdrop-blur-sm rounded-2xl border border-violet-100 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out overflow-hidden">
+                        <div
+                            class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-violet-500 via-fuchsia-500 to-pink-500">
+                        </div>
+
+                        <div class="p-6 flex flex-col h-full">
+                            <div class="flex items-start justify-between mb-4 gap-3">
+                                <span
+                                    class="px-3 py-1 rounded-full bg-violet-100 text-violet-700 text-xs font-semibold">
+                                    Licensed Agency
+                                </span>
+                                
+                            </div>
+
+                            <h3
+                                class="text-lg font-bold text-gray-900 mb-3 group-hover:text-violet-600 transition-colors duration-300">
+                                PRIME HORIZON RECRUITMENT AGENCY
+                            </h3>
+
+                            <div class="flex items-center gap-3 mb-4">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTe0QguQ__EvQtt7Pf9qb27lrYPV6Dn5by1gA&s"
+                                    alt="Prime Horizon Recruitment Agency Logo"
+                                    class="w-12 h-12 object-contain rounded-lg bg-white p-1 border border-gray-200 shadow-sm">
+                                <p class="text-gray-600 text-sm font-medium">
+                                    Makati City
+                                </p>
+                            </div>
+
+                            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+                                12th Floor, Centuria Business Tower, Kalayaan Ave., Makati City
+                            </p>
+
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span
+                                    class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">Recruitment</span>
+                                <span
+                                    class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">International</span>
+                                
+                            </div>
+
+                            <div class="mt-auto flex items-center justify-between pt-4 border-t border-gray-100 gap-4">
+                                <div>
+                                    <p class="text-sm text-gray-500">Contact</p>
+                                    <p class="font-semibold text-violet-600">(02) 8834-1234</p>
+                                    <p class="text-xs text-gray-500">Valid until Aug 2026</p>
+                                </div>
+
+                                <button
+                                    class="px-4 py-2 bg-violet-600 text-white rounded-lg text-sm font-medium hover:bg-violet-700 hover:scale-105 transition-all duration-300 shadow-md">
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
@@ -2796,7 +2769,8 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                     10 Point Agenda
                 </h2>
                 <p class="text-lg text-white/80 reveal">
-                    A comprehensive framework guiding our mission to protect and empower Filipino migrant workers
+                    A comprehensive framework guiding our mission to protect and empower Filipino migrant
+                    workers
                     worldwide.
                 </p>
             </div>
@@ -2810,7 +2784,8 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                             class="agenda-icon w-7 h-7 object-contain" />
                     </div>
                     <h3 class="agenda-title font-semibold text-white mb-2">Protection of Rights</h3>
-                    <p class="agenda-text text-sm text-white/70">Uphold and defend the fundamental rights of every OFW
+                    <p class="agenda-text text-sm text-white/70">Uphold and defend the fundamental rights of
+                        every OFW
                     </p>
                 </div>
 
@@ -2821,7 +2796,8 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                             class="agenda-icon w-7 h-7 object-contain" />
                     </div>
                     <h3 class="agenda-title font-semibold text-white mb-2">Fair Recruitment</h3>
-                    <p class="agenda-text text-sm text-white/70">Ensure ethical and transparent recruitment practices
+                    <p class="agenda-text text-sm text-white/70">Ensure ethical and transparent recruitment
+                        practices
                     </p>
                 </div>
 
@@ -2832,7 +2808,8 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                             class="agenda-icon w-7 h-7 object-contain" />
                     </div>
                     <h3 class="agenda-title font-semibold text-white mb-2">Welfare Services</h3>
-                    <p class="agenda-text text-sm text-white/70">Comprehensive support for OFW welfare and well-being
+                    <p class="agenda-text text-sm text-white/70">Comprehensive support for OFW welfare and
+                        well-being
                     </p>
                 </div>
 
@@ -2843,7 +2820,8 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                             class="agenda-icon w-7 h-7 object-contain" />
                     </div>
                     <h3 class="agenda-title font-semibold text-white mb-2">Legal Assistance</h3>
-                    <p class="agenda-text text-sm text-white/70">Free legal aid and representation for OFWs in distress
+                    <p class="agenda-text text-sm text-white/70">Free legal aid and representation for OFWs in
+                        distress
                     </p>
                 </div>
 
@@ -2864,7 +2842,8 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                             class="agenda-icon w-7 h-7 object-contain" />
                     </div>
                     <h3 class="agenda-title font-semibold text-white mb-2">Financial Literacy</h3>
-                    <p class="agenda-text text-sm text-white/70">Programs for financial management and investment</p>
+                    <p class="agenda-text text-sm text-white/70">Programs for financial management and
+                        investment</p>
                 </div>
 
                 <div class="agenda-card bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 group reveal">
@@ -2884,7 +2863,8 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                             class="agenda-icon w-7 h-7 object-contain" />
                     </div>
                     <h3 class="agenda-title font-semibold text-white mb-2">Digital Services</h3>
-                    <p class="agenda-text text-sm text-white/70">Modern digital platforms for easier access to services
+                    <p class="agenda-text text-sm text-white/70">Modern digital platforms for easier access to
+                        services
                     </p>
                 </div>
 
@@ -2927,7 +2907,8 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                         </span>
                     </h2>
                     <p class="text-gray-600 mb-8 reveal">
-                        Find answers to common questions about our services, requirements, and processes. Can't find
+                        Find answers to common questions about our services, requirements, and processes. Can't
+                        find
                         what you're looking for? Contact our helpdesk.
                     </p>
                     <div class="reveal">
@@ -2940,7 +2921,8 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                 <div class="space-y-4" id="faqList">
                     <!-- FAQ Category -->
                     <div class="reveal">
-                        <h3 class="font-semibold text-primary-500 text-sm uppercase tracking-wider mb-4">All About
+                        <h3 class="font-semibold text-primary-500 text-sm uppercase tracking-wider mb-4">All
+                            About
                             Direct Hiring</h3>
                     </div>
 
@@ -2954,9 +2936,12 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                             </svg>
                         </div>
                         <div class="faq-answer text-gray-600">
-                            <p>Direct hiring is a process where a foreign employer directly hires a Filipino worker
-                                without going through a recruitment agency. The employer must be accredited by the DMW,
-                                and the worker's documents will be processed directly through the Department.</p>
+                            <p>Direct hiring is a process where a foreign employer directly hires a Filipino
+                                worker
+                                without going through a recruitment agency. The employer must be accredited by
+                                the DMW,
+                                and the worker's documents will be processed directly through the Department.
+                            </p>
                         </div>
                     </div>
 
@@ -2970,9 +2955,12 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                             </svg>
                         </div>
                         <div class="faq-answer text-gray-600">
-                            <p>Requirements include: valid passport, employment contract authenticated by the Philippine
-                                Embassy/Consulate, employer's accreditation certificate, worker's credentials and
-                                certificates, medical examination results, and other country-specific requirements.</p>
+                            <p>Requirements include: valid passport, employment contract authenticated by the
+                                Philippine
+                                Embassy/Consulate, employer's accreditation certificate, worker's credentials
+                                and
+                                certificates, medical examination results, and other country-specific
+                                requirements.</p>
                         </div>
                     </div>
 
@@ -2986,8 +2974,10 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                             </svg>
                         </div>
                         <div class="faq-answer text-gray-600">
-                            <p>The processing time varies depending on the destination country and completeness of
-                                documents. On average, it takes 2-4 weeks after submission of complete requirements.</p>
+                            <p>The processing time varies depending on the destination country and completeness
+                                of
+                                documents. On average, it takes 2-4 weeks after submission of complete
+                                requirements.</p>
                         </div>
                     </div>
 
@@ -3007,8 +2997,10 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                             </svg>
                         </div>
                         <div class="faq-answer text-gray-600">
-                            <p>Visit the DMW E-Registration portal and click "Create Account." You'll need to provide
-                                your personal information, valid ID, and contact details. A verification email will be
+                            <p>Visit the DMW E-Registration portal and click "Create Account." You'll need to
+                                provide
+                                your personal information, valid ID, and contact details. A verification email
+                                will be
                                 sent to complete your registration.</p>
                         </div>
                     </div>
@@ -3023,14 +3015,16 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                             </svg>
                         </div>
                         <div class="faq-answer text-gray-600">
-                            <p>Click "Forgot Password" on the login page. Enter your registered email address and follow
+                            <p>Click "Forgot Password" on the login page. Enter your registered email address
+                                and follow
                                 the instructions sent to your email to reset your password.</p>
                         </div>
                     </div>
 
                     <!-- FAQ Category 3 -->
                     <div class="reveal mt-8">
-                        <h3 class="font-semibold text-primary-500 text-sm uppercase tracking-wider mb-4">Deployment and
+                        <h3 class="font-semibold text-primary-500 text-sm uppercase tracking-wider mb-4">
+                            Deployment and
                             Records</h3>
                     </div>
 
@@ -3044,8 +3038,10 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                             </svg>
                         </div>
                         <div class="faq-answer text-gray-600">
-                            <p>Log in to your E-Registration account and navigate to the "Records" section. You can
-                                request and download certified copies of your employment history, contracts, and other
+                            <p>Log in to your E-Registration account and navigate to the "Records" section. You
+                                can
+                                request and download certified copies of your employment history, contracts, and
+                                other
                                 deployment documents.</p>
                         </div>
                     </div>
@@ -3057,193 +3053,229 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
     <!-- News Section -->
     <section id="news" class="py-24 lg:py-32 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
         <div class="container mx-auto px-4 lg:px-8">
-            <!-- Section Header -->
+
+            <!-- Header -->
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="badge badge-gold mb-4 reveal">Updates</span>
+
                 <h2 class="section-title text-gray-900 mb-6 reveal">
                     Latest
-                    <span class="bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116] 
-    bg-clip-text text-transparent">
+                    <span
+                        class="bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116] bg-clip-text text-transparent">
                         News
                     </span>
                 </h2>
+
                 <p class="text-gray-600 text-lg max-w-2xl mx-auto reveal">
                     Stay informed with the latest announcements, policy updates, and important notices from the
                     Department of Migrant Workers.
                 </p>
             </div>
 
-            <!-- News Grid -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- News Card 1 -->
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <!-- News 1 -->
                 <article class="news-card reveal group h-full">
                     <div
                         class="h-full bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10 hover:border-blue-200">
 
-                        <!-- Image Container -->
-                        <div class="relative aspect-video overflow-hidden">
-                            <img src="https://ibctv13.com/wp-content/uploads/2025/10/human-righrs.webp" alt="DMW News"
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="relative h-56 overflow-hidden">
+                            <img src="https://ibctv13.com/wp-content/uploads/2025/10/human-righrs.webp"
+                                class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
 
-                            <!-- Shine Effect -->
                             <div
-                                class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 group-hover:translate-x-full group-hover:opacity-100 transition-all duration-1000">
-                            </div>
-
-                            <!-- Overlay Gradient -->
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition">
                             </div>
                         </div>
 
-                        <!-- Content -->
                         <div class="p-6">
                             <div class="flex items-center gap-3 mb-4">
-                                <span
-                                    class="badge badge-blue transition-transform duration-300 group-hover:scale-110 group-hover:shadow-md">
-                                    Announcement
-                                </span>
+                                <span class="badge badge-blue">Announcement</span>
                                 <span class="text-sm text-gray-500">Jan 15, 2026</span>
                             </div>
 
-                            <h3
-                                class="text-xl font-semibold text-[#0F172A] leading-snug mb-3 transition-colors duration-300 group-hover:text-[#0038A8]">
+                            <h3 class="text-xl font-semibold mb-3 group-hover:text-[#0038A8]">
                                 DMW Launches Enhanced Digital Services Platform
                             </h3>
 
-                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                                The Department of Migrant Workers unveils its new integrated digital platform, offering
-                                streamlined services for OFWs worldwide.
+                            <p class="text-gray-600 text-sm mb-4">
+                                New integrated platform offering streamlined services for OFWs worldwide.
                             </p>
-
-                            <!-- Animated Read More -->
-                            <div
-                                class="flex items-center gap-2 text-[#0038A8] font-semibold text-sm opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                <span>Read More</span>
-                                <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
-                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                </svg>
-                            </div>
                         </div>
                     </div>
                 </article>
 
-                <!-- News Card 2 -->
+                <!-- News 2 -->
                 <article class="news-card reveal group h-full">
                     <div
                         class="h-full bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-green-500/10 hover:border-green-200">
 
-                        <!-- Image Container -->
-                        <div class="relative aspect-video overflow-hidden">
+                        <div class="relative h-56 overflow-hidden">
                             <img src="https://eastasiaforum.org/wp-content/uploads/2020/03/2018-02-23T053622Z_2019254778_RC1BDEAC7D60_RTRMADP_3_PHILIPPINES-KUWAIT-LABOUR-600x425.jpg"
-                                alt="DMW News"
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
 
-                            <!-- Shine Effect -->
                             <div
-                                class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 group-hover:translate-x-full group-hover:opacity-100 transition-all duration-1000">
-                            </div>
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition">
                             </div>
                         </div>
 
-                        <!-- Content -->
                         <div class="p-6">
                             <div class="flex items-center gap-3 mb-4">
-                                <span
-                                    class="badge badge-green transition-transform duration-300 group-hover:scale-110 group-hover:shadow-md">
-                                    Advisory
-                                </span>
+                                <span class="badge badge-green">Advisory</span>
                                 <span class="text-sm text-gray-500">Jan 12, 2026</span>
                             </div>
-                            <h3
-                                class="text-xl font-semibold text-[#0F172A] leading-snug mb-3 transition-colors duration-300 group-hover:text-[#0038A8]">
-                                New Protection Measures for Domestic Workers in Middle East
+
+                            <h3 class="text-xl font-semibold mb-3 group-hover:text-[#0038A8]">
+                                Protection Measures for Domestic Workers
                             </h3>
 
-                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                                DMW implements additional safeguards for Filipino domestic workers deployed to GCC
-                                countries.
+                            <p class="text-gray-600 text-sm mb-4">
+                                Additional safeguards for Filipino workers deployed to GCC countries.
                             </p>
-
-                            <!-- Animated Read More -->
-                            <div
-                                class="flex items-center gap-2 text-[#0038A8] font-semibold text-sm opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                <span>Read More</span>
-                                <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
-                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                </svg>
-                            </div>
                         </div>
                     </div>
                 </article>
 
-                <!-- News Card 3 -->
+                <!-- News 3 -->
                 <article class="news-card reveal group h-full">
                     <div
                         class="h-full bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-yellow-500/10 hover:border-yellow-200">
 
-                        <!-- Image Container -->
-                        <div class="relative aspect-video overflow-hidden">
-                            <img src="images/11 (1).png" alt="DMW News"
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <div class="relative h-56 overflow-hidden">
+                            <img src="images/11 (1).png"
+                                class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
 
-                            <!-- Shine Effect -->
                             <div
-                                class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 group-hover:translate-x-full group-hover:opacity-100 transition-all duration-1000">
-                            </div>
-                            <div
-                                class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition">
                             </div>
                         </div>
 
-                        <!-- Content -->
                         <div class="p-6">
                             <div class="flex items-center gap-3 mb-4">
-                                <span
-                                    class="badge badge-gold transition-transform duration-300 group-hover:scale-110 group-hover:shadow-md">
-                                    Event
-                                </span>
+                                <span class="badge badge-gold">Event</span>
                                 <span class="text-sm text-gray-500">Jan 10, 2026</span>
                             </div>
-                            <h3
-                                class="text-xl font-semibold text-[#0F172A] leading-snug mb-3 transition-colors duration-300 group-hover:text-[#0038A8]">
-                                Free Skills Training Program for Returning OFWs
+
+                            <h3 class="text-xl font-semibold mb-3 group-hover:text-[#0038A8]">
+                                Free Skills Training for Returning OFWs
                             </h3>
 
-                            <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                                DMW partners with TESDA to offer free livelihood and skills training for returning
-                                overseas
-                                Filipino workers.
+                            <p class="text-gray-600 text-sm mb-4">
+                                TESDA partnership provides livelihood and training opportunities.
                             </p>
-
-                            <!-- Animated Read More -->
-                            <div
-                                class="flex items-center gap-2 text-[#0038A8] font-semibold text-sm opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-                                <span>Read More</span>
-                                <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
-                                    fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                </svg>
-                            </div>
                         </div>
                     </div>
                 </article>
 
+                <!-- News 4 -->
+                <article class="news-card reveal group h-full">
+                    <div
+                        class="h-full bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/20 hover:border-purple-300">
+
+                        <div class="relative h-56 overflow-hidden">
+                            <img src="images/arte.png"
+                                class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-purple-900/20 to-transparent opacity-0 group-hover:opacity-100 transition">
+                            </div>
+                        </div>
+
+                        <div class="p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span
+                                    class="inline-flex items-center rounded-full bg-purple-100 text-purple-700 px-3 py-1 text-xs font-semibold">Update</span>
+                                <span class="text-sm text-gray-500">Jan 18, 2026</span>
+                            </div>
+
+                            <h3
+                                class="text-xl font-semibold mb-3 group-hover:text-purple-600 transition-colors duration-300">
+                                Online Appointment System Expanded
+                            </h3>
+
+                            <p class="text-gray-600 text-sm mb-4">
+                                Improved scheduling system for faster and more efficient service nationwide.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                <!-- News 5 -->
+                <article class="news-card reveal group h-full">
+                    <div
+                        class="h-full bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-500/20 hover:border-red-300">
+
+                        <div class="relative h-56 overflow-hidden">
+                            <img src="https://media.philstar.com/photos/2022/04/26/ofw_2022-04-26_20-49-08.jpg"
+                                class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-red-900/20 to-transparent opacity-0 group-hover:opacity-100 transition">
+                            </div>
+                        </div>
+
+                        <div class="p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span
+                                    class="inline-flex items-center rounded-full bg-red-100 text-red-700 px-3 py-1 text-xs font-semibold">Program</span>
+                                <span class="text-sm text-gray-500">Jan 20, 2026</span>
+                            </div>
+
+                            <h3
+                                class="text-xl font-semibold mb-3 group-hover:text-red-600 transition-colors duration-300">
+                                Expanded Reintegration Support for Returning OFWs
+                            </h3>
+
+                            <p class="text-gray-600 text-sm mb-4">
+                                New assistance initiatives help returning migrant workers rebuild careers and
+                                start
+                                small businesses.
+                            </p>
+                        </div>
+                    </div>
+                </article>
+                <!-- News 6 -->
+                <article class="news-card reveal group h-full">
+                    <div
+                        class="h-full bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/20 hover:border-cyan-300">
+
+                        <div class="relative h-56 overflow-hidden">
+                            <img src="https://twomonkeystravelgroup.com/wp-content/uploads/2023/09/How-to-Travel-The-World-on-a-Philippines-Passport-00-456x570.jpg"
+                                class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-cyan-900/20 to-transparent opacity-0 group-hover:opacity-100 transition">
+                            </div>
+                        </div>
+
+                        <div class="p-6">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span
+                                    class="inline-flex items-center rounded-full bg-cyan-100 text-cyan-700 px-3 py-1 text-xs font-semibold">Policy</span>
+                                <span class="text-sm text-gray-500">Jan 22, 2026</span>
+                            </div>
+
+                            <h3
+                                class="text-xl font-semibold mb-3 group-hover:text-cyan-600 transition-colors duration-300">
+                                Updated Guidelines for Overseas Worker Documentation
+                            </h3>
+
+                            <p class="text-gray-600 text-sm mb-4">
+                                Revised documentation process aims to reduce delays and improve compliance for
+                                departing
+                                workers.
+                            </p>
+                        </div>
+                    </div>
+                </article>
 
             </div>
+        </div>
     </section>
-
     <!-- Testimonials Section -->
     <section class="py-24 lg:py-32 bg-white relative overflow-hidden">
         <div class="absolute inset-0 opacity-[0.02]"
-            style="background-image: radial-gradient(#0038a8 1px, transparent 1px); background-size: 30px 30px;"></div>
+            style="background-image: radial-gradient(#0038a8 1px, transparent 1px); background-size: 30px 30px;">
+        </div>
 
         <div class="container mx-auto px-4 lg:px-8 relative">
             <!-- Section Header -->
@@ -3316,7 +3348,8 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                         </div>
 
                         <p class="text-gray-600 mb-6 italic leading-relaxed">
-                            "DMW made my deployment process seamless. The online services saved me multiple trips to the
+                            "DMW made my deployment process seamless. The online services saved me multiple
+                            trips to the
                             office. Thank you for modernizing government services!"
                         </p>
 
@@ -3332,7 +3365,7 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                             <div>
                                 <p
                                     class="font-semibold text-gray-900 group-hover:text-[#0038A8] transition-colors duration-300">
-                                    Keith Pelonia
+                                    Alden Peloso
                                 </p>
                                 <p class="text-sm text-gray-500">OFW in Japan</p>
                             </div>
@@ -3342,21 +3375,24 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
 
                 <!-- Testimonial 2 -->
                 <div
-                    class="testimonial-card reveal group relative overflow-hidden rounded-3xl bg-white border border-slate-200 p-8 shadow-md transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-rose-200/40">
+                    class="testimonial-card reveal group relative overflow-hidden rounded-3xl bg-white border border-slate-200 p-8 shadow-lg shadow-red-200/50 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-red-400/50">
 
                     <div
                         class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]">
                     </div>
+
+                    <!-- stronger red glow -->
                     <div
-                        class="absolute -top-10 -right-10 w-28 h-28 bg-rose-100/50 rounded-full blur-3xl transition-all duration-700 group-hover:scale-125">
+                        class="absolute -top-10 -right-10 w-28 h-28 bg-red-100/60 rounded-full blur-3xl transition-all duration-700 group-hover:scale-125">
                     </div>
+
                     <div
                         class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 transition-all duration-1000 group-hover:translate-x-full group-hover:opacity-100">
                     </div>
 
                     <div class="relative z-10">
                         <div
-                            class="w-14 h-14 rounded-2xl bg-rose-50 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-all duration-500">
+                            class="w-14 h-14 rounded-2xl bg-red-50 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-all duration-500">
                             <svg class="w-6 h-6 text-[#CE1126]" fill="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M7.17 6A5.001 5.001 0 002 11v7h7v-7H6.08A3.001 3.001 0 019 8.17V6H7.17zm10 0A5.001 5.001 0 0012 11v7h7v-7h-2.92A3.001 3.001 0 0119 8.17V6h-1.83z" />
@@ -3364,30 +3400,27 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                         </div>
 
                         <div class="flex items-center gap-1 mb-4">
+                            <!-- stars (unchanged) -->
                             <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
-                                <path
-                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                <path d="..." />
                             </svg>
                             <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
-                                <path
-                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                <path d="..." />
                             </svg>
                             <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
-                                <path
-                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                <path d="..." />
                             </svg>
                             <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
-                                <path
-                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                <path d="..." />
                             </svg>
                             <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
-                                <path
-                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                                <path d="..." />
                             </svg>
                         </div>
 
                         <p class="text-gray-600 mb-6 italic leading-relaxed">
-                            "When I had problems with my employer, DMW's helpdesk responded immediately. They helped me
+                            "When I had problems with my employer, DMW's helpdesk responded immediately. They
+                            helped me
                             resolve my issue within days. Forever grateful!"
                         </p>
 
@@ -3397,7 +3430,6 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                                     class="absolute inset-0 rounded-full bg-gradient-to-r from-[#CE1126] to-[#FCD116] blur-md opacity-30">
                                 </div>
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdldDBD2IfcMolnekdHEYWH_6JN05KlCCAiSO7GD_fIg&s"
-                                    alt="Testimonial"
                                     class="relative w-14 h-14 rounded-full object-cover ring-2 ring-white shadow-md">
                             </div>
                             <div>
@@ -3458,7 +3490,8 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                         </div>
 
                         <p class="text-gray-600 mb-6 italic leading-relaxed">
-                            "The PEOS online seminar was very informative. I felt prepared and confident before my
+                            "The PEOS online seminar was very informative. I felt prepared and confident before
+                            my
                             deployment. The program covered everything I needed to know."
                         </p>
 
@@ -3481,13 +3514,256 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                         </div>
                     </div>
                 </div>
+                <!-- Testimonial 4 -->
+                <div
+                    class="testimonial-card reveal group relative overflow-hidden rounded-3xl bg-white border border-slate-200 p-8 shadow-lg shadow-green-200/50 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-green-400/50">
+
+                    <!-- top gradient -->
+                    <div
+                        class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]">
+                    </div>
+
+                    <!-- green glow -->
+                    <div
+                        class="absolute -top-10 -right-10 w-32 h-32 bg-green-100/60 rounded-full blur-3xl transition-all duration-700 group-hover:scale-125">
+                    </div>
+                    <div
+                        class="absolute -bottom-10 -left-10 w-32 h-32 bg-green-100/50 rounded-full blur-3xl transition-all duration-700 group-hover:scale-125">
+                    </div>
+
+                    <!-- shine -->
+                    <div
+                        class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 transition-all duration-1000 group-hover:translate-x-full group-hover:opacity-100">
+                    </div>
+
+                    <div class="relative z-10">
+                        <!-- icon -->
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-green-50 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-all duration-500">
+                            <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M7.17 6A5.001 5.001 0 002 11v7h7v-7H6.08A3.001 3.001 0 019 8.17V6H7.17zm10 0A5.001 5.001 0 0012 11v7h7v-7h-2.92A3.001 3.001 0 0119 8.17V6h-1.83z" />
+                            </svg>
+                        </div>
+
+                        <!-- stars -->
+                        <div class="flex items-center gap-1 mb-4">
+                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927..." />
+                            </svg>
+                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927..." />
+                            </svg>
+                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927..." />
+                            </svg>
+                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927..." />
+                            </svg>
+                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927..." />
+                            </svg>
+                        </div>
+
+                        <!-- text -->
+                        <p class="text-gray-600 mb-6 italic leading-relaxed">
+                            "DMW services made my application process faster and stress-free. The support team
+                            was very
+                            responsive and helpful throughout my journey abroad."
+                        </p>
+
+                        <!-- profile -->
+                        <div class="flex items-center gap-4 pt-5 border-t border-slate-100">
+                            <div class="relative">
+                                <div
+                                    class="absolute inset-0 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 blur-md opacity-30">
+                                </div>
+                                <img src="data:image/jpeg;base64,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"
+                                    class="relative w-14 h-14 rounded-full object-cover ring-2 ring-white shadow-md">
+                            </div>
+                            <div>
+                                <p
+                                    class="font-semibold text-gray-900 group-hover:text-green-600 transition-colors duration-300">
+                                    Johnrico Amores
+                                </p>
+                                <p class="text-sm text-gray-500">OFW in Canada</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 5 -->
+                <div
+                    class="testimonial-card reveal group relative overflow-hidden rounded-3xl bg-white border border-slate-200 p-8 shadow-lg shadow-purple-200/50 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-purple-400/50">
+
+                    <!-- top gradient -->
+                    <div
+                        class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]">
+                    </div>
+
+                    <!-- purple glow -->
+                    <div
+                        class="absolute -top-10 -right-10 w-32 h-32 bg-purple-100/60 rounded-full blur-3xl transition-all duration-700 group-hover:scale-125">
+                    </div>
+                    <div
+                        class="absolute -bottom-10 -left-10 w-32 h-32 bg-pink-100/50 rounded-full blur-3xl transition-all duration-700 group-hover:scale-125">
+                    </div>
+
+                    <!-- shine -->
+                    <div
+                        class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 transition-all duration-1000 group-hover:translate-x-full group-hover:opacity-100">
+                    </div>
+
+                    <div class="relative z-10">
+                        <!-- icon -->
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-purple-50 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-all duration-500">
+                            <svg class="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M7.17 6A5.001 5.001 0 002 11v7h7v-7H6.08A3.001 3.001 0 019 8.17V6H7.17zm10 0A5.001 5.001 0 0012 11v7h7v-7h-2.92A3.001 3.001 0 0119 8.17V6h-1.83z" />
+                            </svg>
+                        </div>
+
+                        <!-- stars -->
+                        <div class="flex items-center gap-1 mb-4">
+                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                        </div>
+
+                        <p class="text-gray-600 mb-6 italic leading-relaxed">
+                            "The online verification and assistance services were very convenient. I felt guided
+                            every
+                            step of the way,
+                            and the whole process became easier for me and my family."
+                        </p>
+
+                        <div class="flex items-center gap-4 pt-5 border-t border-slate-100">
+                            <div class="relative">
+                                <div
+                                    class="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 blur-md opacity-30">
+                                </div>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-gqrXQp5uFHjDMn54DL7b6t9kDojVJA1RT9LGsRl3Ew&s"
+                                    alt="Testimonial"
+                                    class="relative w-14 h-14 rounded-full object-cover ring-2 ring-white shadow-md">
+                            </div>
+                            <div>
+                                <p
+                                    class="font-semibold text-gray-900 group-hover:text-purple-600 transition-colors duration-300">
+                                    Angela Cruz
+                                </p>
+                                <p class="text-sm text-gray-500">OFW in Singapore</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 6 -->
+                <div
+                    class="testimonial-card reveal group relative overflow-hidden rounded-3xl bg-white border border-slate-200 p-8 shadow-lg shadow-cyan-200/50 transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-cyan-400/50">
+
+                    <!-- top gradient -->
+                    <div
+                        class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]">
+                    </div>
+
+                    <!-- cyan glow -->
+                    <div
+                        class="absolute -top-10 -right-10 w-32 h-32 bg-cyan-100/60 rounded-full blur-3xl transition-all duration-700 group-hover:scale-125">
+                    </div>
+                    <div
+                        class="absolute -bottom-10 -left-10 w-32 h-32 bg-sky-100/50 rounded-full blur-3xl transition-all duration-700 group-hover:scale-125">
+                    </div>
+
+                    <!-- shine -->
+                    <div
+                        class="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 transition-all duration-1000 group-hover:translate-x-full group-hover:opacity-100">
+                    </div>
+
+                    <div class="relative z-10">
+                        <!-- icon -->
+                        <div
+                            class="w-14 h-14 rounded-2xl bg-cyan-50 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-all duration-500">
+                            <svg class="w-6 h-6 text-cyan-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M7.17 6A5.001 5.001 0 002 11v7h7v-7H6.08A3.001 3.001 0 019 8.17V6H7.17zm10 0A5.001 5.001 0 0012 11v7h7v-7h-2.92A3.001 3.001 0 0119 8.17V6h-1.83z" />
+                            </svg>
+                        </div>
+
+                        <!-- stars -->
+                        <div class="flex items-center gap-1 mb-4">
+                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg class="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                        </div>
+
+                        <p class="text-gray-600 mb-6 italic leading-relaxed">
+                            "I appreciated how fast and organized the support system was. From orientation to
+                            deployment
+                            updates,
+                            everything was clear, professional, and easy to follow."
+                        </p>
+
+                        <div class="flex items-center gap-4 pt-5 border-t border-slate-100">
+                            <div class="relative">
+                                <div
+                                    class="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500 to-sky-500 blur-md opacity-30">
+                                </div>
+                                <img src="https://fulbright.org.ph/images/drupal/alumni2019/philStu/phil19Jestoni.jpg"
+                                    alt="Testimonial"
+                                    class="relative w-14 h-14 rounded-full object-cover ring-2 ring-white shadow-md">
+                            </div>
+                            <div>
+                                <p
+                                    class="font-semibold text-gray-900 group-hover:text-cyan-600 transition-colors duration-300">
+                                    Michael Dela Cruz
+                                </p>
+                                <p class="text-sm text-gray-500">OFW in Qatar</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="py-24 lg:py-32 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary-500/5 to-transparent"></div>
+        <div class="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-primary-500/5 to-transparent">
+        </div>
 
         <div class="container mx-auto px-4 lg:px-8 relative">
             <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
@@ -3502,7 +3778,8 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                         </span>
                     </h2>
                     <p class="text-gray-600 mb-8 reveal">
-                        Have questions or need assistance? Our team is ready to help you with your concerns. Reach out
+                        Have questions or need assistance? Our team is ready to help you with your concerns.
+                        Reach out
                         through any of the channels below.
                     </p>
 
@@ -3523,7 +3800,8 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                                     Main Office
                                 </h3>
                                 <p class="text-sm text-gray-600 leading-relaxed">
-                                    DMW Building, 2nd Street, EDSA corner, Guadalupe Viejo, Makati City, Philippines
+                                    DMW Building, 2nd Street, EDSA corner, Guadalupe Viejo, Makati City,
+                                    Philippines
                                 </p>
                             </div>
 
@@ -3675,7 +3953,8 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                         </div>
                     </div>
                     <p class="text-gray-400 mb-6">
-                        Protecting and promoting the welfare of Filipino migrant workers worldwide through comprehensive
+                        Protecting and promoting the welfare of Filipino migrant workers worldwide through
+                        comprehensive
                         services and support.
                     </p>
                 </div>
@@ -3684,10 +3963,12 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                 <div>
                     <h4 class="font-semibold text-lg mb-6 text-white">Quick Links</h4>
                     <ul class="space-y-3">
-                        <li><a href="#home" class="text-gray-400 hover:text-gold-400 transition-colors">Home</a></li>
+                        <li><a href="#home" class="text-gray-400 hover:text-gold-400 transition-colors">Home</a>
+                        </li>
                         <li><a href="#services" class="text-gray-400 hover:text-gold-400 transition-colors">Services</a>
                         </li>
-                        <li><a href="#jobs" class="text-gray-400 hover:text-gold-400 transition-colors">Job Orders</a>
+                        <li><a href="#jobs" class="text-gray-400 hover:text-gold-400 transition-colors">Job
+                                Orders</a>
                         </li>
                         <li><a href="#agencies" class="text-gray-400 hover:text-gold-400 transition-colors">Agencies</a>
                         </li>
@@ -3699,10 +3980,12 @@ bg-[#0038A8]/10 text-[#0038A8] mb-4 reveal">
                 <div>
                     <h4 class="font-semibold text-lg mb-6 text-white">Services</h4>
                     <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-400 hover:text-gold-400 transition-colors">PEOS Online</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-gold-400 transition-colors">PEOS Online</a>
+                        </li>
                         <li><a href="#" class="text-gray-400 hover:text-gold-400 transition-colors">E-Registration</a>
                         </li>
-                        <li><a href="#" class="text-gray-400 hover:text-gold-400 transition-colors">OFW Records</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-gold-400 transition-colors">OFW Records</a>
+                        </li>
                         <li><a href="#" class="text-gray-400 hover:text-gold-400 transition-colors">Balik-Manggagawa</a>
                         </li>
                     </ul>
