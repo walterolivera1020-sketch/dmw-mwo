@@ -1260,17 +1260,6 @@
         .testimonial-card img {
             transition: all 0.4s ease;
         }
-
-        .agency-card,
-        .agency-card::before,
-        .reveal::before {
-            border-left: none !important;
-        }
-
-        .agency-card::before,
-        .reveal::before {
-            display: none !important;
-        }
     </style>
 </head>
 
@@ -1343,8 +1332,7 @@
                         <img src="https://z-cdn-media.chatglm.cn/files/1c58a356-6f8d-4a3c-b8d5-ec3c707c699d.png?auth_key=1873251906-07b2e7f6ed17478fb0a8fed6d6c1b95b-0-9a4902917ccf2e535c7bc9997225fdca"
                             alt="DMW Official Logo" class="logo-img">
                     </div>
-                    <div class="hidden md:block leading-tight border-l-2 pl-4 
-    [border-image:linear-gradient(to_bottom,#0038A8,#E5E7EB,#FCD116)_1]">
+                    <div class="hidden md:block leading-tight border-l-2 pl-4 border-[#0038A8]">
                         <h1 class="font-display font-bold text-lg text-primary-700 tracking-wide">
                             DMW | MWO
                         </h1>
@@ -1421,26 +1409,21 @@
                         </span>
                     </div>
 
-                    <!-- Heading -->
                     <h1
                         class="font-display text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-[#0F172A] mb-8 animate-fade-up">
 
                         Empowering
 
                         <span class="block text-[#0038A8]">
-
                             Migrant Workers
-
                         </span>
 
-                        <span class="text-[#CE1126]">
-
+                        <span
+                            class="bg-gradient-to-r from-[#CE1126] via-[#C9A227] to-[#0038A8] bg-clip-text text-transparent">
                             Worldwide
-
                         </span>
 
                     </h1>
-
                     <!-- Description -->
                     <p
                         class="text-lg lg:text-xl text-slate-600 leading-relaxed mb-10 max-w-xl mx-auto lg:mx-0 animate-fade-up">
@@ -1473,21 +1456,33 @@
 
                         <!-- OFWs -->
                         <div
-                            class="bg-white rounded-2xl p-5 shadow-sm border-t-4 border-[#0038A8] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 text-center">
-                            <p class="counter text-3xl lg:text-4xl font-bold text-[#0038A8]" data-target="10">0</p>
+                            class="bg-white rounded-2xl p-6 shadow-sm border-t-4 border-[#0038A8] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 text-center">
+
+                            <img src="https://cdn-icons-png.flaticon.com/128/2441/2441840.png"
+                                class="w-10 h-10 mx-auto mb-3" alt="OFW Icon">
+
+                            <p class="counter text-3xl lg:text-4xl font-bold text-[#0038A8]" data-target="10">10</p>
                             <p class="text-sm text-slate-500 mt-1">Million OFWs</p>
                         </div>
 
                         <!-- Countries -->
                         <div
-                            class="bg-white rounded-2xl p-5 shadow-sm border-t-4 border-[#FCD116] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 text-center">
+                            class="bg-white rounded-2xl p-6 shadow-sm border-t-4 border-[#FCD116] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 text-center">
+
+                            <img src="https://cdn-icons-png.flaticon.com/128/13086/13086874.png"
+                                class="w-10 h-10 mx-auto mb-3" alt="Countries Icon">
+
                             <p class="counter text-3xl lg:text-4xl font-bold text-[#0F172A]" data-target="190">0</p>
                             <p class="text-sm text-slate-500 mt-1">Countries</p>
                         </div>
 
                         <!-- Agencies -->
                         <div
-                            class="bg-white rounded-2xl p-5 shadow-sm border-t-4 border-[#CE1126] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 text-center">
+                            class="bg-white rounded-2xl p-6 shadow-sm border-t-4 border-[#CE1126] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 text-center">
+
+                            <img src="https://cdn-icons-png.flaticon.com/128/12124/12124409.png"
+                                class="w-10 h-10 mx-auto mb-3" alt="Agencies Icon">
+
                             <p class="counter text-3xl lg:text-4xl font-bold text-[#CE1126]" data-target="2500">0</p>
                             <p class="text-sm text-slate-500 mt-1">Agencies</p>
                         </div>
@@ -1510,55 +1505,8 @@
                         <div class="absolute inset-0 bg-gradient-to-t from-[#0038A8]/40 to-transparent"></div>
 
                     </div>
-                    <!-- floating card -->
-                    <div
-                        class="absolute -left-6 top-10 bg-white rounded-2xl shadow-xl border-l-4 border-[#0038A8] p-4 animate-float">
 
-                        <div class="flex items-center gap-3">
 
-                            <!-- Icon -->
-                            <img src="https://cdn-icons-png.flaticon.com/128/3135/3135715.png"
-                                class="w-8 h-8 object-contain" alt="Verified Agencies">
-
-                            <!-- Text -->
-                            <div>
-                                <p class="text-sm font-semibold text-[#0F172A]">
-                                    Verified Agencies
-                                </p>
-
-                                <p class="text-xs text-[#0038A8] font-medium">
-                                    2,500+ Trusted Listings
-                                </p>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <!-- floating card -->
-                    <div
-                        class="absolute -right-6 bottom-10 bg-white rounded-2xl shadow-xl border-l-4 border-[#FCD116] p-4 animate-float delay-200">
-
-                        <div class="flex items-center gap-3">
-
-                            <!-- Icon -->
-                            <img src="https://cdn-icons-png.flaticon.com/128/1048/1048953.png"
-                                class="w-8 h-8 object-contain" alt="Job Opportunities">
-
-                            <!-- Text -->
-                            <div>
-                                <p class="text-sm font-semibold text-[#0F172A]">
-                                    Job Opportunities
-                                </p>
-
-                                <p class="text-xs text-[#CE1126] font-medium">
-                                    50,000+ Active Openings
-                                </p>
-                            </div>
-
-                        </div>
-
-                    </div>
                 </div>
 
             </div>
@@ -1770,6 +1718,7 @@
                     <div
                         class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]">
                     </div>
+                    <!-- Consistent Blue/Gold Blurs -->
                     <div
                         class="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-blue-100/40 blur-3xl transition-all duration-700 group-hover:scale-125">
                     </div>
@@ -1809,26 +1758,27 @@
 
                 <!-- Service Card 2 -->
                 <div
-                    class="service-card service-card-premium reveal group relative overflow-hidden rounded-3xl bg-white p-8 border border-slate-200 shadow-sm transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-emerald-200/40">
+                    class="service-card service-card-premium reveal group relative overflow-hidden rounded-3xl bg-white p-8 border border-slate-200 shadow-sm transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-blue-200/40">
                     <div
                         class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]">
                     </div>
+                    <!-- Changed to Blue/Gold -->
                     <div
-                        class="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-emerald-100/40 blur-3xl transition-all duration-700 group-hover:scale-125">
+                        class="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-blue-100/40 blur-3xl transition-all duration-700 group-hover:scale-125">
                     </div>
                     <div
-                        class="absolute -left-10 -bottom-10 h-24 w-24 rounded-full bg-blue-100/30 blur-3xl transition-all duration-700 group-hover:scale-125">
+                        class="absolute -left-10 -bottom-10 h-24 w-24 rounded-full bg-yellow-100/40 blur-3xl transition-all duration-700 group-hover:scale-125">
                     </div>
 
                     <div class="relative z-10">
                         <div
-                            class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-lg border border-slate-200 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-emerald-200/50">
+                            class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-lg border border-slate-200 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-blue-200/50">
                             <img src="https://cdn-icons-png.flaticon.com/128/12153/12153732.png"
                                 alt="E-Registration Icon" class="w-10 h-10 object-contain">
                         </div>
 
                         <h3
-                            class="text-xl font-bold text-gray-900 mb-3 transition-colors duration-300 group-hover:text-emerald-600">
+                            class="text-xl font-bold text-gray-900 mb-3 transition-colors duration-300 group-hover:text-[#0038A8]">
                             E-Registration
                         </h3>
 
@@ -1839,7 +1789,7 @@
                         </p>
 
                         <a href="#"
-                            class="inline-flex items-center gap-2 text-emerald-600 font-semibold transition-all duration-300 group-hover:gap-3">
+                            class="inline-flex items-center gap-2 text-primary-500 font-semibold transition-all duration-300 group-hover:gap-3 group-hover:text-[#0038A8]">
                             <span>Register Now</span>
                             <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24">
@@ -1852,26 +1802,27 @@
 
                 <!-- Service Card 3 -->
                 <div
-                    class="service-card service-card-premium reveal group relative overflow-hidden rounded-3xl bg-white p-8 border border-slate-200 shadow-sm transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-yellow-200/40">
+                    class="service-card service-card-premium reveal group relative overflow-hidden rounded-3xl bg-white p-8 border border-slate-200 shadow-sm transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-blue-200/40">
                     <div
                         class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]">
                     </div>
+                    <!-- Changed to Blue/Gold -->
                     <div
-                        class="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-yellow-100/40 blur-3xl transition-all duration-700 group-hover:scale-125">
+                        class="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-blue-100/40 blur-3xl transition-all duration-700 group-hover:scale-125">
                     </div>
                     <div
-                        class="absolute -left-10 -bottom-10 h-24 w-24 rounded-full bg-amber-100/30 blur-3xl transition-all duration-700 group-hover:scale-125">
+                        class="absolute -left-10 -bottom-10 h-24 w-24 rounded-full bg-yellow-100/40 blur-3xl transition-all duration-700 group-hover:scale-125">
                     </div>
 
                     <div class="relative z-10">
                         <div
-                            class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-lg border border-slate-200 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-yellow-200/50">
+                            class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-lg border border-slate-200 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-blue-200/50">
                             <img src="https://cdn-icons-png.flaticon.com/128/3979/3979423.png" alt="OFW Records Icon"
                                 class="w-10 h-10 object-contain">
                         </div>
 
                         <h3
-                            class="text-xl font-bold text-gray-900 mb-3 transition-colors duration-300 group-hover:text-yellow-600">
+                            class="text-xl font-bold text-gray-900 mb-3 transition-colors duration-300 group-hover:text-[#0038A8]">
                             OFW Records
                         </h3>
 
@@ -1882,7 +1833,7 @@
                         </p>
 
                         <a href="#"
-                            class="inline-flex items-center gap-2 text-yellow-600 font-semibold transition-all duration-300 group-hover:gap-3">
+                            class="inline-flex items-center gap-2 text-primary-500 font-semibold transition-all duration-300 group-hover:gap-3 group-hover:text-[#0038A8]">
                             <span>View Records</span>
                             <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24">
@@ -1895,26 +1846,27 @@
 
                 <!-- Service Card 4 -->
                 <div
-                    class="service-card service-card-premium reveal group relative overflow-hidden rounded-3xl bg-white p-8 border border-slate-200 shadow-sm transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-red-200/40">
+                    class="service-card service-card-premium reveal group relative overflow-hidden rounded-3xl bg-white p-8 border border-slate-200 shadow-sm transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-blue-200/40">
                     <div
                         class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]">
                     </div>
+                    <!-- Changed to Blue/Gold -->
                     <div
-                        class="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-red-100/40 blur-3xl transition-all duration-700 group-hover:scale-125">
+                        class="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-blue-100/40 blur-3xl transition-all duration-700 group-hover:scale-125">
                     </div>
                     <div
-                        class="absolute -left-10 -bottom-10 h-24 w-24 rounded-full bg-rose-100/30 blur-3xl transition-all duration-700 group-hover:scale-125">
+                        class="absolute -left-10 -bottom-10 h-24 w-24 rounded-full bg-yellow-100/40 blur-3xl transition-all duration-700 group-hover:scale-125">
                     </div>
 
                     <div class="relative z-10">
                         <div
-                            class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-lg border border-slate-200 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-red-200/50">
+                            class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-lg border border-slate-200 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-blue-200/50">
                             <img src="https://cdn-icons-png.flaticon.com/128/7051/7051390.png"
                                 alt="Balik-Manggagawa Icon" class="w-10 h-10 object-contain">
                         </div>
 
                         <h3
-                            class="text-xl font-bold text-gray-900 mb-3 transition-colors duration-300 group-hover:text-red-600">
+                            class="text-xl font-bold text-gray-900 mb-3 transition-colors duration-300 group-hover:text-[#0038A8]">
                             Balik-Manggagawa
                         </h3>
 
@@ -1925,7 +1877,7 @@
                         </p>
 
                         <a href="#"
-                            class="inline-flex items-center gap-2 text-crimson-500 font-semibold transition-all duration-300 group-hover:gap-3 group-hover:text-red-600">
+                            class="inline-flex items-center gap-2 text-primary-500 font-semibold transition-all duration-300 group-hover:gap-3 group-hover:text-[#0038A8]">
                             <span>Apply Now</span>
                             <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24">
@@ -1938,26 +1890,27 @@
 
                 <!-- Service Card 5 -->
                 <div
-                    class="service-card service-card-premium reveal group relative overflow-hidden rounded-3xl bg-white p-8 border border-slate-200 shadow-sm transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-purple-200/40">
+                    class="service-card service-card-premium reveal group relative overflow-hidden rounded-3xl bg-white p-8 border border-slate-200 shadow-sm transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-blue-200/40">
                     <div
                         class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]">
                     </div>
+                    <!-- Changed to Blue/Gold -->
                     <div
-                        class="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-purple-100/40 blur-3xl transition-all duration-700 group-hover:scale-125">
+                        class="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-blue-100/40 blur-3xl transition-all duration-700 group-hover:scale-125">
                     </div>
                     <div
-                        class="absolute -left-10 -bottom-10 h-24 w-24 rounded-full bg-violet-100/30 blur-3xl transition-all duration-700 group-hover:scale-125">
+                        class="absolute -left-10 -bottom-10 h-24 w-24 rounded-full bg-yellow-100/40 blur-3xl transition-all duration-700 group-hover:scale-125">
                     </div>
 
                     <div class="relative z-10">
                         <div
-                            class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-lg border border-slate-200 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-purple-200/50">
+                            class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-lg border border-slate-200 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-blue-200/50">
                             <img src="https://cdn-icons-png.flaticon.com/128/16445/16445915.png"
                                 alt="Appointment System Icon" class="w-10 h-10 object-contain">
                         </div>
 
                         <h3
-                            class="text-xl font-bold text-gray-900 mb-3 transition-colors duration-300 group-hover:text-purple-600">
+                            class="text-xl font-bold text-gray-900 mb-3 transition-colors duration-300 group-hover:text-[#0038A8]">
                             Appointment System
                         </h3>
 
@@ -1968,7 +1921,7 @@
                         </p>
 
                         <a href="#"
-                            class="inline-flex items-center gap-2 text-purple-600 font-semibold transition-all duration-300 group-hover:gap-3">
+                            class="inline-flex items-center gap-2 text-primary-500 font-semibold transition-all duration-300 group-hover:gap-3 group-hover:text-[#0038A8]">
                             <span>Book Appointment</span>
                             <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24">
@@ -1981,26 +1934,27 @@
 
                 <!-- Service Card 6 -->
                 <div
-                    class="service-card service-card-premium reveal group relative overflow-hidden rounded-3xl bg-white p-8 border border-slate-200 shadow-sm transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-teal-200/40">
+                    class="service-card service-card-premium reveal group relative overflow-hidden rounded-3xl bg-white p-8 border border-slate-200 shadow-sm transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-blue-200/40">
                     <div
                         class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]">
                     </div>
+                    <!-- Changed to Blue/Gold -->
                     <div
-                        class="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-teal-100/40 blur-3xl transition-all duration-700 group-hover:scale-125">
+                        class="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-blue-100/40 blur-3xl transition-all duration-700 group-hover:scale-125">
                     </div>
                     <div
-                        class="absolute -left-10 -bottom-10 h-24 w-24 rounded-full bg-cyan-100/30 blur-3xl transition-all duration-700 group-hover:scale-125">
+                        class="absolute -left-10 -bottom-10 h-24 w-24 rounded-full bg-yellow-100/40 blur-3xl transition-all duration-700 group-hover:scale-125">
                     </div>
 
                     <div class="relative z-10">
                         <div
-                            class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-lg border border-slate-200 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-teal-200/50">
+                            class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-lg border border-slate-200 transition-all duration-500 group-hover:scale-110 group-hover:rotate-3 group-hover:shadow-blue-200/50">
                             <img src="https://cdn-icons-png.flaticon.com/128/4789/4789117.png" alt="DMW HelpDesk Icon"
                                 class="w-10 h-10 object-contain">
                         </div>
 
                         <h3
-                            class="text-xl font-bold text-gray-900 mb-3 transition-colors duration-300 group-hover:text-teal-600">
+                            class="text-xl font-bold text-gray-900 mb-3 transition-colors duration-300 group-hover:text-[#0038A8]">
                             DMW HelpDesk
                         </h3>
 
@@ -2011,7 +1965,7 @@
                         </p>
 
                         <a href="#"
-                            class="inline-flex items-center gap-2 text-teal-600 font-semibold transition-all duration-300 group-hover:gap-3">
+                            class="inline-flex items-center gap-2 text-primary-500 font-semibold transition-all duration-300 group-hover:gap-3 group-hover:text-[#0038A8]">
                             <span>Get Help</span>
                             <svg class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none"
                                 stroke="currentColor" viewBox="0 0 24 24">
@@ -2021,7 +1975,6 @@
                         </a>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -2093,7 +2046,6 @@
                     Earthwork Construction Worker
                 </h3>
 
-                <!-- Company with Logo -->
                 <div class="flex items-center gap-3 mb-4">
                     <img src="https://www.tokyu-cnst.co.jp/img/share/logo-tokyu_cnst_en.svg" alt="Tokyu Construction"
                         class="w-10 h-10 object-contain bg-white p-1 rounded-md shadow-sm border border-gray-100">
@@ -2105,7 +2057,6 @@
                 <div class="flex flex-wrap gap-2 mb-4">
                     <span class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">Construction</span>
                     <span class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">Full-time</span>
-                    <span class="px-3 py-1 bg-red-100 rounded-full text-xs text-red-600 animate-pulse">Urgent</span>
                 </div>
 
                 <div class="flex items-center justify-between pt-4 border-t border-gray-100">
@@ -2114,8 +2065,8 @@
                         <p class="font-semibold text-[#0038A8]">JPY 180,000 - JPY 350,000</p>
                     </div>
 
-                    <a href="https://www.tokyu-cnst.co.jp/en/" target="_blank" class="inline-block px-4 py-2 bg-[#0038A8] text-white rounded-lg text-sm font-medium 
-   hover:bg-[#002d85] hover:scale-105 transition-all duration-300 shadow-md text-center">
+                    <a href="https://www.tokyu-cnst.co.jp/en/" target="_blank"
+                        class="inline-block px-4 py-2 bg-[#0038A8] text-white rounded-lg text-sm font-medium hover:bg-[#002d85] hover:scale-105 transition-all duration-300 shadow-md text-center">
                         View Details
                     </a>
                 </div>
@@ -2123,20 +2074,21 @@
         </div>
 
         <!-- Job Card 2 -->
-        <div class="job-card reveal group relative bg-white/90 backdrop-blur-sm rounded-2xl border border-yellow-100 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out overflow-hidden"
+        <div class="job-card reveal group relative bg-white/90 backdrop-blur-sm rounded-2xl border border-blue-100 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out overflow-hidden"
             data-country="saudi">
-            <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#FCD116] via-[#CE1126] to-[#0038A8]"></div>
+            <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]"></div>
 
             <div class="p-6">
                 <div class="flex items-start justify-between mb-4">
-                    <span class="px-3 py-1 rounded-full bg-purple-100 text-purple-700 text-xs font-semibold">
+                    <!-- Changed to Blue Theme -->
+                    <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-semibold">
                         Saudi Arabia
                     </span>
                     <span class="text-sm text-gray-500">Posted 1 day ago</span>
                 </div>
 
                 <h3
-                    class="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors duration-300">
+                    class="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#0038A8] transition-colors duration-300">
                     Registered Nurse
                 </h3>
 
@@ -2157,8 +2109,9 @@
                         <p class="text-sm text-gray-500">Salary</p>
                         <p class="font-semibold text-[#0038A8]">SAR 10,000 - SAR 20,000</p>
                     </div>
-                    <a href="https://riyadh-ms.com.sa/" target="_blank" class="inline-block px-4 py-2 bg-purple-600 text-white rounded-lg text-sm font-medium 
-   hover:bg-purple-700 hover:scale-105 transition-all duration-300 shadow-md text-center">
+                    <!-- Changed to Blue Button -->
+                    <a href="https://riyadh-ms.com.sa/" target="_blank"
+                        class="inline-block px-4 py-2 bg-[#0038A8] text-white rounded-lg text-sm font-medium hover:bg-[#002d85] hover:scale-105 transition-all duration-300 shadow-md text-center">
                         View Details
                     </a>
                 </div>
@@ -2168,17 +2121,18 @@
         <!-- Job Card 3 -->
         <div class="job-card reveal group relative bg-white/90 backdrop-blur-sm rounded-2xl border border-blue-100 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out overflow-hidden"
             data-country="uae">
-            <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#FCD116] to-[#CE1126]"></div>
+            <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]"></div>
             <div class="p-6">
                 <div class="flex items-start justify-between mb-4">
-                    <span class="px-3 py-1 rounded-full bg-red-100 text-red-700 text-xs font-semibold">
+                    <!-- Changed to Blue Theme -->
+                    <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-semibold">
                         UAE
                     </span>
                     <span class="text-sm text-gray-500">Posted 3 days ago</span>
                 </div>
 
                 <h3
-                    class="text-lg font-bold text-gray-900 mb-2 group-hover:text-red-600 transition-colors duration-300">
+                    class="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#0038A8] transition-colors duration-300">
                     Hotel Front Desk Agent
                 </h3>
 
@@ -2192,12 +2146,8 @@
                 </div>
 
                 <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">
-                        Hospitality
-                    </span>
-                    <span class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">
-                        Full-time
-                    </span>
+                    <span class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">Hospitality</span>
+                    <span class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">Full-time</span>
                 </div>
 
                 <div class="flex items-center justify-between pt-4 border-t border-gray-100">
@@ -2206,8 +2156,9 @@
                         <p class="font-semibold text-[#0038A8]">AED 25,000 - AED 38,000</p>
                     </div>
 
-                    <a href="https://www.dubaiholding.com/en" target="_blank" class="inline-block px-4 py-2 bg-[#CE1126] text-white rounded-lg text-sm font-medium 
-   hover:bg-red-700 hover:scale-105 transition-all duration-300 shadow-md text-center">
+                    <!-- Changed to Blue Button -->
+                    <a href="https://www.dubaiholding.com/en" target="_blank"
+                        class="inline-block px-4 py-2 bg-[#0038A8] text-white rounded-lg text-sm font-medium hover:bg-[#002d85] hover:scale-105 transition-all duration-300 shadow-md text-center">
                         View Details
                     </a>
                 </div>
@@ -2215,20 +2166,21 @@
         </div>
 
         <!-- Job Card 4 -->
-        <div class="job-card reveal group relative bg-white/90 backdrop-blur-sm rounded-2xl border border-green-100 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out overflow-hidden"
+        <div class="job-card reveal group relative bg-white/90 backdrop-blur-sm rounded-2xl border border-blue-100 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out overflow-hidden"
             data-country="singapore">
-            <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#22c55e] to-[#FCD116]"></div>
+            <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]"></div>
 
             <div class="p-6">
                 <div class="flex items-start justify-between mb-4">
-                    <span class="px-3 py-1 rounded-full bg-green-100 text-green-700 text-xs font-semibold">
+                    <!-- Changed to Blue Theme -->
+                    <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-semibold">
                         Singapore
                     </span>
                     <span class="text-sm text-gray-500">Posted 5 days ago</span>
                 </div>
 
                 <h3
-                    class="text-lg font-bold text-gray-900 mb-2 group-hover:text-emerald-600 transition-colors duration-300">
+                    class="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#0038A8] transition-colors duration-300">
                     IT Support Specialist
                 </h3>
 
@@ -2242,12 +2194,8 @@
                 </div>
 
                 <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">
-                        Technology
-                    </span>
-                    <span class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">
-                        Full-time
-                    </span>
+                    <span class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">Technology</span>
+                    <span class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">Full-time</span>
                 </div>
 
                 <div class="flex items-center justify-between pt-4 border-t border-gray-100">
@@ -2256,8 +2204,9 @@
                         <p class="font-semibold text-[#0038A8]">SGD 17,000 - SGD 29,000</p>
                     </div>
 
-                    <a href="https://singha.tech/" target="_blank" class="inline-block px-4 py-2 bg-green-600 text-white rounded-lg text-sm font-medium 
-   hover:bg-green-700 hover:scale-105 transition-all duration-300 shadow-md text-center">
+                    <!-- Changed to Blue Button -->
+                    <a href="https://singha.tech/" target="_blank"
+                        class="inline-block px-4 py-2 bg-[#0038A8] text-white rounded-lg text-sm font-medium hover:bg-[#002d85] hover:scale-105 transition-all duration-300 shadow-md text-center">
                         View Details
                     </a>
                 </div>
@@ -2265,20 +2214,21 @@
         </div>
 
         <!-- Job Card 5 -->
-        <div class="job-card reveal group relative bg-white/90 backdrop-blur-sm rounded-2xl border border-yellow-100 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out overflow-hidden"
+        <div class="job-card reveal group relative bg-white/90 backdrop-blur-sm rounded-2xl border border-blue-100 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out overflow-hidden"
             data-country="qatar">
-            <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#FCD116] via-[#0038A8] to-[#CE1126]"></div>
+            <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]"></div>
 
             <div class="p-6">
                 <div class="flex items-start justify-between mb-4">
-                    <span class="px-3 py-1 rounded-full bg-yellow-100 text-yellow-700 text-xs font-semibold">
+                    <!-- Changed to Blue Theme -->
+                    <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-semibold">
                         Qatar
                     </span>
                     <span class="text-sm text-gray-500">Posted 1 week ago</span>
                 </div>
 
                 <h3
-                    class="text-lg font-bold text-gray-900 mb-2 group-hover:text-yellow-500 transition-colors duration-300">
+                    class="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#0038A8] transition-colors duration-300">
                     Civil Engineer
                 </h3>
 
@@ -2292,12 +2242,9 @@
                 </div>
 
                 <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">
-                        Engineering
-                    </span>
-                    <span class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">
-                        Full-time
-                    </span>
+                    <span class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">Engineering</span>
+                    <span class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">Full-time</span>
+                    <!-- Kept Red for Urgent as per Accent Rule -->
                     <span class="px-3 py-1 bg-red-100 rounded-full text-xs text-red-600 animate-pulse">
                         Urgent
                     </span>
@@ -2309,8 +2256,9 @@
                         <p class="font-semibold text-[#0038A8]">QAR 12,000 - QAR 18,000</p>
                     </div>
 
-                    <a href="https://www.dohwa.co.kr/" target="_blank" class="inline-block px-4 py-2 bg-[#FCD116] text-black rounded-lg text-sm font-medium 
-   hover:bg-[#e6bd12] hover:scale-105 transition-all duration-300 shadow-md text-center">
+                    <!-- Changed to Blue Button (Removed Gold) -->
+                    <a href="https://www.dohwa.co.kr/" target="_blank"
+                        class="inline-block px-4 py-2 bg-[#0038A8] text-white rounded-lg text-sm font-medium hover:bg-[#002d85] hover:scale-105 transition-all duration-300 shadow-md text-center">
                         View Details
                     </a>
                 </div>
@@ -2345,12 +2293,8 @@
                 </div>
 
                 <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">
-                        Healthcare
-                    </span>
-                    <span class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">
-                        Full-time
-                    </span>
+                    <span class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">Healthcare</span>
+                    <span class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">Full-time</span>
                 </div>
 
                 <div class="flex items-center justify-between pt-4 border-t border-gray-100">
@@ -2360,8 +2304,8 @@
                     </div>
 
                     <a href="https://www.pref.osaka.lg.jp/o090100/koreishisetsu/gaiyou/tokuyousyousai.html"
-                        target="_blank" class="inline-block px-4 py-2 bg-[#0038A8] text-white rounded-lg text-sm font-medium 
-   hover:bg-[#002d85] hover:scale-105 transition-all duration-300 shadow-md text-center">
+                        target="_blank"
+                        class="inline-block px-4 py-2 bg-[#0038A8] text-white rounded-lg text-sm font-medium hover:bg-[#002d85] hover:scale-105 transition-all duration-300 shadow-md text-center">
                         View Details
                     </a>
                 </div>
@@ -2472,30 +2416,28 @@
                 </div>
 
                 <!-- Agency Card 2 -->
-                <div class="agency-card valid reveal h-full">
+                <div class="agency-card reveal h-full">
                     <div
-                        class="group relative h-full bg-white/90 backdrop-blur-sm rounded-2xl border border-emerald-100 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out overflow-hidden">
-                        <div
-                            class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-emerald-500 via-green-500 to-lime-400">
-                        </div>
+                        class="group relative h-full bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out overflow-hidden">
+
+                        <!-- TOP BLUE LINE -->
+                        <div class="absolute inset-x-0 top-0 h-1 bg-[#0038A8]"></div>
 
                         <div class="p-6 flex flex-col h-full">
                             <div class="flex items-start justify-between mb-4 gap-3">
-                                <span
-                                    class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-700 text-xs font-semibold">
+                                <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-semibold">
                                     Licensed Agency
                                 </span>
-
                             </div>
 
                             <h3
-                                class="text-lg font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors duration-300">
+                                class="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#0038A8] transition-colors duration-300">
                                 AAA INTERNATIONAL MANPOWER SERVICES
                             </h3>
 
                             <div class="flex items-center gap-3 mb-4">
                                 <img src="images/AAA.png" alt="AAA International Manpower Services Logo"
-                                    class="w-12 h-12 object-contain rounded-lg bg-white p-1 border border-gray-200 shadow-sm">
+                                    class="w-10 h-10 object-contain bg-white p-1 rounded-md shadow-sm border border-gray-100">
                                 <p class="text-gray-600 text-sm font-medium">
                                     Sta. Cruz, Manila
                                 </p>
@@ -2509,18 +2451,17 @@
                                 <span class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">Manpower</span>
                                 <span
                                     class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">International</span>
-
                             </div>
 
                             <div class="mt-auto flex items-center justify-between pt-4 border-t border-gray-100 gap-4">
                                 <div>
                                     <p class="text-sm text-gray-500">Contact</p>
-                                    <p class="font-semibold text-emerald-600">(02) 8745-1234</p>
+                                    <p class="font-semibold text-[#0038A8]">(02) 8745-1234</p>
                                     <p class="text-xs text-gray-500">Valid until Mar 2026</p>
                                 </div>
 
-                                <a href="https://www.aaa-ph.com/" target="_blank" class="inline-block px-4 py-2 bg-emerald-600 text-white rounded-lg text-sm font-medium 
-   hover:bg-emerald-700 hover:scale-105 transition-all duration-300 shadow-md text-center">
+                                <a href="https://www.aaa-ph.com/" target="_blank"
+                                    class="inline-block px-4 py-2 bg-[#0038A8] text-white rounded-lg text-sm font-medium hover:bg-[#002d85] hover:scale-105 transition-all duration-300 shadow-md text-center">
                                     View Details
                                 </a>
                             </div>
@@ -2529,31 +2470,29 @@
                 </div>
 
                 <!-- Agency Card 3 -->
-                <div class="agency-card valid reveal h-full">
+                <div class="agency-card reveal h-full">
                     <div
-                        class="group relative h-full bg-white/90 backdrop-blur-sm rounded-2xl border border-yellow-100 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out overflow-hidden">
-                        <div
-                            class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-yellow-400 via-amber-500 to-orange-400">
-                        </div>
+                        class="group relative h-full bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out overflow-hidden">
+
+                        <!-- TOP BLUE LINE -->
+                        <div class="absolute inset-x-0 top-0 h-1 bg-[#0038A8]"></div>
 
                         <div class="p-6 flex flex-col h-full">
                             <div class="flex items-start justify-between mb-4 gap-3">
-                                <span
-                                    class="px-3 py-1 rounded-full bg-yellow-100 text-yellow-700 text-xs font-semibold">
+                                <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-semibold">
                                     Licensed Agency
                                 </span>
-
                             </div>
 
                             <h3
-                                class="text-lg font-bold text-gray-900 mb-3 group-hover:text-yellow-600 transition-colors duration-300">
+                                class="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#0038A8] transition-colors duration-300">
                                 EDI - STAFFBUILDERS INTERNATIONAL INC.
                             </h3>
 
                             <div class="flex items-center gap-3 mb-4">
                                 <img src="https://edistaffbuilders.com/assets/polo/images/edi_small_orig_smaller.png"
-                                    alt="Absolute Manpower Agency Logo"
-                                    class="w-12 h-12 object-contain rounded-lg bg-white p-1 border border-gray-200 shadow-sm">
+                                    alt="EDI Staffbuilders Logo"
+                                    class="w-10 h-10 object-contain bg-white p-1 rounded-md shadow-sm border border-gray-100">
                                 <p class="text-gray-600 text-sm font-medium">
                                     Makati City
                                 </p>
@@ -2567,18 +2506,17 @@
                                 <span class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">Manpower</span>
                                 <span
                                     class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">Recruitment</span>
-
                             </div>
 
                             <div class="mt-auto flex items-center justify-between pt-4 border-t border-gray-100 gap-4">
                                 <div>
                                     <p class="text-sm text-gray-500">Contact</p>
-                                    <p class="font-semibold text-yellow-600">(02) 8789-1234</p>
+                                    <p class="font-semibold text-[#0038A8]">(02) 8789-1234</p>
                                     <p class="text-xs text-gray-500">Valid until Jun 2026</p>
                                 </div>
 
-                                <a href="https://edistaffbuilders.com/" target="_blank" class="inline-block px-4 py-2 bg-yellow-500 text-black rounded-lg text-sm font-medium 
-   hover:bg-yellow-600 hover:scale-105 transition-all duration-300 shadow-md text-center">
+                                <a href="https://edistaffbuilders.com/" target="_blank"
+                                    class="inline-block px-4 py-2 bg-[#0038A8] text-white rounded-lg text-sm font-medium hover:bg-[#002d85] hover:scale-105 transition-all duration-300 shadow-md text-center">
                                     View Details
                                 </a>
                             </div>
@@ -2587,30 +2525,29 @@
                 </div>
 
                 <!-- Agency Card 4 -->
-                <div class="agency-card valid reveal h-full">
+                <div class="agency-card reveal h-full">
                     <div
-                        class="group relative h-full bg-white/90 backdrop-blur-sm rounded-2xl border border-rose-100 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out overflow-hidden">
-                        <div
-                            class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-rose-500 via-red-500 to-pink-500">
-                        </div>
+                        class="group relative h-full bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out overflow-hidden">
+
+                        <!-- TOP BLUE LINE -->
+                        <div class="absolute inset-x-0 top-0 h-1 bg-[#0038A8]"></div>
 
                         <div class="p-6 flex flex-col h-full">
                             <div class="flex items-start justify-between mb-4 gap-3">
-                                <span class="px-3 py-1 rounded-full bg-rose-100 text-rose-700 text-xs font-semibold">
+                                <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-semibold">
                                     Licensed Agency
                                 </span>
-
                             </div>
 
                             <h3
-                                class="text-lg font-bold text-gray-900 mb-3 group-hover:text-rose-600 transition-colors duration-300">
+                                class="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#0038A8] transition-colors duration-300">
                                 Access International Manpower and Offshore Placement
                             </h3>
 
                             <div class="flex items-center gap-3 mb-4">
                                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAflBMVEX0DRX0AAr0AAD0BhD3U1j5ioz5lZf2R0z8xcb+6uv+9fX/+Pn93N31GiH6pKb////4fX/0AAX1LzX8wML4hIb0ERn1KTD+5eX5kJP3XmL4bnH+8PH91db3PkX1HSb7t7r3T1X9ztD3Zmn6qKv4anD1NTz5dnr7r7H3Wl77tLUFH9U+AAAA4UlEQVR4AbTRRWKAMBAFUPKRUmxwd+f+Fyyzwpf9m8iLR/r/CEB8EGRF1X7eVSj6r2FaeEXboT3mO8I1dzS8V5T9gBFcfSpCgxjlKH6qHOtECWQ71bPbzkKWkBdUwtZMSq6Iqga8hgKofK78rKKlomkRdUrPRuoZoXKXoSIKyCiG8bIsNOKUtZjGGLhtORtJGThZL7tDXt/fN3KzCXCKaaFiWXFTeAKuQUpfECXb44XRWkSTvdAe7/FADRH5/BL0mLn3MgrPoUXI95nTUpgm9i+J2W4RUqbN7z/G8QDpb/QAAKRZDoQhpaGVAAAAAElFTkSuQmCC"
                                     alt="Access International Manpower Corp. Logo"
-                                    class="w-12 h-12 object-contain rounded-lg bg-white p-1 border border-gray-200 shadow-sm">
+                                    class="w-10 h-10 object-contain bg-white p-1 rounded-md shadow-sm border border-gray-100">
                                 <p class="text-gray-600 text-sm font-medium">
                                     Quezon City
                                 </p>
@@ -2628,13 +2565,13 @@
                             <div class="mt-auto flex items-center justify-between pt-4 border-t border-gray-100 gap-4">
                                 <div>
                                     <p class="text-sm text-gray-500">Contact</p>
-                                    <p class="font-semibold text-rose-600">(02) 8912-1234</p>
+                                    <p class="font-semibold text-[#0038A8]">(02) 8912-1234</p>
                                     <p class="text-xs text-gray-500">Valid until Sep 2026</p>
                                 </div>
 
                                 <a href="https://www.yelp.com/biz/access-international-manpower-and-offshore-placement-quezon-city"
-                                    target="_blank" class="inline-block px-4 py-2 bg-rose-600 text-white rounded-lg text-sm font-medium 
-   hover:bg-rose-700 hover:scale-105 transition-all duration-300 shadow-md text-center">
+                                    target="_blank"
+                                    class="inline-block px-4 py-2 bg-[#0038A8] text-white rounded-lg text-sm font-medium hover:bg-[#002d85] hover:scale-105 transition-all duration-300 shadow-md text-center">
                                     View Details
                                 </a>
                             </div>
@@ -2643,30 +2580,29 @@
                 </div>
 
                 <!-- Agency Card 5 -->
-                <div class="agency-card valid reveal h-full">
+                <div class="agency-card reveal h-full">
                     <div
-                        class="group relative h-full bg-white/90 backdrop-blur-sm rounded-2xl border border-sky-100 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out overflow-hidden">
-                        <div
-                            class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-sky-500 via-cyan-500 to-blue-500">
-                        </div>
+                        class="group relative h-full bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out overflow-hidden">
+
+                        <!-- TOP BLUE LINE -->
+                        <div class="absolute inset-x-0 top-0 h-1 bg-[#0038A8]"></div>
 
                         <div class="p-6 flex flex-col h-full">
                             <div class="flex items-start justify-between mb-4 gap-3">
-                                <span class="px-3 py-1 rounded-full bg-sky-100 text-sky-700 text-xs font-semibold">
+                                <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-semibold">
                                     Licensed Agency
                                 </span>
-
                             </div>
 
                             <h3
-                                class="text-lg font-bold text-gray-900 mb-3 group-hover:text-sky-600 transition-colors duration-300">
+                                class="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#0038A8] transition-colors duration-300">
                                 GLOBAL LINK MANPOWER SERVICES INC.
                             </h3>
 
                             <div class="flex items-center gap-3 mb-4">
                                 <img src="data:image/png;base64,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"
                                     alt="Global Link Manpower Services Logo"
-                                    class="w-12 h-12 object-contain rounded-lg bg-white p-1 border border-gray-200 shadow-sm">
+                                    class="w-10 h-10 object-contain bg-white p-1 rounded-md shadow-sm border border-gray-100">
                                 <p class="text-gray-600 text-sm font-medium">
                                     Mandaluyong City
                                 </p>
@@ -2684,12 +2620,12 @@
                             <div class="mt-auto flex items-center justify-between pt-4 border-t border-gray-100 gap-4">
                                 <div>
                                     <p class="text-sm text-gray-500">Contact</p>
-                                    <p class="font-semibold text-sky-600">(02) 8815-1234</p>
+                                    <p class="font-semibold text-[#0038A8]">(02) 8815-1234</p>
                                     <p class="text-xs text-gray-500">Valid until Nov 2026</p>
                                 </div>
 
-                                <a href="https://globalink-inc.com/" target="_blank" class="inline-block px-4 py-2 bg-sky-600 text-white rounded-lg text-sm font-medium 
-   hover:bg-sky-700 hover:scale-105 transition-all duration-300 shadow-md text-center">
+                                <a href="https://globalink-inc.com/" target="_blank"
+                                    class="inline-block px-4 py-2 bg-[#0038A8] text-white rounded-lg text-sm font-medium hover:bg-[#002d85] hover:scale-105 transition-all duration-300 shadow-md text-center">
                                     View Details
                                 </a>
                             </div>
@@ -2698,31 +2634,29 @@
                 </div>
 
                 <!-- Agency Card 6 -->
-                <div class="agency-card valid reveal h-full">
+                <div class="agency-card reveal h-full">
                     <div
-                        class="group relative h-full bg-white/90 backdrop-blur-sm rounded-2xl border border-violet-100 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out overflow-hidden">
-                        <div
-                            class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-violet-500 via-fuchsia-500 to-pink-500">
-                        </div>
+                        class="group relative h-full bg-white/90 backdrop-blur-sm rounded-2xl border border-gray-200 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ease-out overflow-hidden">
+
+                        <!-- TOP BLUE LINE -->
+                        <div class="absolute inset-x-0 top-0 h-1 bg-[#0038A8]"></div>
 
                         <div class="p-6 flex flex-col h-full">
                             <div class="flex items-start justify-between mb-4 gap-3">
-                                <span
-                                    class="px-3 py-1 rounded-full bg-violet-100 text-violet-700 text-xs font-semibold">
+                                <span class="px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-semibold">
                                     Licensed Agency
                                 </span>
-
                             </div>
 
                             <h3
-                                class="text-lg font-bold text-gray-900 mb-3 group-hover:text-violet-600 transition-colors duration-300">
+                                class="text-lg font-bold text-gray-900 mb-2 group-hover:text-[#0038A8] transition-colors duration-300">
                                 PRIME HORIZON RECRUITMENT AGENCY
                             </h3>
 
                             <div class="flex items-center gap-3 mb-4">
                                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADn0lEQVR4AWIYVMBhqgOP30rvGL/VPlP8VvvNohb2Xe3d573c2894pjErTst9lvlYBqzzuxuw3v8/rbD/Wt+Tngs8lTEtX+qjGrDO/x1MIU0dsc7vZsB8BwEUB/it8V0JkqQXBkZLA9xy4wZjroC1fl/o6QD/Nb6XgVYzgh3g2ukqFbABUxFt04Lfm9BVocxgBzj1OUkDBentAIDewR3gMMlBBkBdOW1ZEkRB9PvGbNu2bdu2bdu2bdvumHOrZ+Ww7Ye0dsWJzPrynAC3VYA/6xuXHhTgpgo4Ntji4OQAx2fHqJ+thXKx3FMq8AEDq72I6A5FQIcfBlf7ORjHRtsnAkh/i6ieMNb+Qim0KwhHp0dwarS/P4BaiTLCuoIR0O5DdSUEdfgjpDMA7k3OsKu3wvfMLzCu1IVkvjg0y9TYZgn9cTg8PYB2mTrrkymQRHhXCFybnPCVrrhLkyOsak3h1eIGhSL5SxRIf4/5nVnkjmbTJh9RMVWG/pVO8GV+xsbBOpIHEiBXIIUkOrBxrp43h4VmanMCk1sTBPmV10fwPjg/P4dtnSUdbo+c0awLDzXawajK8LIQfMDc9gyyRy4ml02WMID1gzXE9UVDOEcQBWM5ODs/5VSieRxIYLs3Bx/aFQjxPBF4NNnRnDNY15nDmQ49OTtB8UQBVIoV6AZ9/w9A5v8BprfG4dbsDPsGG3wlEOcmB/i0umN2exqlE0UMgNfn2eKKlf1lKl0gmSfEAL5R6DxobG57lvOLUZXBvw/RZQoMrHaxuH7lpPVF30oPUgbiuc1kC6QYAO9t2D3epVsSArEc/guAWnNaE8DzD5caKHThNH6JCRUxuNKNsolCrl47U4HupVYoFsrwADgpI7uCOFCTKj1Mb44hfTABuuXqyB5OhViuMFoXmukDMuhgE0zReGR3MBk7FLG9kbCvt0bWcBpEad4lHvh4eWLjrE7e+PrPvPKpUjTPN/zR9+XnfFKQrb8kBLdL5HhOKZKWhWhicxxV0xWP+y9giTv0M2zqLJBIV7N7uZNzu3mNye0AmAL3SAJkQKNKPShc+OUJFLg8vVKAHwqke5PM9y3cAdad1rzAJvlPOjdKb4MbpTAQsNpvFz0d4LvadyIDMvBd4mkBlPhBFwes83vlucRThgEd+K70jQRGxUcaW/4U2AW0YcAF3Ba5KQI7pm1+q333+q3yPQLD/shsNOyHzsdQ6wdk++0AzH+VT4XvTAcRhsEGAJ18SN6LNrZXAAAAAElFTkSuQmCC"
                                     alt="Prime Horizon Recruitment Agency Logo"
-                                    class="w-12 h-12 object-contain rounded-lg bg-white p-1 border border-gray-200 shadow-sm">
+                                    class="w-10 h-10 object-contain bg-white p-1 rounded-md shadow-sm border border-gray-100">
                                 <p class="text-gray-600 text-sm font-medium">
                                     Makati City
                                 </p>
@@ -2737,18 +2671,17 @@
                                     class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">Recruitment</span>
                                 <span
                                     class="px-3 py-1 bg-slate-100 rounded-full text-xs text-slate-600">International</span>
-
                             </div>
 
                             <div class="mt-auto flex items-center justify-between pt-4 border-t border-gray-100 gap-4">
                                 <div>
                                     <p class="text-sm text-gray-500">Contact</p>
-                                    <p class="font-semibold text-violet-600">(02) 8834-1234</p>
+                                    <p class="font-semibold text-[#0038A8]">(02) 8834-1234</p>
                                     <p class="text-xs text-gray-500">Valid until Aug 2026</p>
                                 </div>
 
-                                <a href="https://ipams.com/" target="_blank" class="inline-block px-4 py-2 bg-violet-600 text-white rounded-lg text-sm font-medium 
-   hover:bg-violet-700 hover:scale-105 transition-all duration-300 shadow-md text-center">
+                                <a href="https://ipams.com/" target="_blank"
+                                    class="inline-block px-4 py-2 bg-[#0038A8] text-white rounded-lg text-sm font-medium hover:bg-[#002d85] hover:scale-105 transition-all duration-300 shadow-md text-center">
                                     View Details
                                 </a>
                             </div>
@@ -2863,7 +2796,7 @@
                 <div class="agenda-card bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 group reveal">
                     <div
                         class="agenda-icon-wrap w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-4 shadow-lg">
-                        <img src="https://cdn-icons-png.flaticon.com/128/15636/15636902.png"
+                        <img src="https://cdn-icons-png.flaticon.com/128/17283/17283218.png"
                             class="agenda-icon w-7 h-7 object-contain" />
                     </div>
                     <h3 class="agenda-title font-semibold text-white mb-2">Financial Literacy</h3>
@@ -2884,7 +2817,7 @@
                 <div class="agenda-card bg-white/10 backdrop-blur border border-white/20 rounded-2xl p-6 group reveal">
                     <div
                         class="agenda-icon-wrap w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mb-4 shadow-lg">
-                        <img src="https://cdn-icons-png.flaticon.com/128/1236/1236575.png"
+                        <img src="https://cdn-icons-png.flaticon.com/128/17370/17370622.png"
                             class="agenda-icon w-7 h-7 object-contain" />
                     </div>
                     <h3 class="agenda-title font-semibold text-white mb-2">Digital Services</h3>
@@ -3081,7 +3014,7 @@
 
             <!-- Header -->
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="badge badge-gold mb-4 reveal">Updates</span>
+                <span class="badge badge-blue mb-4 reveal">Updates</span>
 
                 <h2 class="section-title text-gray-900 mb-6 reveal">
                     Latest
@@ -3115,11 +3048,15 @@
 
                         <div class="p-6">
                             <div class="flex items-center gap-3 mb-4">
-                                <span class="badge badge-blue">Announcement</span>
+                                <span
+                                    class="inline-flex items-center rounded-full bg-blue-100 text-blue-700 px-3 py-1 text-xs font-semibold">
+                                    Announcement
+                                </span>
                                 <span class="text-sm text-gray-500">Jan 15, 2026</span>
                             </div>
 
-                            <h3 class="text-xl font-semibold mb-3 group-hover:text-[#0038A8]">
+                            <h3
+                                class="text-xl font-semibold mb-3 group-hover:text-[#0038A8] transition-colors duration-300">
                                 DMW Launches Enhanced Digital Services Platform
                             </h3>
 
@@ -3133,7 +3070,7 @@
                 <!-- News 2 -->
                 <article class="news-card reveal group h-full">
                     <div
-                        class="h-full bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-green-500/10 hover:border-green-200">
+                        class="h-full bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10 hover:border-blue-200">
 
                         <div class="relative h-56 overflow-hidden">
                             <img src="https://eastasiaforum.org/wp-content/uploads/2020/03/2018-02-23T053622Z_2019254778_RC1BDEAC7D60_RTRMADP_3_PHILIPPINES-KUWAIT-LABOUR-600x425.jpg"
@@ -3146,11 +3083,15 @@
 
                         <div class="p-6">
                             <div class="flex items-center gap-3 mb-4">
-                                <span class="badge badge-green">Advisory</span>
+                                <span
+                                    class="inline-flex items-center rounded-full bg-blue-100 text-blue-700 px-3 py-1 text-xs font-semibold">
+                                    Advisory
+                                </span>
                                 <span class="text-sm text-gray-500">Jan 12, 2026</span>
                             </div>
 
-                            <h3 class="text-xl font-semibold mb-3 group-hover:text-emerald-600">
+                            <h3
+                                class="text-xl font-semibold mb-3 group-hover:text-[#0038A8] transition-colors duration-300">
                                 Protection Measures for Domestic Workers
                             </h3>
 
@@ -3164,7 +3105,7 @@
                 <!-- News 3 -->
                 <article class="news-card reveal group h-full">
                     <div
-                        class="h-full bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-yellow-500/10 hover:border-yellow-200">
+                        class="h-full bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10 hover:border-blue-200">
 
                         <div class="relative h-56 overflow-hidden">
                             <img src="images/11 (1).png"
@@ -3177,11 +3118,15 @@
 
                         <div class="p-6">
                             <div class="flex items-center gap-3 mb-4">
-                                <span class="badge badge-gold">Event</span>
+                                <span
+                                    class="inline-flex items-center rounded-full bg-blue-100 text-blue-700 px-3 py-1 text-xs font-semibold">
+                                    Event
+                                </span>
                                 <span class="text-sm text-gray-500">Jan 10, 2026</span>
                             </div>
 
-                            <h3 class="text-xl font-semibold mb-3 group-hover:text-yellow-500">
+                            <h3
+                                class="text-xl font-semibold mb-3 group-hover:text-[#0038A8] transition-colors duration-300">
                                 Free Skills Training for Returning OFWs
                             </h3>
 
@@ -3195,26 +3140,28 @@
                 <!-- News 4 -->
                 <article class="news-card reveal group h-full">
                     <div
-                        class="h-full bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-purple-500/20 hover:border-purple-300">
+                        class="h-full bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10 hover:border-blue-200">
 
                         <div class="relative h-56 overflow-hidden">
                             <img src="images/arte.png"
                                 class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
 
                             <div
-                                class="absolute inset-0 bg-gradient-to-t from-purple-900/20 to-transparent opacity-0 group-hover:opacity-100 transition">
+                                class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition">
                             </div>
                         </div>
 
                         <div class="p-6">
                             <div class="flex items-center gap-3 mb-4">
                                 <span
-                                    class="inline-flex items-center rounded-full bg-purple-100 text-purple-700 px-3 py-1 text-xs font-semibold">Update</span>
+                                    class="inline-flex items-center rounded-full bg-blue-100 text-blue-700 px-3 py-1 text-xs font-semibold">
+                                    Update
+                                </span>
                                 <span class="text-sm text-gray-500">Jan 18, 2026</span>
                             </div>
 
                             <h3
-                                class="text-xl font-semibold mb-3 group-hover:text-purple-600 transition-colors duration-300">
+                                class="text-xl font-semibold mb-3 group-hover:text-[#0038A8] transition-colors duration-300">
                                 Online Appointment System Expanded
                             </h3>
 
@@ -3224,70 +3171,74 @@
                         </div>
                     </div>
                 </article>
+
                 <!-- News 5 -->
                 <article class="news-card reveal group h-full">
                     <div
-                        class="h-full bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-red-500/20 hover:border-red-300">
+                        class="h-full bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10 hover:border-blue-200">
 
                         <div class="relative h-56 overflow-hidden">
                             <img src="https://media.philstar.com/photos/2022/04/26/ofw_2022-04-26_20-49-08.jpg"
                                 class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
 
                             <div
-                                class="absolute inset-0 bg-gradient-to-t from-red-900/20 to-transparent opacity-0 group-hover:opacity-100 transition">
+                                class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition">
                             </div>
                         </div>
 
                         <div class="p-6">
                             <div class="flex items-center gap-3 mb-4">
                                 <span
-                                    class="inline-flex items-center rounded-full bg-red-100 text-red-700 px-3 py-1 text-xs font-semibold">Program</span>
+                                    class="inline-flex items-center rounded-full bg-blue-100 text-blue-700 px-3 py-1 text-xs font-semibold">
+                                    Program
+                                </span>
                                 <span class="text-sm text-gray-500">Jan 20, 2026</span>
                             </div>
 
                             <h3
-                                class="text-xl font-semibold mb-3 group-hover:text-red-600 transition-colors duration-300">
+                                class="text-xl font-semibold mb-3 group-hover:text-[#0038A8] transition-colors duration-300">
                                 Expanded Reintegration Support for Returning OFWs
                             </h3>
 
                             <p class="text-gray-600 text-sm mb-4">
                                 New assistance initiatives help returning migrant workers rebuild careers and
-                                start
-                                small businesses.
+                                start small businesses.
                             </p>
                         </div>
                     </div>
                 </article>
+
                 <!-- News 6 -->
                 <article class="news-card reveal group h-full">
                     <div
-                        class="h-full bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/20 hover:border-cyan-300">
+                        class="h-full bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/10 hover:border-blue-200">
 
                         <div class="relative h-56 overflow-hidden">
                             <img src="https://twomonkeystravelgroup.com/wp-content/uploads/2023/09/How-to-Travel-The-World-on-a-Philippines-Passport-00-456x570.jpg"
                                 class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
 
                             <div
-                                class="absolute inset-0 bg-gradient-to-t from-cyan-900/20 to-transparent opacity-0 group-hover:opacity-100 transition">
+                                class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition">
                             </div>
                         </div>
 
                         <div class="p-6">
                             <div class="flex items-center gap-3 mb-4">
                                 <span
-                                    class="inline-flex items-center rounded-full bg-cyan-100 text-cyan-700 px-3 py-1 text-xs font-semibold">Policy</span>
+                                    class="inline-flex items-center rounded-full bg-blue-100 text-blue-700 px-3 py-1 text-xs font-semibold">
+                                    Policy
+                                </span>
                                 <span class="text-sm text-gray-500">Jan 22, 2026</span>
                             </div>
 
                             <h3
-                                class="text-xl font-semibold mb-3 group-hover:text-cyan-600 transition-colors duration-300">
+                                class="text-xl font-semibold mb-3 group-hover:text-[#0038A8] transition-colors duration-300">
                                 Updated Guidelines for Overseas Worker Documentation
                             </h3>
 
                             <p class="text-gray-600 text-sm mb-4">
                                 Revised documentation process aims to reduce delays and improve compliance for
-                                departing
-                                workers.
+                                departing workers.
                             </p>
                         </div>
                     </div>
@@ -3363,8 +3314,7 @@
 
                         <p class="text-gray-600 mb-6 italic leading-relaxed">
                             "DMW made my deployment process seamless. The online services saved me multiple
-                            trips to the
-                            office. Thank you for modernizing government services!"
+                            trips to the office. Thank you for modernizing government services!"
                         </p>
 
                         <div class="flex items-center gap-4 pt-5 border-t border-slate-100">
@@ -3389,7 +3339,7 @@
 
                 <!-- Testimonial 2 -->
                 <div
-                    class="testimonial-card reveal group relative overflow-hidden rounded-3xl bg-white border border-slate-200 p-8 shadow-md transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-red-200/40">
+                    class="testimonial-card reveal group relative overflow-hidden rounded-3xl bg-white border border-slate-200 p-8 shadow-md transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-blue-200/40">
 
                     <div
                         class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]">
@@ -3401,8 +3351,8 @@
 
                     <div class="relative z-10">
                         <div
-                            class="w-14 h-14 rounded-2xl bg-red-50 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-all duration-500">
-                            <svg class="w-6 h-6 text-[#CE1126]" fill="currentColor" viewBox="0 0 24 24">
+                            class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-all duration-500">
+                            <svg class="w-6 h-6 text-[#0038A8]" fill="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M7.17 6A5.001 5.001 0 002 11v7h7v-7H6.08A3.001 3.001 0 019 8.17V6H7.17zm10 0A5.001 5.001 0 0012 11v7h7v-7h-2.92A3.001 3.001 0 0119 8.17V6h-1.83z" />
                             </svg>
@@ -3433,8 +3383,7 @@
 
                         <p class="text-gray-600 mb-6 italic leading-relaxed">
                             "When I had problems with my employer, DMW's helpdesk responded immediately. They
-                            helped me
-                            resolve my issue within days. Forever grateful!"
+                            helped me resolve my issue within days. Forever grateful!"
                         </p>
 
                         <div class="flex items-center gap-4 pt-5 border-t border-slate-100">
@@ -3443,11 +3392,12 @@
                                     class="absolute inset-0 rounded-full bg-gradient-to-r from-[#FCD116] to-[#0038A8] blur-md opacity-30">
                                 </div>
                                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdldDBD2IfcMolnekdHEYWH_6JN05KlCCAiSO7GD_fIg&s"
+                                    alt="Testimonial"
                                     class="relative w-14 h-14 rounded-full object-cover ring-2 ring-white shadow-md">
                             </div>
                             <div>
                                 <p
-                                    class="font-semibold text-gray-900 group-hover:text-[#CE1126] transition-colors duration-300">
+                                    class="font-semibold text-gray-900 group-hover:text-[#0038A8] transition-colors duration-300">
                                     Maria Santos
                                 </p>
                                 <p class="text-sm text-gray-500">OFW in UAE</p>
@@ -3458,7 +3408,7 @@
 
                 <!-- Testimonial 3 -->
                 <div
-                    class="testimonial-card reveal group relative overflow-hidden rounded-3xl bg-white border border-slate-200 p-8 shadow-md transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-yellow-200/40">
+                    class="testimonial-card reveal group relative overflow-hidden rounded-3xl bg-white border border-slate-200 p-8 shadow-md transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-blue-200/40">
 
                     <div
                         class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]">
@@ -3470,8 +3420,8 @@
 
                     <div class="relative z-10">
                         <div
-                            class="w-14 h-14 rounded-2xl bg-yellow-50 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-all duration-500">
-                            <svg class="w-6 h-6 text-[#F59E0B]" fill="currentColor" viewBox="0 0 24 24">
+                            class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-all duration-500">
+                            <svg class="w-6 h-6 text-[#0038A8]" fill="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M7.17 6A5.001 5.001 0 002 11v7h7v-7H6.08A3.001 3.001 0 019 8.17V6H7.17zm10 0A5.001 5.001 0 0012 11v7h7v-7h-2.92A3.001 3.001 0 0119 8.17V6h-1.83z" />
                             </svg>
@@ -3502,8 +3452,7 @@
 
                         <p class="text-gray-600 mb-6 italic leading-relaxed">
                             "The PEOS online seminar was very informative. I felt prepared and confident before
-                            my
-                            deployment. The program covered everything I needed to know."
+                            my deployment. The program covered everything I needed to know."
                         </p>
 
                         <div class="flex items-center gap-4 pt-5 border-t border-slate-100">
@@ -3517,7 +3466,7 @@
                             </div>
                             <div>
                                 <p
-                                    class="font-semibold text-gray-900 group-hover:text-[#F59E0B] transition-colors duration-300">
+                                    class="font-semibold text-gray-900 group-hover:text-[#0038A8] transition-colors duration-300">
                                     Carlos Reyes
                                 </p>
                                 <p class="text-sm text-gray-500">OFW in Saudi Arabia</p>
@@ -3525,9 +3474,10 @@
                         </div>
                     </div>
                 </div>
+
                 <!-- Testimonial 4 -->
                 <div
-                    class="testimonial-card reveal group relative overflow-hidden rounded-3xl bg-white border border-slate-200 p-8 shadow-md transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-green-200/40">
+                    class="testimonial-card reveal group relative overflow-hidden rounded-3xl bg-white border border-slate-200 p-8 shadow-md transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-blue-200/40">
 
                     <div
                         class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]">
@@ -3539,8 +3489,8 @@
 
                     <div class="relative z-10">
                         <div
-                            class="w-14 h-14 rounded-2xl bg-green-50 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-all duration-500">
-                            <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                            class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-all duration-500">
+                            <svg class="w-6 h-6 text-[#0038A8]" fill="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M7.17 6A5.001 5.001 0 002 11v7h7v-7H6.08A3.001 3.001 0 019 8.17V6H7.17zm10 0A5.001 5.001 0 0012 11v7h7v-7h-2.92A3.001 3.001 0 0119 8.17V6h-1.83z" />
                             </svg>
@@ -3571,8 +3521,7 @@
 
                         <p class="text-gray-600 mb-6 italic leading-relaxed">
                             "DMW services made my application process faster and stress-free. The support team
-                            was very
-                            responsive and helpful throughout my journey abroad."
+                            was very responsive and helpful throughout my journey abroad."
                         </p>
 
                         <div class="flex items-center gap-4 pt-5 border-t border-slate-100">
@@ -3581,11 +3530,12 @@
                                     class="absolute inset-0 rounded-full bg-gradient-to-r from-[#FCD116] to-[#0038A8] blur-md opacity-30">
                                 </div>
                                 <img src="data:image/jpeg;base64,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"
+                                    alt="Testimonial"
                                     class="relative w-14 h-14 rounded-full object-cover ring-2 ring-white shadow-md">
                             </div>
                             <div>
                                 <p
-                                    class="font-semibold text-gray-900 group-hover:text-green-600 transition-colors duration-300">
+                                    class="font-semibold text-gray-900 group-hover:text-[#0038A8] transition-colors duration-300">
                                     Johnrico Amores
                                 </p>
                                 <p class="text-sm text-gray-500">OFW in Canada</p>
@@ -3596,7 +3546,7 @@
 
                 <!-- Testimonial 5 -->
                 <div
-                    class="testimonial-card reveal group relative overflow-hidden rounded-3xl bg-white border border-slate-200 p-8 shadow-md transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-purple-200/40">
+                    class="testimonial-card reveal group relative overflow-hidden rounded-3xl bg-white border border-slate-200 p-8 shadow-md transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-blue-200/40">
 
                     <div
                         class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]">
@@ -3608,8 +3558,8 @@
 
                     <div class="relative z-10">
                         <div
-                            class="w-14 h-14 rounded-2xl bg-purple-50 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-all duration-500">
-                            <svg class="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 24 24">
+                            class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-all duration-500">
+                            <svg class="w-6 h-6 text-[#0038A8]" fill="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M7.17 6A5.001 5.001 0 002 11v7h7v-7H6.08A3.001 3.001 0 019 8.17V6H7.17zm10 0A5.001 5.001 0 0012 11v7h7v-7h-2.92A3.001 3.001 0 0119 8.17V6h-1.83z" />
                             </svg>
@@ -3640,9 +3590,7 @@
 
                         <p class="text-gray-600 mb-6 italic leading-relaxed">
                             "The online verification and assistance services were very convenient. I felt guided
-                            every
-                            step of the way,
-                            and the whole process became easier for me and my family."
+                            every step of the way, and the whole process became easier for me and my family."
                         </p>
 
                         <div class="flex items-center gap-4 pt-5 border-t border-slate-100">
@@ -3656,7 +3604,7 @@
                             </div>
                             <div>
                                 <p
-                                    class="font-semibold text-gray-900 group-hover:text-purple-600 transition-colors duration-300">
+                                    class="font-semibold text-gray-900 group-hover:text-[#0038A8] transition-colors duration-300">
                                     Angela Cruz
                                 </p>
                                 <p class="text-sm text-gray-500">OFW in Singapore</p>
@@ -3667,7 +3615,7 @@
 
                 <!-- Testimonial 6 -->
                 <div
-                    class="testimonial-card reveal group relative overflow-hidden rounded-3xl bg-white border border-slate-200 p-8 shadow-md transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-cyan-200/40">
+                    class="testimonial-card reveal group relative overflow-hidden rounded-3xl bg-white border border-slate-200 p-8 shadow-md transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl hover:shadow-blue-200/40">
 
                     <div
                         class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#0038A8] via-[#CE1126] to-[#FCD116]">
@@ -3679,8 +3627,8 @@
 
                     <div class="relative z-10">
                         <div
-                            class="w-14 h-14 rounded-2xl bg-cyan-50 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-all duration-500">
-                            <svg class="w-6 h-6 text-cyan-600" fill="currentColor" viewBox="0 0 24 24">
+                            class="w-14 h-14 rounded-2xl bg-blue-50 flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-all duration-500">
+                            <svg class="w-6 h-6 text-[#0038A8]" fill="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M7.17 6A5.001 5.001 0 002 11v7h7v-7H6.08A3.001 3.001 0 019 8.17V6H7.17zm10 0A5.001 5.001 0 0012 11v7h7v-7h-2.92A3.001 3.001 0 0119 8.17V6h-1.83z" />
                             </svg>
@@ -3711,9 +3659,7 @@
 
                         <p class="text-gray-600 mb-6 italic leading-relaxed">
                             "I appreciated how fast and organized the support system was. From orientation to
-                            deployment
-                            updates,
-                            everything was clear, professional, and easy to follow."
+                            deployment updates, everything was clear, professional, and easy to follow."
                         </p>
 
                         <div class="flex items-center gap-4 pt-5 border-t border-slate-100">
@@ -3727,7 +3673,7 @@
                             </div>
                             <div>
                                 <p
-                                    class="font-semibold text-gray-900 group-hover:text-cyan-600 transition-colors duration-300">
+                                    class="font-semibold text-gray-900 group-hover:text-[#0038A8] transition-colors duration-300">
                                     Michael Dela Cruz
                                 </p>
                                 <p class="text-sm text-gray-500">OFW in Qatar</p>
@@ -3736,6 +3682,7 @@
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
